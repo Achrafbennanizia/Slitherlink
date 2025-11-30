@@ -38,6 +38,8 @@ slitherlink_*
 # Test Output
 *.log
 test_output/
+benchmark_results.csv
+benchmark_detailed.log
 
 # macOS
 .DS_Store

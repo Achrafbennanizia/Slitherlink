@@ -2,20 +2,55 @@
 
 A high-performance parallel Slitherlink puzzle solver using Intel oneAPI Threading Building Blocks (TBB) with intelligent backtracking and constraint propagation.
 
+## 📁 Project Structure
+
+```
+Slitherlink/
+├── main.cpp                 # Main solver implementation (V10)
+├── CMakeLists.txt          # Build configuration
+├── README.md               # This file
+│
+├── puzzles/                # Test puzzles organized by category
+│   └── examples/           # Example puzzles (4×4 to 20×20)
+│
+├── scripts/                # Automation scripts
+│   ├── benchmark_suite.sh  # Comprehensive benchmark automation
+│   └── test_all.sh        # Quick test runner
+│
+├── docs/                   # Complete documentation (5,900+ lines)
+│   ├── README.md           # Documentation index
+│   ├── guides/             # User & developer guides
+│   │   ├── TESTING_GUIDE.md
+│   │   └── NAVIGATION_GUIDE.md
+│   ├── analysis/           # Performance analysis & optimization
+│   │   ├── 10x10_OPTIMIZATION_JOURNEY.md (1,555 lines)
+│   │   ├── PUZZLE_DIFFICULTY_ANALYSIS.md (696 lines)
+│   │   ├── COMPLETE_VERSION_ANALYSIS.md (820 lines)
+│   │   └── TBB_INTEGRATION_STORY.md (792 lines)
+│   └── history/            # Development history
+│       ├── CODE_EVOLUTION.md
+│       ├── VERSION_HISTORY.md
+│       └── CONVERSATION_HISTORY.md
+│
+└── tests/                  # Test infrastructure
+    └── old_versions/       # Historical code versions (V1-V10)
+        ├── v01_baseline.cpp
+        ├── v02_threadpool.cpp
+        ├── ...
+        └── version.txt     # Complete version archive
+```
+
 ## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
 - [Quick Start](#quick-start)
 - [Architecture](#architecture)
-- [Code Structure](#code-structure)
-- [Algorithms](#algorithms)
-- [Performance Optimization Journey](#performance-optimization-journey)
+- [Performance Highlights](#performance-highlights)
 - [Build & Usage](#build--usage)
-- [Performance Benchmarks](#performance-benchmarks)
-- [Testing & Benchmarking](#testing--benchmarking) ⭐ NEW
-- [Technical Details](#technical-details)
-- [📚 Development Archive](#development-archive)
+- [Testing & Benchmarking](#testing--benchmarking)
+- [📚 Documentation](#documentation)
+- [Contributing](#contributing)
 
 ---
 
@@ -63,17 +98,17 @@ Slitherlink is a logic puzzle where you draw a single continuous loop through a 
 cmake --build cmake-build-debug
 
 # Test with a simple 4×4 puzzle
-./cmake-build-debug/slitherlink example4x4.txt
+./cmake-build-debug/slitherlink puzzles/examples/example4x4.txt
 
 # Test with a challenging 10×10 puzzle
-./cmake-build-debug/slitherlink example10x10.txt
+./cmake-build-debug/slitherlink puzzles/examples/example10x10.txt
 ```
 
 ### Run Comprehensive Benchmarks
 
 ```bash
 # Automated test suite across all puzzle sizes
-./benchmark_suite.sh
+./scripts/benchmark_suite.sh
 
 # Results saved to:
 # - benchmark_results.csv (machine-readable)
@@ -89,6 +124,57 @@ column -t -s',' benchmark_results.csv | head -20
 # Full detailed output
 cat benchmark_detailed.log
 ```
+
+---
+
+## Performance Highlights
+
+### Version Evolution (V1 → V10)
+
+```
+Puzzle | V1 (baseline) | V10 (TBB) | Improvement
+-------|---------------|-----------|-------------
+4×4    | 0.100s        | 0.0013s   | 77× faster
+8×8    | 15.0s         | 0.705s    | 21× faster
+10×10  | TIMEOUT       | ~130s     | ∞ → solvable!
+```
+
+### Key Breakthroughs
+
+1. **Adaptive Depth Strategy** → 3× improvement
+   - Size-based tiers (10×10 gets depth 20+)
+   - Density adjustment for sparse puzzles
+2. **TBB Work-Stealing** → 2× improvement
+   - Low overhead (1μs vs 50μs for std::async)
+   - 95%+ efficiency on irregular workloads
+3. **Smart Heuristics** → 1.8× improvement
+   - Priority-based edge selection
+   - Forced moves first, binary decisions second
+
+**Total**: 10.8× improvement + made 10×10 solvable
+
+### Puzzle Difficulty Impact
+
+```
+Same 8×8 size, different characteristics:
+
+Dense (100% clues):  0.42ms  ← Deterministic!
+Sparse (50% clues):  519ms  ← 1200× slower!
+
+Reason: Density > quantity
+```
+
+**See [docs/analysis/](docs/analysis/) for complete analysis**
+
+# Summary table
+
+column -t -s',' benchmark_results.csv | head -20
+
+# Full detailed output
+
+cat benchmark_detailed.log
+
+````
 
 **See [Testing & Benchmarking](#testing--benchmarking) for complete guide**
 
@@ -106,7 +192,7 @@ struct Grid {
     vector<int> clues;     // Cell clues (-1 for no clue, 0-3 for clue value)
     int cellIndex(int r, int c) const;  // Convert (row, col) to linear index
 };
-```
+````
 
 #### `Edge`
 
@@ -3128,34 +3214,71 @@ Developed as a high-performance puzzle solver demonstrating advanced C++ techniq
 
 ---
 
-## 📚 Development Archive
+## 📚 Documentation
 
-### Complete Development History & Version Files
+### Complete Documentation Index
 
-All development conversations, failed experiments, and historical code versions are preserved in the `versions/` directory for educational purposes.
+All documentation is organized in the [`docs/`](docs/) directory with 5,900+ lines covering every aspect of development.
 
-**📖 Key Resources**:
+**📖 Documentation Hub**: **[docs/README.md](docs/README.md)** ⭐ START HERE
 
-1. **[Development Archive Overview](versions/DEVELOPMENT_ARCHIVE.md)** ⭐ START HERE
+### Quick Links by Purpose
 
-   - Links to all documentation and code versions
-   - How to compile and test historical versions
-   - Performance comparison guides
-   - Learning recommendations
+#### For Users & Testing
 
-2. **[Complete Conversation History](versions/CONVERSATION_HISTORY.md)** 📝 DETAILED
+- **[docs/guides/TESTING_GUIDE.md](docs/guides/TESTING_GUIDE.md)** - Complete testing reference
+  - Running benchmarks
+  - Creating puzzles
+  - Troubleshooting
+  - Performance tuning
 
-   - Full conversation logs from all development sessions
-   - Every decision explained with context
-   - Failed experiments with detailed analysis
-   - 50+ pages of development narrative
-   - OR-Tools disaster complete story (4 days, 3 approaches)
+#### For Understanding Performance
 
-3. **[Version History Summary](versions/VERSION_HISTORY.md)** 📊 QUICK REF
-   - Performance comparison table
-   - Compilation instructions
-   - Key milestones
-   - Statistics summary
+- **[docs/analysis/10x10_OPTIMIZATION_JOURNEY.md](docs/analysis/10x10_OPTIMIZATION_JOURNEY.md)** (1,555 lines)
+
+  - Complete 10×10 optimization story
+  - Tools that FAILED: OR-Tools (3 attempts, 2.5 days)
+  - What WORKED: Adaptive depth, TBB, heuristics
+  - Real benchmarks and code comparisons
+
+- **[docs/analysis/PUZZLE_DIFFICULTY_ANALYSIS.md](docs/analysis/PUZZLE_DIFFICULTY_ANALYSIS.md)** (696 lines)
+  - 5 difficulty factors explained
+  - Puzzle-by-puzzle analysis (4×4 to 15×15)
+  - Algorithm behavior across all difficulties
+  - Performance scaling analysis
+
+#### For Understanding Code Evolution
+
+- **[docs/analysis/COMPLETE_VERSION_ANALYSIS.md](docs/analysis/COMPLETE_VERSION_ANALYSIS.md)** (820 lines)
+
+  - V1 to V10 detailed breakdown
+  - Performance improvements per version
+  - Code changes explained
+
+- **[docs/history/CODE_EVOLUTION.md](docs/history/CODE_EVOLUTION.md)** (580 lines)
+  - Side-by-side code comparisons
+  - Evolution of key algorithms
+
+#### For Learning from Failures
+
+- **[docs/analysis/10x10_OPTIMIZATION_JOURNEY.md](docs/analysis/10x10_OPTIMIZATION_JOURNEY.md)** - Section: "Phase 3: Tool Experiments"
+  - OR-Tools: 3 failed attempts documented
+  - Why constraint programming doesn't fit
+  - 2.5 days of experimentation explained
+
+### Historical Code Versions
+
+All V1-V10 code versions preserved in [`tests/old_versions/`](tests/old_versions/):
+
+- `v01_baseline.cpp` - Original std::async implementation
+- `v02_threadpool.cpp` - Thread pool attempt
+- `v03-v09_*.cpp` - std::async refinements
+- `v10_final.cpp` - TBB breakthrough
+- `version.txt` - Complete version archive (6,543 lines)
+  - Performance comparison table
+  - Compilation instructions
+  - Key milestones
+  - Statistics summary
 
 **💾 Historical Code Versions** (10 major versions):
 

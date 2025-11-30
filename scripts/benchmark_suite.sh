@@ -35,19 +35,36 @@ echo "" >> "$DETAILED_LOG"
 # Test definitions: file:size:difficulty:timeout
 declare -a TESTS=(
     # 4×4 puzzles - EASY
-    "example4x4.txt:4x4:Easy:10"
+    "puzzles/examples/example4x4.txt:4x4:Easy:10"
     
     # 5×5 puzzles - EASY to MEDIUM
-    "example5x5.txt:5x5:Medium:30"
+    "puzzles/examples/example5x5.txt:5x5:Medium:30"
     
     # 6×6 puzzles - MEDIUM
-    "example6x6.txt:6x6:Medium:60"
+    "puzzles/examples/example6x6.txt:6x6:Medium:60"
     
     # 7×7 puzzles - MEDIUM
-    "example7x7.txt:7x7:Medium:120"
+    "puzzles/examples/example7x7.txt:7x7:Medium:120"
     
     # 8×8 puzzles - MEDIUM to HARD
-    "example8x8_simple.txt:8x8:Easy:30"
+    "puzzles/examples/example8x8_simple.txt:8x8:Easy:30"
+    "puzzles/examples/example8x8.txt:8x8:Hard:180"
+    "puzzles/examples/example8x8_box.txt:8x8:Medium:90"
+    
+    # 10×10 puzzles - HARD to VERY HARD
+    "puzzles/examples/example10x10_dense.txt:10x10:Hard:180"
+    "puzzles/examples/example10x10.txt:10x10:VeryHard:300"
+    
+    # 12×12 puzzles - EXTREME
+    "puzzles/examples/example12x12_simple.txt:12x12:Hard:600"
+    "puzzles/examples/example12x12.txt:12x12:Extreme:1200"
+    
+    # 15×15 puzzles - EXTREME+
+    "puzzles/examples/example15x15.txt:15x15:Extreme:1800"
+    
+    # 20×20 puzzles - NIGHTMARE
+    "puzzles/examples/example20x20_dense.txt:20x20:Nightmare:3600"
+    "puzzles/examples/example20x20.txt:20x20:Nightmare:3600"
     "example8x8.txt:8x8:Hard:180"
     "example8x8_box.txt:8x8:Medium:90"
     
