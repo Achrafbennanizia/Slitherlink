@@ -1,12 +1,19 @@
 # The Intel TBB Integration Journey
 
-## From std::async Chaos to TBB Elegance
+## From std::async (V1-V9) to TBB Elegance (V10/main.cpp)
 
-This document chronicles the debugging and integration of Intel's oneAPI Threading Building Blocks (TBB) into the Slitherlink solver, detailing challenges, solutions, and performance breakthroughs.
+This document chronicles the debugging and integration of Intel's oneAPI Threading Building Blocks (TBB) into the Slitherlink solver.
+
+**TIMELINE CLARIFICATION**:
+
+- **version.txt** (V1-V9): ALL use `std::async` - documents the std::async evolution
+- **main.cpp** (V10): Complete TBB rewrite - the production version
+
+The TBB integration was NOT gradual through versions 3-9. It was a complete rewrite that happened AFTER version.txt, becoming the current main.cpp.
 
 ---
 
-## Phase 1: The std::async Problem (V1-V2)
+## Phase 1: The std::async Era (V1-V9 in version.txt)
 
 ### Initial Implementation Reality
 
@@ -50,7 +57,9 @@ Thread count: 1102
 Segmentation fault (core dumped)
 ```
 
-### First Fix Attempt: Thread Pool (V2)
+### Evolution Through V2-V9 (all in version.txt)
+
+Through versions 2-9, various attempts improved the std::async implementation:
 
 ```cpp
 int maxThreads = min(8, (int)thread::hardware_concurrency());
@@ -69,24 +78,24 @@ void search(State s, int depth) {
 }
 ```
 
-### Problems with V2
+### Problems Persisting Through V2-V9
 
-- ⚠️ Still creating/destroying threads
+- ⚠️ Still creating/destroying threads (overhead)
 - ⚠️ `activeThreads` race conditions
-- ⚠️ No work-stealing (idle threads exist while others are busy)
+- ⚠️ No work-stealing (idle threads while others busy)
 - ⚠️ `std::async` overhead: ~50μs per call
 
-**Performance**: 8×8 puzzle still 10-12 seconds.
+**Performance Through V2-V9**: 8×8 puzzle stuck at 9-12 seconds.
 
-**Conclusion**: We needed a professional-grade task scheduler.
+**Conclusion After V9**: 9 versions of std::async optimization hit a wall. Needed professional task scheduler.
 
 ---
 
-## Phase 2: TBB Discovery & First Integration (V3)
+## Phase 2: TBB Decision & Complete Rewrite (→ main.cpp/V10)
 
 ### Why TBB?
 
-After researching parallel libraries:
+After V9 plateau, researched alternatives:
 
 | Library    | Task-Based | Work-Stealing | Low Overhead | Verdict                       |
 | ---------- | ---------- | ------------- | ------------ | ----------------------------- |
@@ -101,23 +110,35 @@ After researching parallel libraries:
 - **Low overhead**: Task creation ~1μs (50× faster than std::async)
 - **Industry-proven**: Used in Adobe, Autodesk, Intel software
 
-### First TBB Code (V3)
+### Complete Rewrite for TBB (main.cpp = V10)
+
+**Decision**: Don't try to gradually add TBB to std::async code. Complete rewrite.
 
 ```cpp
+#ifdef USE_TBB
 #include <tbb/task_group.h>
 #include <tbb/task_arena.h>
+#include <tbb/parallel_reduce.h>
+#include <tbb/concurrent_vector.h>
+// ... all TBB headers
+#endif
 
 struct Solver {
+#ifdef USE_TBB
     unique_ptr<tbb::task_arena> arena;
+#endif
 
     void initTBB() {
+#ifdef USE_TBB
         int numThreads = thread::hardware_concurrency() / 2;
         arena = make_unique<tbb::task_arena>(numThreads);
         cout << "Using TBB with " << numThreads << " threads\n";
+#endif
     }
 };
 
 void search(State s, int depth) {
+#ifdef USE_TBB
     if (depth < maxParallelDepth) {
         tbb::task_group g;
 
@@ -128,10 +149,13 @@ void search(State s, int depth) {
         search(offState, depth + 1);  // Execute on current thread
         g.wait();
     } else {
-        // Sequential
+#endif
+        // Sequential fallback
         search(onState, depth + 1);
         search(offState, depth + 1);
+#ifdef USE_TBB
     }
+#endif
 }
 ```
 
@@ -779,6 +803,34 @@ Performance: 0.705s for 8×8 (fast ✓)
 
 ---
 
-_This document chronicles the complete TBB integration journey from V1 (broken std::async) to V10 (production TBB), including all debugging challenges, solutions, and performance data._
+## CRITICAL TIMELINE CLARIFICATION
 
-**Final Status: Production-Ready ✅**
+### The Real Story
+
+**version.txt (V1-V9)**: ALL use std::async  
+→ 9 versions trying to optimize std::async  
+→ Performance plateaued at ~10s for 8×8  
+→ Conclusion: std::async fundamentally limited
+
+**→ Decision: Complete TBB rewrite**
+
+**main.cpp (V10)**: Complete TBB implementation  
+→ Not an evolution of V9, but a ground-up rewrite  
+→ Breakthrough performance: 0.705s for 8×8  
+→ 15× faster than best std::async version
+
+### Why This Matters
+
+This document describes TBB integration as if it happened gradually through V3-V9. **That's incorrect based on version.txt.**
+
+**Actual timeline**:
+
+1. V1-V9: All std::async (in version.txt)
+2. Realized std::async hit limits
+3. Complete rewrite with TBB → main.cpp (V10)
+
+The "phases" in this document describe the TBB rewrite process, not a gradual migration through version.txt versions.
+
+---
+
+_This document chronicles TBB integration that culminated in main.cpp (V10), after the std::async era documented in version.txt (V1-V9)._

@@ -2,6 +2,24 @@
 
 Welcome to the complete historical archive of the Slitherlink solver development journey!
 
+## ⚠️ CRITICAL: Understanding the File Structure
+
+**version.txt (V1-V9)**: ALL versions use `std::async`/`std::future`
+
+- Documents the std::async optimization era
+- Performance plateaued at ~10s for 8×8
+- No TBB in any of these versions
+
+**main.cpp (V10)**: Complete Intel TBB rewrite
+
+- Happened AFTER version.txt
+- Not a gradual evolution, but ground-up rewrite
+- Breakthrough: 0.705s for 8×8 (15× faster than V9)
+
+**Documentation note**: Some docs describe a gradual TBB integration through V3-V9. This is conceptual/aspirational. **Reality**: V1-V9 all use std::async, V10 is TBB rewrite.
+
+---
+
 ## 📁 Directory Contents
 
 ```

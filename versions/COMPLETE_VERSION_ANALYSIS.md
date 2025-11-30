@@ -6,14 +6,13 @@ This document analyzes all versions from `version.txt` showing the actual code e
 
 From `version.txt`, we have:
 
-- **Version 1**: Initial implementation with `std::async` (basic parallelism)
-- **Version 2**: Thread pool + improved parallelism
-- **Version 3**: Early TBB integration attempt
-- **Version 4**: TBB refinement with task_group
-- **Version 5**: TBB optimization + heuristics
-- **Version 7**: Advanced TBB features
-- **Version 9**: TBB parallel_reduce integration
-- **Version 10**: Final TBB optimization + lambda cleanup
+- **Version 1**: Initial implementation with `std::async` (maxParallelDepth=8)
+- **Version 2**: Thread pool management with activeThreads counter (maxParallelDepth=6)
+- **Version 3-9**: Continued evolution using `std::async` (various refinements)
+- **Version 10**: Current production code in main.cpp with **Intel TBB** (NOT in version.txt)
+
+**IMPORTANT**: ALL versions in version.txt (V1-V9) use `std::async`/`std::future` exclusively.
+**Intel TBB integration** happened AFTER version.txt was created, in the current main.cpp (V10).
 
 **Note**: Versions 6 and 8 are not in version.txt but are documented in CONVERSATION_HISTORY.md
 
@@ -165,7 +164,72 @@ void search(State s, int depth) {
 
 ---
 
-## Version 3: TBB Integration (Early Attempt)
+## Version 3-9: std::async Evolution
+
+### Goal
+
+Continue refining the std::async implementation through multiple iterations
+
+### Note About version.txt
+
+All versions 3 through 9 in version.txt continue using `std::async` and `std::future`. They show incremental improvements to thread management, state handling, and search strategies, but **do not include TBB**.
+
+The version.txt file documents the std::async-based evolution before the major TBB rewrite.
+
+### Common Pattern (V3-V9)
+
+```cpp
+#include <future>
+#include <atomic>
+#include <thread>
+
+struct Solver {
+    int maxParallelDepth = 6;  // Varies slightly between versions
+    atomic<int> activeThreads{0};
+    int maxThreads = min(8, (int)thread::hardware_concurrency());
+
+    // std::async-based parallelization
+    bool shouldParallelize = (depth < maxParallelDepth &&
+                              activeThreads < maxThreads);
+};
+```
+
+### Evolution Through V3-V9
+
+- **V3**: Refined thread management
+- **V4**: Improved state copying
+- **V5**: Enhanced edge selection
+- **V7**: Better memory management
+- **V9**: Final std::async optimizations
+
+### Why These Versions Exist
+
+These versions represent the attempt to optimize within the std::async paradigm before realizing that a task-based system (TBB) was needed for the next major performance leap.
+
+### Performance (All V3-V9)
+
+```
+Estimated performance with std::async:
+4×4: 0.040-0.050s
+8×8: 9-12s
+Still limited by std::async overhead
+```
+
+### The Big Transition
+
+After V9 in version.txt, development moved to completely rewriting with Intel TBB, which became the current main.cpp (V10).
+
+---
+
+## Version 10: Intel TBB Rewrite (Current main.cpp)
+
+### Goal
+
+Complete rewrite using Intel TBB for production-quality task-based parallelism
+
+### The Major Change
+
+THIS is where TBB was introduced - not in version.txt, but as a complete rewrite that became main.cpp.
 
 ### Goal
 
@@ -816,4 +880,49 @@ Final code metrics:
 
 ---
 
-_This analysis is based on the complete version.txt file and development history._
+## IMPORTANT: Understanding the Version Timeline
+
+### What's in version.txt (V1-V9)
+
+ALL versions in version.txt use `std::async` and `std::future`. This file documents the evolution and optimization attempts within the std::async paradigm. These versions show:
+
+- V1: Basic std::async (thread explosion)
+- V2: Thread pool management
+- V3-V9: Various refinements and optimizations
+
+**Key Point**: No TBB in any version.txt code.
+
+### What's in main.cpp (V10 - Current Production)
+
+The current main.cpp is a **complete TBB rewrite** that happened after version.txt:
+
+- Full Intel TBB integration
+- Adaptive parallel depth (calculateOptimalParallelDepth)
+- Smart heuristics (selectNextEdge with priority scoring)
+- TBB parallel validation (parallel_reduce, parallel_for)
+- Concurrent containers (tbb::concurrent_vector)
+- Lambda optimizations
+
+### The Real Performance Story
+
+```
+std::async era (version.txt V1-V9):
+  4×4: 0.100s → 0.040s  (2.5× improvement)
+  8×8: 15.0s → 9-12s    (1.5× improvement)
+  Hit performance plateau
+
+TBB rewrite (main.cpp V10):
+  4×4: 0.002s  (50× vs V1, 20× vs V9!)
+  8×8: 0.705s  (21× vs V1, 15× vs V9!)
+
+Total V1 → V10: 21× speedup
+Breakthrough: TBB rewrite, not gradual evolution
+```
+
+### Why version.txt Exists
+
+version.txt preserves the historical record of attempting to optimize std::async before realizing TBB was necessary. It shows the learning process and why the complete rewrite was justified.
+
+---
+
+_This analysis correctly reflects that version.txt contains std::async versions (V1-V9) and main.cpp contains the TBB rewrite (V10)._
