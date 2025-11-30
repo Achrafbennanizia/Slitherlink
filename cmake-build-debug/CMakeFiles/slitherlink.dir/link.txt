@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/slitherlink.dir/main.cpp.o -o slitherlink  -Wl,-rpath,/opt/homebrew/lib /opt/homebrew/lib/libtbb.12.17.dylib /opt/homebrew/lib/libortools.dylib /opt/homebrew/lib/libprotobuf.dylib /opt/homebrew/lib/libabsl_base.dylib /opt/homebrew/lib/libabsl_strings.dylib

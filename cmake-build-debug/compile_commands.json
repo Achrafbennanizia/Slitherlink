@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug",
+  "command": "/usr/bin/c++ -DUSE_ORTOOLS -DUSE_TBB -isystem /opt/homebrew/include -O3 -DNDEBUG -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/slitherlink.dir/main.cpp.o -c /Users/achraf/CLionProjects/Slitherlink/main.cpp",
+  "file": "/Users/achraf/CLionProjects/Slitherlink/main.cpp",
+  "output": "CMakeFiles/slitherlink.dir/main.cpp.o"
+}
+]

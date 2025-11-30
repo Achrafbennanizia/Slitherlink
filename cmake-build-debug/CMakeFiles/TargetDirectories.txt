@@ -1,0 +1,3 @@
+/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/CMakeFiles/slitherlink.dir
+/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/CMakeFiles/rebuild_cache.dir
