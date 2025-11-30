@@ -6,14 +6,16 @@ A high-performance parallel Slitherlink puzzle solver using Intel oneAPI Threadi
 
 - [Overview](#overview)
 - [Features](#features)
+- [Quick Start](#quick-start)
 - [Architecture](#architecture)
 - [Code Structure](#code-structure)
 - [Algorithms](#algorithms)
 - [Performance Optimization Journey](#performance-optimization-journey)
 - [Build & Usage](#build--usage)
 - [Performance Benchmarks](#performance-benchmarks)
+- [Testing & Benchmarking](#testing--benchmarking) ⭐ NEW
 - [Technical Details](#technical-details)
-- [📚 Development Archive](#development-archive) ⭐ NEW
+- [📚 Development Archive](#development-archive)
 
 ---
 
@@ -49,6 +51,46 @@ Slitherlink is a logic puzzle where you draw a single continuous loop through a 
 - **Small (4×4 - 5×5)**: < 0.5 seconds
 - **Medium (6×6 - 8×8)**: < 2 minutes (depending on density)
 - **Large (10×10+)**: Variable (exponential complexity)
+
+---
+
+## Quick Start
+
+### Run a Test Puzzle
+
+```bash
+# Build the solver
+cmake --build cmake-build-debug
+
+# Test with a simple 4×4 puzzle
+./cmake-build-debug/slitherlink example4x4.txt
+
+# Test with a challenging 10×10 puzzle
+./cmake-build-debug/slitherlink example10x10.txt
+```
+
+### Run Comprehensive Benchmarks
+
+```bash
+# Automated test suite across all puzzle sizes
+./benchmark_suite.sh
+
+# Results saved to:
+# - benchmark_results.csv (machine-readable)
+# - benchmark_detailed.log (detailed output)
+```
+
+### View Results
+
+```bash
+# Summary table
+column -t -s',' benchmark_results.csv | head -20
+
+# Full detailed output
+cat benchmark_detailed.log
+```
+
+**See [Testing & Benchmarking](#testing--benchmarking) for complete guide**
 
 ---
 
@@ -2459,6 +2501,189 @@ example10x10.txt:
 **Scaling**:
 
 - 4×4 to 5×5: 30× slower (exponential)
+
+**📊 For comprehensive benchmark data across all puzzle types and difficulty levels, see:**
+
+- **[PUZZLE_DIFFICULTY_ANALYSIS.md](versions/PUZZLE_DIFFICULTY_ANALYSIS.md)**: Complete difficulty analysis with real benchmarks
+- **[TESTING_GUIDE.md](versions/TESTING_GUIDE.md)**: Quick reference for running tests
+
+---
+
+## Testing & Benchmarking
+
+### Automated Test Suite
+
+The project includes a comprehensive benchmark suite that tests puzzles across all sizes and difficulty levels:
+
+```bash
+# Run full automated benchmark
+./benchmark_suite.sh
+```
+
+**Output Files**:
+
+- `benchmark_results.csv`: Machine-readable CSV with timing data
+- `benchmark_detailed.log`: Human-readable detailed output
+
+### Test Coverage
+
+The suite automatically tests:
+
+| Category    | Sizes       | Puzzles | Purpose                        |
+| ----------- | ----------- | ------- | ------------------------------ |
+| **Trivial** | 4×4         | 1       | Quick validation               |
+| **Small**   | 5×5         | 1       | Basic functionality            |
+| **Medium**  | 6×6-8×8     | 4       | Different densities & patterns |
+| **Large**   | 10×10       | 2       | Sparse vs dense comparison     |
+| **Extreme** | 12×12-15×15 | 3       | Stress testing                 |
+| **Limit**   | 20×20       | 2       | Algorithm limits               |
+
+### Benchmark Results Summary
+
+| Puzzle                | Size  | Density | Time (V10) | Difficulty | Status |
+| --------------------- | ----- | ------- | ---------- | ---------- | ------ |
+| example4x4.txt        | 4×4   | 25%     | 0.0013s    | Trivial    | ✓      |
+| example8x8_simple.txt | 8×8   | 100%    | 0.00042s   | Easy       | ✓      |
+| example8x8.txt        | 8×8   | 50%     | 0.519s     | Hard       | ✓      |
+| example10x10.txt      | 10×10 | 28%     | ~125s      | Very Hard  | ✓      |
+| example12x12.txt      | 12×12 | 50%     | ~600s      | Extreme    | ✓      |
+
+### Understanding Puzzle Difficulty
+
+**Key Factors**:
+
+1. **Size**: Edges grow quadratically (4×4 = 40 edges, 10×10 = 220 edges)
+2. **Density**: % of cells with clues (higher = easier)
+3. **Clue Quality**: 0s and 3s are strong, 1s and 2s are weak
+4. **Distribution**: Even spread better than clustered
+
+**Performance Range**:
+
+```
+Difficulty  | Size    | Density | Time Range
+------------|---------|---------|------------
+Trivial     | 4×4-5×5 | >80%    | <0.1s
+Easy        | 6×6-8×8 | >60%    | 0.1-1s
+Medium      | 8×8     | 40-60%  | 1-10s
+Hard        | 10×10   | 25-40%  | 60-180s
+Very Hard   | 10×10   | <25%    | 120-300s
+Extreme     | 12×12+  | <30%    | 300-1800s
+```
+
+### Puzzle Difficulty Examples
+
+**Same Size, Different Difficulty**:
+
+**Easy 8×8** (100% density, 0.4ms):
+
+```
+2 1 1 2 2 1 1 2
+1 0 0 1 1 0 0 1  ← Every cell has clue
+1 0 0 1 1 0 0 1
+...
+```
+
+**Hard 8×8** (50% density, 519ms):
+
+```
+3 2 2 2 2 2 2 3  ← Border only
+2 . . . . . . 2  ← Empty center
+2 . . . . . . 2
+...
+```
+
+**Result**: Same size, 1200× time difference due to density and distribution!
+
+### How the Algorithm Responds
+
+#### On Dense Puzzles (60%+ clues):
+
+- ✅ Heavy constraint propagation
+- ✅ Minimal branching (1.2× factor)
+- ✅ Early pruning at shallow depths
+- ✅ Mostly deterministic solving
+- ⚡ Result: Near-linear scaling
+
+#### On Sparse Puzzles (<30% clues):
+
+- ⚠️ Limited constraint propagation
+- ⚠️ Heavy branching (1.9× factor)
+- ⚠️ Late pruning at deep depths
+- ⚠️ Massive search tree exploration
+- 🐌 Result: Exponential complexity
+
+### Creating Test Puzzles
+
+**Puzzle File Format**:
+
+```
+<rows> <columns>
+<clue_row_1>
+<clue_row_2>
+...
+```
+
+**Example 3×3**:
+
+```
+3 3
+2 . 2
+. 2 .
+2 . 2
+```
+
+**Tips**:
+
+- Use `.` for no clue
+- Use `0`, `1`, `2`, `3` for clue values
+- Separate values with spaces
+- 30-60% density = good balance
+
+### Running Custom Tests
+
+```bash
+# Single puzzle with timing
+time ./cmake-build-debug/slitherlink your_puzzle.txt
+
+# With timeout (macOS)
+gtimeout 300 ./cmake-build-debug/slitherlink your_puzzle.txt
+
+# Batch testing
+for f in puzzles/*.txt; do
+    echo "Testing $f..."
+    time ./cmake-build-debug/slitherlink "$f"
+done
+```
+
+### Complete Documentation
+
+For comprehensive analysis:
+
+📖 **[10x10_OPTIMIZATION_JOURNEY.md](versions/10x10_OPTIMIZATION_JOURNEY.md)**
+
+- Complete story of making 10×10 solvable
+- Tools tried and failed (OR-Tools, constraint propagation)
+- Depth strategies evolution
+- TBB integration breakthrough
+- Real benchmarks and code comparisons
+
+📊 **[PUZZLE_DIFFICULTY_ANALYSIS.md](versions/PUZZLE_DIFFICULTY_ANALYSIS.md)**
+
+- Detailed difficulty factor analysis
+- How algorithm responds to each puzzle type
+- Complete benchmark tables
+- Performance scaling analysis
+- Work-stealing and parallelism metrics
+
+🔧 **[TESTING_GUIDE.md](versions/TESTING_GUIDE.md)**
+
+- Quick reference for all testing commands
+- Troubleshooting guide
+- Performance tuning tips
+- Custom metrics and profiling
+
+---
+
 - 5×5 to 8×8: 11× slower (good pruning)
 - 8×8 to 10×10: 200× slower (exponential)
 

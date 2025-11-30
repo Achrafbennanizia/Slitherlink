@@ -255,8 +255,10 @@ void search(State s, int depth) {
 
 ### V3: Fixed Parallel Depth
 
+> Based on recovered `v03_from_history.cpp` (CPU cap, fixed depth).
+
 ```cpp
-// v03_cpu_limit.cpp
+// v03_from_history.cpp
 struct Solver {
     int maxParallelDepth = 16;  // FIXED VALUE
 
@@ -277,8 +279,10 @@ struct Solver {
 
 ### V4: Adaptive Parallel Depth
 
+> Based on recovered `v04_from_history.cpp` (adaptive depth calculation).
+
 ```cpp
-// v04_dynamic_depth.cpp
+// v04_from_history.cpp
 struct Solver {
     int maxParallelDepth = 16;  // Will be calculated dynamically
 
@@ -381,8 +385,10 @@ int selectNextEdge(const State &s) {
 
 ### V5: Enhanced Heuristics
 
+> Based on recovered `v05_from_history.cpp` (smarter edge scoring).
+
 ```cpp
-// v05_smart_heuristics.cpp
+// v05_from_history.cpp
 int selectNextEdge(const State &s) {
     int best = -1;
     int maxScore = -1;
@@ -488,8 +494,10 @@ void search(State s, int depth) {
 
 ### V6: Queue-Based Propagation
 
+> V06 is summarized here; standalone source was not archived. Logic below reflects the described propagation design.
+
 ```cpp
-// v06_propagation.cpp
+// v06 (summary) - propagation
 bool propagateConstraints(State &s) {
     queue<int> edgeQueue;
 
