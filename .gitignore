@@ -1,0 +1,72 @@
+# C++ Build Artifacts
+*.o
+*.obj
+*.exe
+*.out
+*.app
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+
+# CMake Build Directories
+cmake-build-*/
+build/
+out/
+
+# IDE Specific Files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Backup and Temporary Files
+*.backup
+*.bak
+*.tmp
+*_old.cpp
+*_broken.cpp
+main.cpp.backup
+
+# Compiled Binaries
+slitherlink
+slitherlink_*
+
+# Test Output
+*.log
+test_output/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Intel oneAPI / TBB
+*.tbbvars
+tbbvars.*

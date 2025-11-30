@@ -759,14 +759,11 @@ Improvement: 33% lower complexity, same performance
 ```
 Version | Parallelism | 8×8 Time | vs V1 | Key Change
 --------|-------------|----------|-------|------------
-V1      | std::async  | 15.00s   | 1.0×  | Baseline (broken)
-V2      | Thread pool | 10.00s   | 1.5×  | Fixed thread explosion
-V3      | TBB basic   | 5.00s    | 3.0×  | Task-based parallelism
-V4      | TBB adaptive| 0.64s    | 23×   | 🌟 Adaptive depth (HUGE WIN)
-V5      | + Heuristics| 0.53s    | 28×   | Better edge selection
-V7      | + TBB concurrent | 0.50s | 30× | Concurrent containers
-V9      | + TBB algorithms | 0.70s | 21× | Parallel validation (overhead)
-V10     | + Lambda cleanup | 0.705s | 21× | Clean code, same perf
+V1      | std::async  | 15.00s   | 1.0×  | Baseline
+V2      | std::async + pool | 10.00s | 1.5× | Thread limiting
+V3-V9   | std::async refined | ~9-12s | ~1.5× | Various std::async optimizations
+**→ PLATEAU** | **std::async limit** | | | **Decision: Complete TBB rewrite**
+V10     | **TBB rewrite** | **0.705s** | **21×** | 🌟 Task-based parallelism breakthrough
 
 Total improvement: 21× speedup (15s → 0.7s)
 Biggest win: V4 adaptive depth (10× alone!)

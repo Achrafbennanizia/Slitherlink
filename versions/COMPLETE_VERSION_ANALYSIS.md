@@ -317,11 +317,13 @@ CPU usage: ~500% (50% of 10-core system) ✓
 
 ---
 
-## Version 4: TBB with Adaptive Depth
+## Version 4: std::async with Improved State Management
 
 ### Goal
 
-Dynamically calculate optimal parallel depth based on puzzle size and density
+Continue refining std::async implementation with better state handling
+
+**Note**: Despite the section title, V4 in version.txt does NOT have TBB. The adaptive depth algorithm described here is conceptual - it was implemented later in the TBB rewrite (main.cpp V10).
 
 ### Key Addition: Adaptive Depth Calculation
 
