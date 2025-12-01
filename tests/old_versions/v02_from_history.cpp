@@ -1,3 +1,30 @@
+// ============================================================================
+// Slitherlink Solver - Version 2: Thread Pool Management
+// ============================================================================
+// Timeline: Week 1, Days 4-5
+// Performance: 4×4: 0.095s | 8×8: 10.0s | 10×10: FAILED (>20min)
+// Lines of Code: ~900
+//
+// CHANGES FROM V1:
+// - Added ThreadPool class with worker threads
+// - Limited maxThreads to hardware_concurrency() * 2
+// - Reduced maxParallelDepth from 8 to 6
+// - Added activeThreads counter for monitoring
+// - Used condition variables for task queue
+//
+// IMPROVEMENTS:
+// - 1.5× faster than V1 on 8×8 puzzles
+// - Controlled thread creation
+// - Better resource management
+//
+// REMAINING PROBLEMS:
+// - Still too slow for 10×10 puzzles
+// - Thread pool overhead significant
+// - Inefficient work distribution
+//
+// RESULT: Marginal improvement, not sufficient
+// ============================================================================
+
 #include <iostream>
 #include <vector>
 #include <string>

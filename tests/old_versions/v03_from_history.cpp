@@ -1,3 +1,30 @@
+// ============================================================================
+// Slitherlink Solver - Version 3: Work-Stealing Queue
+// ============================================================================
+// Timeline: Week 1, Days 6-7
+// Performance: 4×4: 0.090s | 8×8: 8.5s | 10×10: FAILED (>15min)
+// Lines of Code: ~1000
+//
+// CHANGES FROM V2:
+// - Implemented work-stealing deque for each thread
+// - Load balancing between threads
+// - Reduced lock contention
+// - Better task distribution
+//
+// IMPROVEMENTS:
+// - 1.8× faster than V1 on 8×8
+// - Better CPU utilization
+// - More even workload distribution
+//
+// PROBLEMS:
+// - Complex implementation
+// - Still not fast enough for 10×10
+// - Race conditions in work stealing
+// - Debugging nightmares
+//
+// VERDICT: Right direction, wrong execution
+// ============================================================================
+
 #include <iostream>
 #include <vector>
 #include <string>

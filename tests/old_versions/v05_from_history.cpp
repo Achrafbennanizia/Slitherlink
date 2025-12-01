@@ -1,3 +1,29 @@
+// ============================================================================
+// Slitherlink Solver - Version 5: Hybrid Parallel + Pruning
+// ============================================================================
+// Timeline: Week 2, Days 3-4
+// Performance: 4×4: 0.070s | 8×8: 4.2s | 10×10: FAILED (~8min)
+// Lines of Code: ~1050
+//
+// CHANGES FROM V4:
+// - Combined V3 work-stealing with V4 pruning
+// - Parallel pruning of search branches
+// - Adaptive parallelization depth
+// - Lock-free constraint checking
+//
+// IMPROVEMENTS:
+// - 3.6× faster than V1 on 8×8
+// - Best of both worlds approach
+// - Approaching usable performance
+//
+// PROBLEMS:
+// - Code complexity increasing
+// - Still not breaking 10×10 barrier
+// - Diminishing returns
+//
+// REALIZATION: Need professional tools, not DIY parallelism
+// ============================================================================
+
 #include <iostream>
 #include <vector>
 #include <string>

@@ -1,3 +1,29 @@
+// ============================================================================
+// Slitherlink Solver - Version 4: Smart Pruning Strategies
+// ============================================================================
+// Timeline: Week 2, Days 1-2
+// Performance: 4×4: 0.080s | 8×8: 6.0s | 10×10: FAILED (>10min)
+// Lines of Code: ~950
+//
+// CHANGES FROM V3:
+// - Early constraint checking before recursion
+// - Impossible state detection
+// - Smart edge ordering (most constrained first)
+// - Propagation of forced edge decisions
+//
+// IMPROVEMENTS:
+// - 2.5× faster than V1 on 8×8
+// - Reduced search space by ~40%
+// - Better algorithmic efficiency
+//
+// PROBLEMS:
+// - Still sequential bottlenecks
+// - Pruning overhead on simple puzzles
+// - 10×10 still unreachable
+//
+// INSIGHT: Good algorithms > brute force parallelism
+// ============================================================================
+
 #include <iostream>
 #include <vector>
 #include <string>
