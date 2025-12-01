@@ -1,0 +1,115 @@
+==========================================
+  Slitherlink Solver Benchmark Suite
+==========================================
+
+Date: 2025-12-01 00:40:55
+Solver: ./cmake-build-debug/slitherlink
+Timeout: 300s per puzzle
+
+==========================================
+  Running Benchmarks
+==========================================
+
+Testing: example10x10 (10 10)
+Clues: 16
+Time: Unknown
+Status: ⚠️  No solution found
+
+Testing: example10x10_dense (10 10)
+Clues: 13
+Time: Unknown
+Status: ⚠️  No solution found
+
+Testing: example11x11 (11 11)
+Clues: 19
+Time: Unknown
+Status: ⚠️  No solution found
+
+Testing: example12x12 (12 12)
+Clues: 0
+Time: Unknown
+Status: ⚠️  No solution found
+
+Testing: example12x12_simple (12 12)
+Clues: 0
+Time: Unknown
+Status: ⚠️  No solution found
+
+Testing: example15x15 (15 15)
+Clues: 28
+Time: Unknown
+Status: ⚠️  No solution found
+
+Testing: example20x20 (20 20)
+Clues: 15
+Time: Unknown
+Status: ⚠️  No solution found
+
+Testing: example20x20_dense (20 20)
+Clues: 22
+Time: Unknown
+Status: ⚠️  No solution found
+
+Testing: example4x4 (4 4)
+Clues: 3
+Time: Unknown
+Status: ⚠️  No solution found
+
+Testing: example5x5 (5 5)
+Clues: 6
+Time: Unknown
+Status: ⚠️  No solution found
+
+Testing: example5x5_easy (5 5)
+Clues: 5
+Time: Unknown
+Status: ⚠️  No solution found
+
+Testing: example5x5_hard (5 5)
+Clues: 5
+Time: Unknown
+Status: ⚠️  No solution found
+
+Testing: example6x6 (6 6)
+Clues: 8
+Time: Unknown
+Status: ⚠️  No solution found
+
+Testing: example6x6_medium (6 6)
+Clues: 8
+Time: Unknown
+Status: ⚠️  No solution found
+
+Testing: example7x7 (7 7)
+Clues: 8
+Time: Unknown
+Status: ⚠️  No solution found
+
+Testing: example7x7_medium (7 7)
+Clues: 8
+Time: Unknown
+Status: ⚠️  No solution found
+
+Testing: example8x8 (8 8)
+Clues: 0
+Time: Unknown
+Status: ⚠️  No solution found
+
+Testing: example8x8_box (8 8)
+Clues: 12
+Time: Unknown
+Status: ⚠️  No solution found
+
+Testing: example8x8_simple (8 8)
+Clues: 0
+Time: Unknown
+Status: ⚠️  No solution found
+
+Testing: example9x9 (9 9)
+Clues: 14
+Time: Unknown
+Status: ⚠️  No solution found
+
+==========================================
+  Benchmark Complete
+==========================================

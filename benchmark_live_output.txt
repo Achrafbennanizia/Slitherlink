@@ -1,0 +1,32 @@
+Warning: No timeout command found. Tests will run without time limits.
+╔════════════════════════════════════════════════════════════╗
+║   COMPREHENSIVE SLITHERLINK BENCHMARK SUITE                ║
+║   Testing all sizes (4×4 to 20×20) × all difficulties     ║
+╚════════════════════════════════════════════════════════════╝
+
+Starting benchmark suite...
+
+[0;34m═══ 4x4 Puzzles ═══[0m
+Testing 4x4_easy                  ... [0;32mPASS[0m (143ms)
+Testing 4x4_medium                ... [0;32mPASS[0m (65ms)
+Testing 4x4_hard                  ... [0;32mPASS[0m (62ms)
+Testing 4x4_extreme               ... [0;32mPASS[0m (62ms)
+Testing 4x4_original              ... [0;32mPASS[0m (63ms)
+
+[0;34m═══ 5x5 Puzzles ═══[0m
+Testing 5x5_easy                  ... [0;34mNO SOLUTION[0m (98ms)
+Testing 5x5_medium                ... [0;32mPASS[0m (75ms)
+Testing 5x5_hard                  ... [0;32mPASS[0m (63ms)
+Testing 5x5_extreme               ... [0;32mPASS[0m (92ms)
+Testing 5x5_original              ... [0;32mPASS[0m (123ms)
+
+[0;34m═══ 6x6 Puzzles ═══[0m
+Testing 6x6_easy                  ... [0;32mPASS[0m (1.51s)
+Testing 6x6_medium                ... [0;32mPASS[0m (459ms)
+Testing 6x6_hard                  ... [0;32mPASS[0m (1.90s)
+Testing 6x6_extreme               ... [0;32mPASS[0m (67ms)
+Testing 6x6_original              ... [0;32mPASS[0m (1m 48.1s)
+
+[0;34m═══ 7x7 Puzzles ═══[0m
+Testing 7x7_easy                  ... [0;34mNO SOLUTION[0m (2m 51.0s)
+Testing 7x7_medium                ... 

@@ -1,0 +1,24 @@
+Comprehensive Slitherlink Benchmark Results
+Generated: Mon Dec  1 01:13:50 CET 2025
+═══════════════════════════════════════════════════════════════
+
+
+═══ 4x4 Puzzles ═══
+4x4_easy: SOLVED in 492ms (solutions: 1, nodes: )
+4x4_medium: SOLVED in 65ms (solutions: 1, nodes: )
+4x4_hard: SOLVED in 66ms (solutions: 1, nodes: )
+4x4_extreme: SOLVED in 67ms (solutions: 1, nodes: )
+4x4_original: SOLVED in 65ms (solutions: 1, nodes: )
+
+═══ 5x5 Puzzles ═══
+5x5_easy: NO SOLUTION in 98ms
+5x5_medium: SOLVED in 115ms (solutions: 1, nodes: )
+5x5_hard: SOLVED in 65ms (solutions: 1, nodes: )
+5x5_extreme: SOLVED in 96ms (solutions: 1, nodes: )
+5x5_original: SOLVED in 66ms (solutions: 1, nodes: )
+
+═══ 6x6 Puzzles ═══
+6x6_easy: SOLVED in 2.01s (solutions: 1, nodes: )
+6x6_medium: SOLVED in 478ms (solutions: 1, nodes: )
+6x6_hard: SOLVED in 10.86s (solutions: 1, nodes: )
+6x6_extreme: SOLVED in 80ms (solutions: 1, nodes: )
