@@ -2,21 +2,52 @@
 
 Complete documentation for the Slitherlink solver project.
 
+## 📄 Documentation Organization
+
+The documentation is organized into three main categories:
+
+1. **guides/** - Practical how-to guides for users and developers
+2. **analysis/** - In-depth performance analysis and optimization stories
+3. **history/** - Development timeline and code evolution
+
+**Total**: 8,299 lines across 14 files
+
 ## 📁 Directory Structure
 
 ```
 docs/
-├── README.md (this file)
-├── guides/                  # User and developer guides
-├── analysis/                # Performance and optimization analysis
-├── history/                 # Development history and evolution
-├── CODE_EXPORT_INDEX.md     # Index of code versions
-└── VERSION_ARCHIVE_README.md # Version archive overview
+├── README.md (this file)           # Start here
+├── guides/                        # Practical guides
+│   ├── TESTING_GUIDE.md           # How to test and benchmark
+│   └── NAVIGATION_GUIDE.md        # How to navigate docs
+├── analysis/                      # Performance deep dives
+│   ├── 10x10_OPTIMIZATION_JOURNEY.md   # Complete optimization story (1,862 lines)
+│   ├── PUZZLE_DIFFICULTY_ANALYSIS.md   # Difficulty factors (696 lines)
+│   ├── COMPLETE_VERSION_ANALYSIS.md    # V1-V10 analysis (931 lines)
+│   └── TBB_INTEGRATION_STORY.md        # TBB parallelism (792 lines)
+└── history/                       # Development evolution
+    ├── CODE_EVOLUTION.md          # Side-by-side code comparisons (580 lines)
+    ├── VERSION_HISTORY.md         # Timeline (145 lines)
+    ├── CONVERSATION_HISTORY.md    # Development narrative (1,101 lines)
+    ├── DEVELOPMENT_ARCHIVE.md     # Complete archive (380 lines)
+    └── UMSETZUNG_STRATEGIE.md     # Implementation strategy (104 lines)
 ```
 
 ---
 
-## 🚀 Quick Start Guides
+## ⚡ Quick Reference
+
+**I want to...**
+
+- **Run tests** → [guides/TESTING_GUIDE.md](guides/TESTING_GUIDE.md)
+- **Understand performance** → [analysis/PUZZLE_DIFFICULTY_ANALYSIS.md](analysis/PUZZLE_DIFFICULTY_ANALYSIS.md)
+- **See code evolution** → [history/CODE_EVOLUTION.md](history/CODE_EVOLUTION.md)
+- **Learn about TBB** → [analysis/TBB_INTEGRATION_STORY.md](analysis/TBB_INTEGRATION_STORY.md)
+- **Find specific info** → [guides/NAVIGATION_GUIDE.md](guides/NAVIGATION_GUIDE.md)
+
+---
+
+## 🚀 Getting Started
 
 ### For Users
 
@@ -159,12 +190,15 @@ Implementation strategy and planning
 
 ### Performance Improvements (V1 → V10)
 
+**Note**: Performance varies significantly by puzzle characteristics. Times are typical observations.
+
 ```
-Puzzle Size | V1 Time    | V10 Time | Speedup
-------------|------------|----------|--------
-4×4         | 0.100s     | 0.0013s  | 77×
-8×8         | 15.0s      | 0.705s   | 21×
-10×10       | TIMEOUT    | ~130s    | ∞ → finite
+Puzzle Size | V1 Time    | V10 Time  | Speedup
+------------|------------|-----------|----------
+4×4         | 0.100s     | ~0.001s   | ~100×
+5×5         | 0.500s     | ~0.001s   | ~500×
+8×8         | 15.0s      | ~0.5-1s   | ~15-30× (variable)
+10×10       | TIMEOUT    | TIMEOUT   | Still challenging
 ```
 
 ### Algorithm Characteristics

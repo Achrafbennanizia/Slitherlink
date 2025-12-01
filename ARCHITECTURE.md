@@ -1,5 +1,17 @@
 # Project Architecture
 
+This document describes the file organization and structure of the Slitherlink solver project.
+For code architecture and algorithms, see the main [README.md](README.md).
+
+## Overview
+
+- **Language**: C++17
+- **Build System**: CMake
+- **Parallelism**: Intel Threading Building Blocks (TBB)
+- **Code Lines**: 1,023 (main.cpp) + 9,006 (historical versions)
+- **Documentation**: 8,299 lines across 14 files
+- **Test Puzzles**: 50 files (4×4 to 20×20)
+
 ## Directory Structure
 
 ```
@@ -38,7 +50,7 @@ Slitherlink/
 │   ├── benchmark_results.txt
 │   └── benchmark_live_output.txt
 │
-├── 📁 docs/                       # Complete documentation (5,900+ lines)
+├── 📁 docs/                       # Complete documentation (8,299 lines)
 │   ├── 📄 README.md              # Documentation index and navigation
 │   ├── 📄 CODE_EXPORT_INDEX.md   # Code version index
 │   ├── 📄 VERSION_ARCHIVE_README.md  # Version archive overview
@@ -74,30 +86,48 @@ Slitherlink/
 
 ### 1. **Separation of Concerns**
 
-- **Source code** (main.cpp) in root for easy access
-- **Puzzles** separate from documentation
-- **Scripts** in dedicated directory
-- **Documentation** organized by purpose
+- **Source code** (main.cpp) in root for immediate visibility
+- **Build artifacts** in cmake-build-debug/ (gitignored)
+- **Puzzles** separate from code (puzzles/examples/)
+- **Scripts** for automation (scripts/)
+- **Documentation** organized by purpose (docs/)
+- **Historical code** preserved separately (tests/old_versions/)
 
 ### 2. **Documentation Structure**
 
+Three-tier organization:
+
 ```
 docs/
-├── guides/      → How-to and references
-├── analysis/    → Performance and optimization deep dives
-└── history/     → Development evolution and decisions
+├── guides/      → Practical how-to (TESTING_GUIDE.md, NAVIGATION_GUIDE.md)
+├── analysis/    → Technical deep dives (optimization, performance, TBB)
+└── history/     → Evolution and decisions (versions, conversations, code)
 ```
 
-### 3. **Clear Naming**
+This structure separates:
 
-- `examples/` for puzzle files (self-explanatory)
-- `old_versions/` for historical code (archival)
-- `analysis/` for performance docs (technical depth)
-- `guides/` for user-facing docs (practical)
+- **What to do** (guides)
+- **How it works** (analysis)
+- **How it evolved** (history)
+
+### 3. **Clear Naming Conventions**
+
+- `example*.txt` - Puzzle files with clear size indicators
+- `*_easy.txt`, `*_hard.txt` - Difficulty-graded variants
+- `v01_*.cpp`, `v10_*.cpp` - Version-numbered code files
+- `*_GUIDE.md` - User-facing documentation
+- `*_ANALYSIS.md` - Technical documentation
+- `*_HISTORY.md` - Historical documentation
 
 ### 4. **Discoverability**
 
-- README.md at root → Quick start
+Multiple entry points for different needs:
+
+- **Quick start** → README.md at root
+- **Testing** → scripts/ directory
+- **Documentation** → docs/README.md
+- **Code structure** → ARCHITECTURE.md (this file)
+- **Complete history** → COMPLETE_CODE_HISTORY.md
 - docs/README.md → Documentation hub
 - Each subdirectory has clear purpose
 - Cross-references between related docs

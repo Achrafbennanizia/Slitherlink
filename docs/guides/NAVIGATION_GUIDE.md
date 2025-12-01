@@ -1,37 +1,38 @@
 # 🗺️ Complete Documentation Map
 
-This is your guide to navigating all the documentation and code for the Slitherlink Solver project.
+**Total Documentation:** 8,299 lines across 14 files  
+**Total Code:** 1,023 lines (main.cpp) + 9,006 lines (historical versions)
 
-## 📚 Documentation Hierarchy
+This guide helps you navigate all documentation and code for the Slitherlink Solver project.
+
+## 📚 Documentation Structure
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                     START HERE                               │
-│                 Main README.md                               │
-│          (Project overview & current features)               │
-└─────────────────┬───────────────────────────────────────────┘
-                  │
-                  ├──────────────────────────────────────────┐
-                  │                                          │
-                  ▼                                          ▼
-    ┌─────────────────────────┐              ┌─────────────────────────┐
-    │   Quick Start Users     │              │   Deep Dive Learners    │
-    └────────────┬────────────┘              └────────────┬────────────┘
-                 │                                        │
-                 ▼                                        ▼
-    ┌─────────────────────────┐              ┌─────────────────────────┐
-    │  Build & Usage Section  │              │ versions/README.md      │
-    │  (Main README)          │              │ (Archive overview)      │
-    └─────────────────────────┘              └────────────┬────────────┘
-                                                          │
-                                                          ├──────────────┬─────────────┐
-                                                          ▼              ▼             ▼
-                                             ┌──────────────────┐  ┌──────────┐  ┌──────────┐
-                                             │ CONVERSATION_    │  │ VERSION_ │  │ DEVELOP_ │
-                                             │ HISTORY.md       │  │ HISTORY. │  │ MENT_    │
-                                             │ (50+ pages)      │  │ md       │  │ ARCHIVE. │
-                                             │ Complete story   │  │ (Quick)  │  │ md       │
-                                             └──────────────────┘  └──────────┘  └──────────┘
+Documentation (8,299 lines)
+├── Root Level
+│   ├── README.md (3,328 lines)           → Main project overview
+│   ├── ARCHITECTURE.md (263 lines)      → File organization
+│   └── COMPLETE_CODE_HISTORY.md (183 lines) → Version evolution
+│
+├── docs/
+│   ├── README.md (265 lines)            → Documentation index
+│   │
+│   ├── guides/                          → Practical how-to
+│   │   ├── TESTING_GUIDE.md (421 lines)
+│   │   └── NAVIGATION_GUIDE.md (342 lines)
+│   │
+│   ├── analysis/                        → Technical deep dives
+│   │   ├── COMPLETE_VERSION_ANALYSIS.md (68 lines)
+│   │   ├── TBB_INTEGRATION_STORY.md (792 lines)
+│   │   ├── 10x10_OPTIMIZATION_JOURNEY.md
+│   │   └── PUZZLE_DIFFICULTY_ANALYSIS.md
+│   │
+│   └── history/                         → Development journey
+│       ├── CONVERSATION_HISTORY.md (1,101 lines)
+│       └── VERSION_ARCHIVE_README.md (117 lines)
+│
+└── results/
+    └── BENCHMARK_RESULTS.md (124 lines) → Test results
 ```
 
 ## 📖 Reading Order by Goal
@@ -82,26 +83,42 @@ This is your guide to navigating all the documentation and code for the Slitherl
 
 ## 📄 File Guide
 
-### In Root Directory
+### Root Directory
 
-| File               | Size        | Purpose                        | Read Time |
-| ------------------ | ----------- | ------------------------------ | --------- |
-| **README.md**      | ~2900 lines | Complete project documentation | 45 min    |
-| **main.cpp**       | 1023 lines  | Current production code (V10)  | 30 min    |
-| **CMakeLists.txt** | ~30 lines   | Build configuration            | 2 min     |
+| File                         | Size        | Purpose                       | Read Time |
+| ---------------------------- | ----------- | ----------------------------- | --------- |
+| **README.md**                | 3,328 lines | Complete project overview     | 45 min    |
+| **ARCHITECTURE.md**          | 263 lines   | File organization & structure | 15 min    |
+| **COMPLETE_CODE_HISTORY.md** | 183 lines   | Version evolution summary     | 10 min    |
+| **main.cpp**                 | 1,023 lines | Current production code (V10) | 30 min    |
+| **CMakeLists.txt**           | ~30 lines   | Build configuration           | 2 min     |
 
-### In `versions/` Directory
+### docs/ Directory
 
-| File                        | Size        | Purpose                        | Read Time  |
-| --------------------------- | ----------- | ------------------------------ | ---------- |
-| **README.md**               | ~400 lines  | Archive navigation guide       | 10 min     |
-| **CONVERSATION_HISTORY.md** | ~1000 lines | Complete chat logs & decisions | 90 min     |
-| **VERSION_HISTORY.md**      | ~200 lines  | Version comparison & stats     | 15 min     |
-| **DEVELOPMENT_ARCHIVE.md**  | ~300 lines  | How to use archive             | 20 min     |
-| **v01_baseline.cpp**        | 800 lines   | Week 1 - Initial code          | 25 min     |
-| **v10_final.cpp**           | 987 lines   | Week 4 - Final code            | 30 min     |
-| **compile_all_versions.sh** | ~60 lines   | Build script                   | Executable |
-| **benchmark_versions.sh**   | ~80 lines   | Performance testing            | Executable |
+| File                                            | Size        | Purpose                      | Read Time |
+| ----------------------------------------------- | ----------- | ---------------------------- | --------- |
+| **docs/README.md**                              | 265 lines   | Documentation navigation hub | 10 min    |
+| **docs/guides/TESTING_GUIDE.md**                | 421 lines   | How to test and benchmark    | 15 min    |
+| **docs/guides/NAVIGATION_GUIDE.md**             | 342 lines   | This file (meta!)            | 15 min    |
+| **docs/analysis/COMPLETE_VERSION_ANALYSIS.md**  | 68 lines    | Aligned version history      | 5 min     |
+| **docs/analysis/TBB_INTEGRATION_STORY.md**      | 792 lines   | TBB technical story          | 45 min    |
+| **docs/analysis/10x10_OPTIMIZATION_JOURNEY.md** | ~400 lines  | 10×10 optimization attempts  | 25 min    |
+| **docs/analysis/PUZZLE_DIFFICULTY_ANALYSIS.md** | ~200 lines  | Difficulty factors analysis  | 15 min    |
+| **docs/history/CONVERSATION_HISTORY.md**        | 1,101 lines | Complete chat logs           | 90 min    |
+| **docs/history/VERSION_ARCHIVE_README.md**      | 117 lines   | Archive guide                | 8 min     |
+
+### tests/old_versions/ (9,006 lines total)
+
+| File                        | Size         | Purpose                         |
+| --------------------------- | ------------ | ------------------------------- | ---------- |
+| v01_baseline.cpp            | ~1,200 lines | V1: Baseline std::async         |
+| v02_threadpool.cpp          | ~1,300 lines | V2: Thread control              |
+| v03-v09\_\*.cpp             | ~6,000 lines | V3-V9: Incremental improvements |
+| v10_final.cpp               | ~1,500 lines | V10: TBB rewrite                |
+| **v01_baseline.cpp**        | 800 lines    | Week 1 - Initial code           | 25 min     |
+| **v10_final.cpp**           | 987 lines    | Week 4 - Final code             | 30 min     |
+| **compile_all_versions.sh** | ~60 lines    | Build script                    | Executable |
+| **benchmark_versions.sh**   | ~80 lines    | Performance testing             | Executable |
 
 ## 🎯 Quick Access by Topic
 

@@ -1,52 +1,55 @@
 # Slitherlink Solver
 
-A high-performance parallel Slitherlink puzzle solver using Intel oneAPI Threading Building Blocks (TBB) with intelligent backtracking and constraint propagation.
+A high-performance parallel Slitherlink puzzle solver using Intel oneAPI Threading Building Blocks (TBB) with intelligent backtracking and constraint propagation. Versions **V1–V9** (std::async era) are archived under `tests/old_versions/`; **V10** is the first TBB rewrite and is the basis of `main.cpp`.
 
 ## 📁 Project Structure
 
 ```
 Slitherlink/
-├── main.cpp                 # Main solver implementation (V10)
-├── CMakeLists.txt          # Build configuration
-├── ARCHITECTURE.md         # Detailed structure guide
-├── README.md               # This file
+├── main.cpp                 # Main solver implementation (V10 with TBB)
+├── CMakeLists.txt          # Build configuration with TBB support
+├── README.md               # This file - project overview
+├── ARCHITECTURE.md         # Detailed project structure
+├── COMPLETE_CODE_HISTORY.md # All code versions documented
 │
-├── puzzles/                # Test puzzles (50 total)
-│   └── examples/           # Example puzzles (4×4 to 20×20)
-│                          # Each size has: easy, medium, hard, extreme variants
+├── puzzles/examples/       # 50 test puzzles (4×4 to 20×20)
+│   ├── example4x4.txt      # Original puzzles
+│   ├── example4x4_easy.txt # Difficulty-graded variants
+│   └── ...                 # Easy, Medium, Hard, Extreme for each size
 │
-├── scripts/                # Automation scripts (8 total)
-│   ├── comprehensive_benchmark.sh  # Tests all 50 puzzles
-│   ├── validate_and_benchmark.sh   # Focused validation suite
-│   ├── benchmark_suite.sh          # Original benchmark
-│   └── ...                         # Additional testing scripts
+├── scripts/                # 8 automation scripts
+│   ├── benchmark_suite.sh  # Comprehensive benchmark automation
+│   ├── test_originals.sh   # Test original puzzles
+│   └── ...                 # Various testing utilities
 │
-├── results/                # Benchmark results and reports
-│   ├── BENCHMARK_RESULTS.md        # Latest comprehensive results
-│   └── ...                         # Historical benchmark outputs
+├── results/                # Benchmark outputs and reports
+│   └── BENCHMARK_RESULTS.md # Latest benchmark analysis
 │
-├── docs/                   # Complete documentation (5,900+ lines)
-│   ├── README.md           # Documentation index
+├── docs/                   # Complete documentation (8,299 lines)
+│   ├── README.md           # Documentation index and navigation
 │   ├── guides/             # User & developer guides
 │   │   ├── TESTING_GUIDE.md
 │   │   └── NAVIGATION_GUIDE.md
-│   ├── analysis/           # Performance analysis & optimization
-│   │   ├── 10x10_OPTIMIZATION_JOURNEY.md (1,819 lines)
-│   │   ├── PUZZLE_DIFFICULTY_ANALYSIS.md (696 lines)
-│   │   ├── COMPLETE_VERSION_ANALYSIS.md (820 lines)
-│   │   └── TBB_INTEGRATION_STORY.md (792 lines)
-│   └── history/            # Development history
+│   ├── analysis/           # Performance deep dives (4,863 lines)
+│   │   ├── 10x10_OPTIMIZATION_JOURNEY.md
+│   │   ├── PUZZLE_DIFFICULTY_ANALYSIS.md
+│   │   ├── COMPLETE_VERSION_ANALYSIS.md
+│   │   └── TBB_INTEGRATION_STORY.md
+│   └── history/            # Development evolution (1,859 lines)
 │       ├── CODE_EVOLUTION.md
 │       ├── VERSION_HISTORY.md
 │       └── CONVERSATION_HISTORY.md
 │
-└── tests/                  # Test infrastructure
-    └── old_versions/       # Historical code versions (V1-V10)
-        ├── v01_baseline.cpp
-        ├── v02_threadpool.cpp
-        ├── ...
-        └── version.txt     # Complete version archive
+└── tests/old_versions/     # Historical code (V1–V10 snapshots)
+    ├── v01_baseline.cpp    # Baseline std::async
+    ├── v02_threadpool.cpp  # Thread-limited async experiment
+    ├── v03_from_history.cpp / v04_from_history.cpp / v05_from_history.cpp
+    ├── v07_from_history.cpp / v09_from_history.cpp
+    ├── v10_final.cpp       # First TBB version (basis for main.cpp)
+    └── version.txt         # Notes for V1–V9 (async era)
 ```
+
+**Version reality:** V1–V9 are std::async-only; V10 is the first and only TBB rewrite (now `main.cpp`). If an older note suggests gradual TBB integration before V10, treat it as historical commentary rather than code.
 
 ## Table of Contents
 
@@ -139,27 +142,48 @@ cat benchmark_detailed.log
 
 ### Version Evolution (V1 → V10)
 
+**⚠️ Important**: Performance varies significantly based on puzzle characteristics (clue density,
+distribution, symmetry). Times shown are typical observed values, not guarantees.
+
 ```
 Puzzle | V1 (baseline) | V10 (TBB) | Improvement
 -------|---------------|-----------|-------------
-4×4    | 0.100s        | 0.0013s   | 77× faster
-8×8    | 15.0s         | 0.705s    | 21× faster
-10×10  | TIMEOUT       | ~130s     | ∞ → solvable!
+4×4    | 0.100s        | ~0.001s   | ~100× faster
+5×5    | 0.500s        | ~0.001s   | ~500× faster
+8×8    | 15.0s         | ~0.5-1s   | ~15-30× faster (varies)
+10×10  | TIMEOUT       | TIMEOUT   | Still challenging
 ```
 
-### Key Breakthroughs
+**Note**: 10×10 and larger puzzles often timeout. The solver is optimized for 4×4 to 8×8 puzzles.
 
-1. **Adaptive Depth Strategy** → 3× improvement
-   - Size-based tiers (10×10 gets depth 20+)
-   - Density adjustment for sparse puzzles
-2. **TBB Work-Stealing** → 2× improvement
-   - Low overhead (1μs vs 50μs for std::async)
-   - 95%+ efficiency on irregular workloads
-3. **Smart Heuristics** → 1.8× improvement
-   - Priority-based edge selection
-   - Forced moves first, binary decisions second
+### Key Optimizations
 
-**Total**: 10.8× improvement + made 10×10 solvable
+1. **Adaptive Depth Strategy**
+
+   - Size-based tiers: 4×4→depth 8, 8×8→depth 14, 10×10→depth 20+
+   - Density adjustment: sparse puzzles get +6 depth for more parallelism
+   - Prevents under-parallelization on small puzzles and over-parallelization on large ones
+
+2. **TBB Work-Stealing Parallelism**
+
+   - Low overhead: ~1μs task creation vs 50μs for std::async
+   - Automatic load balancing across threads
+   - 95%+ CPU efficiency on irregular search trees
+   - Limited to 50% CPU usage (configurable)
+
+3. **Smart Edge Selection Heuristics**
+
+   - Priority 1: Forced moves (degree-1 points) - score 10,000
+   - Priority 2: Binary decisions (cells with 1 undecided edge) - score 5,000
+   - Priority 3: Near-constraint cells - score 1,000-2,000
+   - Dramatically reduces search tree size
+
+4. **Constraint Propagation**
+   - Bidirectional propagation from cells and points
+   - Queue-based for efficiency
+   - Early contradiction detection
+
+**Combined Impact**: ~15-30× improvement on 8×8 puzzles, ~100× on 4×4
 
 ### Puzzle Difficulty Impact
 
@@ -173,18 +197,6 @@ Reason: Density > quantity
 ```
 
 **See [docs/analysis/](docs/analysis/) for complete analysis**
-
-# Summary table
-
-column -t -s',' benchmark_results.csv | head -20
-
-# Full detailed output
-
-cat benchmark_detailed.log
-
-````
-
-**See [Testing & Benchmarking](#testing--benchmarking) for complete guide**
 
 ---
 
@@ -200,7 +212,7 @@ struct Grid {
     vector<int> clues;     // Cell clues (-1 for no clue, 0-3 for clue value)
     int cellIndex(int r, int c) const;  // Convert (row, col) to linear index
 };
-````
+```
 
 #### `Edge`
 

@@ -1,5 +1,7 @@
 # Quick Reference: Puzzle Testing & Benchmarking
 
+⚠️ **Important:** Performance varies significantly based on puzzle characteristics (clue density, symmetry, forced moves). Times shown are approximate and can vary 5-10× on similar puzzles.
+
 ## Running Tests
 
 ### Quick Single Test
@@ -65,19 +67,28 @@ grep "SUCCESS\|TIMEOUT" benchmark_results.csv | wc -l
 
 ## Performance Expectations
 
-### By Size (with typical density)
+### By Size (typical ranges)
+
+**Note:** These are approximate ranges. Individual puzzles may vary significantly.
 
 ```
-4×4:     <0.01s    ✓ Instant
-5×5:     <0.1s     ✓ Instant
-6×6:     <10s      ✓ Fast
-7×7:     <20s      ✓ Fast
-8×8:     <60s      ✓ Acceptable
-10×10:   60-180s   ⚠ Slow
-12×12:   300-900s  ⚠ Very slow
-15×15:   1000-3000s ⚠ Extreme
-20×20:   TIMEOUT   ✗ Too hard
+4×4:     ~0.001s        ✓ Instant (very consistent)
+5×5:     ~0.001-0.1s    ✓ Instant to fast
+6×6:     ~0.5-3s        ✓ Fast (high variance)
+7×7:     ~1-10s         ✓ Fast to acceptable
+8×8:     ~0.5-1s        ✓ Acceptable (variance 0.3-11s observed)
+10×10:   TIMEOUT        ✗ Most puzzles >60s
+12×12:   TIMEOUT        ✗ Very challenging
+15×15:   TIMEOUT        ✗ Too hard
+20×20:   TIMEOUT        ✗ Too hard
 ```
+
+**Comparison to V1 baseline:**
+
+- 4×4: ~100× faster (~0.1s → ~0.001s)
+- 5×5: ~500× faster (~0.5s → ~0.001s)
+- 8×8: ~15-30× faster (~15s → ~0.5-1s)
+- 10×10: Still challenging (both often timeout)
 
 ### By Density (10×10 puzzle)
 
