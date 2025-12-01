@@ -8,20 +8,35 @@ Slitherlink/
 ├── 📄 main.cpp                    # Main solver implementation (V10 with TBB)
 ├── 📄 CMakeLists.txt              # Build configuration
 ├── 📄 README.md                   # Project overview and quick start
+├── 📄 ARCHITECTURE.md             # This file - project structure guide
 ├── 📄 .gitignore                  # Git ignore patterns
 │
-├── 📁 puzzles/                    # Test puzzles
+├── 📁 puzzles/                    # Test puzzles (50 total)
 │   └── 📁 examples/               # Example puzzles (4×4 to 20×20)
 │       ├── example4x4.txt
+│       ├── example4x4_easy.txt
+│       ├── example4x4_medium.txt
+│       ├── example4x4_hard.txt
+│       ├── example4x4_extreme.txt
 │       ├── example8x8_simple.txt
 │       ├── example10x10.txt
-│       └── ... (17 total)
+│       └── ... (50 total puzzles)
 │
-├── 📁 scripts/                    # Automation and testing scripts
-│   ├── benchmark_suite.sh         # Comprehensive benchmark automation
+├── 📁 scripts/                    # Automation and testing scripts (8 total)
+│   ├── benchmark_suite.sh         # Original benchmark automation
+│   ├── comprehensive_benchmark.sh # Tests all 50 puzzles
+│   ├── validate_and_benchmark.sh  # Focused validation suite
+│   ├── quick_sample_benchmark.sh  # Quick representative test
+│   ├── test_originals.sh         # Tests original puzzles only
 │   ├── test_all.sh               # Quick test runner
 │   ├── benchmark_versions.sh      # Historical version benchmarks
 │   └── compile_all_versions.sh    # Compile all old versions
+│
+├── 📁 results/                    # Benchmark results and reports
+│   ├── BENCHMARK_RESULTS.md       # Latest comprehensive benchmark
+│   ├── benchmark_results_comprehensive.txt
+│   ├── benchmark_results.txt
+│   └── benchmark_live_output.txt
 │
 ├── 📁 docs/                       # Complete documentation (5,900+ lines)
 │   ├── 📄 README.md              # Documentation index and navigation
@@ -97,7 +112,9 @@ docs/
 
 #### Run benchmarks
 
-→ `scripts/benchmark_suite.sh`
+→ `scripts/comprehensive_benchmark.sh` (all 50 puzzles)
+→ `scripts/validate_and_benchmark.sh` (focused test)
+→ `results/BENCHMARK_RESULTS.md` (latest results)
 → `docs/guides/TESTING_GUIDE.md` for details
 
 #### Understand why my puzzle is slow

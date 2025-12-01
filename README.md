@@ -8,14 +8,22 @@ A high-performance parallel Slitherlink puzzle solver using Intel oneAPI Threadi
 Slitherlink/
 ├── main.cpp                 # Main solver implementation (V10)
 ├── CMakeLists.txt          # Build configuration
+├── ARCHITECTURE.md         # Detailed structure guide
 ├── README.md               # This file
 │
-├── puzzles/                # Test puzzles organized by category
+├── puzzles/                # Test puzzles (50 total)
 │   └── examples/           # Example puzzles (4×4 to 20×20)
+│                          # Each size has: easy, medium, hard, extreme variants
 │
-├── scripts/                # Automation scripts
-│   ├── benchmark_suite.sh  # Comprehensive benchmark automation
-│   └── test_all.sh        # Quick test runner
+├── scripts/                # Automation scripts (8 total)
+│   ├── comprehensive_benchmark.sh  # Tests all 50 puzzles
+│   ├── validate_and_benchmark.sh   # Focused validation suite
+│   ├── benchmark_suite.sh          # Original benchmark
+│   └── ...                         # Additional testing scripts
+│
+├── results/                # Benchmark results and reports
+│   ├── BENCHMARK_RESULTS.md        # Latest comprehensive results
+│   └── ...                         # Historical benchmark outputs
 │
 ├── docs/                   # Complete documentation (5,900+ lines)
 │   ├── README.md           # Documentation index
@@ -23,7 +31,7 @@ Slitherlink/
 │   │   ├── TESTING_GUIDE.md
 │   │   └── NAVIGATION_GUIDE.md
 │   ├── analysis/           # Performance analysis & optimization
-│   │   ├── 10x10_OPTIMIZATION_JOURNEY.md (1,555 lines)
+│   │   ├── 10x10_OPTIMIZATION_JOURNEY.md (1,819 lines)
 │   │   ├── PUZZLE_DIFFICULTY_ANALYSIS.md (696 lines)
 │   │   ├── COMPLETE_VERSION_ANALYSIS.md (820 lines)
 │   │   └── TBB_INTEGRATION_STORY.md (792 lines)
