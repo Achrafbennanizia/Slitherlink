@@ -1,8 +1,110 @@
 [
 {
   "directory": "/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug",
-  "command": "/usr/bin/c++ -DUSE_ORTOOLS -DUSE_TBB -isystem /opt/homebrew/include -O3 -DNDEBUG -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/slitherlink.dir/main.cpp.o -c /Users/achraf/CLionProjects/Slitherlink/main.cpp",
+  "command": "/usr/bin/c++ -DTBB_USE_DEBUG -DUSE_ORTOOLS -DUSE_TBB -I/Users/achraf/CLionProjects/Slitherlink/include -I/Users/achraf/CLionProjects/Slitherlink/include/slitherlink -isystem /opt/homebrew/include -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/slitherlink_lib.dir/src/core/Config.cpp.o -c /Users/achraf/CLionProjects/Slitherlink/src/core/Config.cpp",
+  "file": "/Users/achraf/CLionProjects/Slitherlink/src/core/Config.cpp",
+  "output": "CMakeFiles/slitherlink_lib.dir/src/core/Config.cpp.o"
+},
+{
+  "directory": "/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug",
+  "command": "/usr/bin/c++ -DTBB_USE_DEBUG -DUSE_ORTOOLS -DUSE_TBB -I/Users/achraf/CLionProjects/Slitherlink/include -I/Users/achraf/CLionProjects/Slitherlink/include/slitherlink -isystem /opt/homebrew/include -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/slitherlink_lib.dir/src/solver/Solver.cpp.o -c /Users/achraf/CLionProjects/Slitherlink/src/solver/Solver.cpp",
+  "file": "/Users/achraf/CLionProjects/Slitherlink/src/solver/Solver.cpp",
+  "output": "CMakeFiles/slitherlink_lib.dir/src/solver/Solver.cpp.o"
+},
+{
+  "directory": "/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug",
+  "command": "/usr/bin/c++ -DTBB_USE_DEBUG -DUSE_ORTOOLS -DUSE_TBB -I/Users/achraf/CLionProjects/Slitherlink/include -I/Users/achraf/CLionProjects/Slitherlink/include/slitherlink -isystem /opt/homebrew/include -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/slitherlink_lib.dir/src/solver/GraphBuilder.cpp.o -c /Users/achraf/CLionProjects/Slitherlink/src/solver/GraphBuilder.cpp",
+  "file": "/Users/achraf/CLionProjects/Slitherlink/src/solver/GraphBuilder.cpp",
+  "output": "CMakeFiles/slitherlink_lib.dir/src/solver/GraphBuilder.cpp.o"
+},
+{
+  "directory": "/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug",
+  "command": "/usr/bin/c++ -DTBB_USE_DEBUG -DUSE_ORTOOLS -DUSE_TBB -I/Users/achraf/CLionProjects/Slitherlink/include -I/Users/achraf/CLionProjects/Slitherlink/include/slitherlink -isystem /opt/homebrew/include -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/slitherlink_lib.dir/src/io/GridReader.cpp.o -c /Users/achraf/CLionProjects/Slitherlink/src/io/GridReader.cpp",
+  "file": "/Users/achraf/CLionProjects/Slitherlink/src/io/GridReader.cpp",
+  "output": "CMakeFiles/slitherlink_lib.dir/src/io/GridReader.cpp.o"
+},
+{
+  "directory": "/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug",
+  "command": "/usr/bin/c++ -DTBB_USE_DEBUG -DUSE_ORTOOLS -DUSE_TBB -I/Users/achraf/CLionProjects/Slitherlink/include -I/Users/achraf/CLionProjects/Slitherlink/include/slitherlink -isystem /opt/homebrew/include -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/slitherlink_lib.dir/src/io/SolutionCollector.cpp.o -c /Users/achraf/CLionProjects/Slitherlink/src/io/SolutionCollector.cpp",
+  "file": "/Users/achraf/CLionProjects/Slitherlink/src/io/SolutionCollector.cpp",
+  "output": "CMakeFiles/slitherlink_lib.dir/src/io/SolutionCollector.cpp.o"
+},
+{
+  "directory": "/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug",
+  "command": "/usr/bin/c++ -DTBB_USE_DEBUG -DUSE_ORTOOLS -DUSE_TBB -I/Users/achraf/CLionProjects/Slitherlink/include -I/Users/achraf/CLionProjects/Slitherlink/include/slitherlink -isystem /opt/homebrew/include -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/slitherlink_lib.dir/src/io/SolutionPrinter.cpp.o -c /Users/achraf/CLionProjects/Slitherlink/src/io/SolutionPrinter.cpp",
+  "file": "/Users/achraf/CLionProjects/Slitherlink/src/io/SolutionPrinter.cpp",
+  "output": "CMakeFiles/slitherlink_lib.dir/src/io/SolutionPrinter.cpp.o"
+},
+{
+  "directory": "/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug",
+  "command": "/usr/bin/c++ -DTBB_USE_DEBUG -DUSE_ORTOOLS -DUSE_TBB -I/Users/achraf/CLionProjects/Slitherlink/include -I/Users/achraf/CLionProjects/Slitherlink/include/slitherlink -isystem /opt/homebrew/include -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/slitherlink_lib.dir/src/factory/SlitherlinkSolver.cpp.o -c /Users/achraf/CLionProjects/Slitherlink/src/factory/SlitherlinkSolver.cpp",
+  "file": "/Users/achraf/CLionProjects/Slitherlink/src/factory/SlitherlinkSolver.cpp",
+  "output": "CMakeFiles/slitherlink_lib.dir/src/factory/SlitherlinkSolver.cpp.o"
+},
+{
+  "directory": "/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug",
+  "command": "/usr/bin/c++ -DTBB_USE_DEBUG -DUSE_ORTOOLS -DUSE_TBB -I/Users/achraf/CLionProjects/Slitherlink/include -I/Users/achraf/CLionProjects/Slitherlink/include/slitherlink -isystem /opt/homebrew/include -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/slitherlink_lib.dir/src/factory/SolverFactory.cpp.o -c /Users/achraf/CLionProjects/Slitherlink/src/factory/SolverFactory.cpp",
+  "file": "/Users/achraf/CLionProjects/Slitherlink/src/factory/SolverFactory.cpp",
+  "output": "CMakeFiles/slitherlink_lib.dir/src/factory/SolverFactory.cpp.o"
+},
+{
+  "directory": "/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug",
+  "command": "/usr/bin/c++ -DTBB_USE_DEBUG -DUSE_ORTOOLS -DUSE_TBB -I/Users/achraf/CLionProjects/Slitherlink/include -isystem /opt/homebrew/include -g -std=c++17 -arch arm64 -o CMakeFiles/slitherlink.dir/main.cpp.o -c /Users/achraf/CLionProjects/Slitherlink/main.cpp",
   "file": "/Users/achraf/CLionProjects/Slitherlink/main.cpp",
   "output": "CMakeFiles/slitherlink.dir/main.cpp.o"
+},
+{
+  "directory": "/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/tests",
+  "command": "/usr/bin/c++  -isystem /Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-src/googletest -g -std=c++17 -arch arm64 -o CMakeFiles/test_grid.dir/test_grid.cpp.o -c /Users/achraf/CLionProjects/Slitherlink/tests/test_grid.cpp",
+  "file": "/Users/achraf/CLionProjects/Slitherlink/tests/test_grid.cpp",
+  "output": "tests/CMakeFiles/test_grid.dir/test_grid.cpp.o"
+},
+{
+  "directory": "/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/tests",
+  "command": "/usr/bin/c++  -isystem /Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-src/googletest -g -std=c++17 -arch arm64 -o CMakeFiles/test_solver_basic.dir/test_solver_basic.cpp.o -c /Users/achraf/CLionProjects/Slitherlink/tests/test_solver_basic.cpp",
+  "file": "/Users/achraf/CLionProjects/Slitherlink/tests/test_solver_basic.cpp",
+  "output": "tests/CMakeFiles/test_solver_basic.dir/test_solver_basic.cpp.o"
+},
+{
+  "directory": "/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/c++  -I/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-src/googlemock/include -I/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-src/googlemock -isystem /Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-src/googletest -g -std=c++17 -arch arm64  -DGTEST_HAS_PTHREAD=1   -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "file": "/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
+},
+{
+  "directory": "/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/c++  -isystem /Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-src/googlemock/include -isystem /Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-src/googlemock -isystem /Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-src/googletest -g -std=c++17 -arch arm64  -DGTEST_HAS_PTHREAD=1   -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "file": "/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
+},
+{
+  "directory": "/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-build/googletest",
+  "command": "/usr/bin/c++  -I/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-src/googletest/include -I/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-src/googletest -g -std=c++17 -arch arm64  -DGTEST_HAS_PTHREAD=1   -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "file": "/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+},
+{
+  "directory": "/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-build/googletest",
+  "command": "/usr/bin/c++  -isystem /Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-src/googletest -g -std=c++17 -arch arm64  -DGTEST_HAS_PTHREAD=1   -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "file": "/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+},
+{
+  "directory": "/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/examples",
+  "command": "/usr/bin/c++   -g -std=c++17 -arch arm64 -o CMakeFiles/example_simple_usage.dir/simple_usage.cpp.o -c /Users/achraf/CLionProjects/Slitherlink/examples/simple_usage.cpp",
+  "file": "/Users/achraf/CLionProjects/Slitherlink/examples/simple_usage.cpp",
+  "output": "examples/CMakeFiles/example_simple_usage.dir/simple_usage.cpp.o"
+},
+{
+  "directory": "/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/examples",
+  "command": "/usr/bin/c++   -g -std=c++17 -arch arm64 -o CMakeFiles/example_thread_config.dir/thread_config_demo.cpp.o -c /Users/achraf/CLionProjects/Slitherlink/examples/thread_config_demo.cpp",
+  "file": "/Users/achraf/CLionProjects/Slitherlink/examples/thread_config_demo.cpp",
+  "output": "examples/CMakeFiles/example_thread_config.dir/thread_config_demo.cpp.o"
+},
+{
+  "directory": "/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/examples",
+  "command": "/usr/bin/c++   -g -std=c++17 -arch arm64 -o CMakeFiles/example_puzzle_generator.dir/puzzle_generator.cpp.o -c /Users/achraf/CLionProjects/Slitherlink/examples/puzzle_generator.cpp",
+  "file": "/Users/achraf/CLionProjects/Slitherlink/examples/puzzle_generator.cpp",
+  "output": "examples/CMakeFiles/example_puzzle_generator.dir/puzzle_generator.cpp.o"
 }
 ]

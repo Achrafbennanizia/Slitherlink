@@ -95,6 +95,7 @@ slitherlink_EXTERNAL_OBJECTS =
 
 slitherlink: CMakeFiles/slitherlink.dir/main.cpp.o
 slitherlink: CMakeFiles/slitherlink.dir/build.make
+slitherlink: libslitherlink.a
 slitherlink: /opt/homebrew/lib/libtbb.12.17.dylib
 slitherlink: /opt/homebrew/lib/libortools.dylib
 slitherlink: /opt/homebrew/lib/libprotobuf.dylib

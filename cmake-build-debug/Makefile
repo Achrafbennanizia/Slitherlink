@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /Users/achraf/CLionProjects/Slitherlink/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/opt/homebrew/bin/ctest $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -84,6 +94,51 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\" \"gmock\" \"gtest\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/opt/homebrew/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/opt/homebrew/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -117,6 +172,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named slitherlink_lib
+
+# Build rule for target.
+slitherlink_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 slitherlink_lib
+.PHONY : slitherlink_lib
+
+# fast build rule for target.
+slitherlink_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink_lib.dir/build.make CMakeFiles/slitherlink_lib.dir/build
+.PHONY : slitherlink_lib/fast
+
+#=============================================================================
 # Target rules for targets named slitherlink
 
 # Build rule for target.
@@ -128,6 +196,123 @@ slitherlink: cmake_check_build_system
 slitherlink/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink.dir/build.make CMakeFiles/slitherlink.dir/build
 .PHONY : slitherlink/fast
+
+#=============================================================================
+# Target rules for targets named test_grid
+
+# Build rule for target.
+test_grid: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_grid
+.PHONY : test_grid
+
+# fast build rule for target.
+test_grid/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_grid.dir/build.make tests/CMakeFiles/test_grid.dir/build
+.PHONY : test_grid/fast
+
+#=============================================================================
+# Target rules for targets named test_solver_basic
+
+# Build rule for target.
+test_solver_basic: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_solver_basic
+.PHONY : test_solver_basic
+
+# fast build rule for target.
+test_solver_basic/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_solver_basic.dir/build.make tests/CMakeFiles/test_solver_basic.dir/build
+.PHONY : test_solver_basic/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named example_simple_usage
+
+# Build rule for target.
+example_simple_usage: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example_simple_usage
+.PHONY : example_simple_usage
+
+# fast build rule for target.
+example_simple_usage/fast:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/example_simple_usage.dir/build.make examples/CMakeFiles/example_simple_usage.dir/build
+.PHONY : example_simple_usage/fast
+
+#=============================================================================
+# Target rules for targets named example_thread_config
+
+# Build rule for target.
+example_thread_config: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example_thread_config
+.PHONY : example_thread_config
+
+# fast build rule for target.
+example_thread_config/fast:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/example_thread_config.dir/build.make examples/CMakeFiles/example_thread_config.dir/build
+.PHONY : example_thread_config/fast
+
+#=============================================================================
+# Target rules for targets named example_puzzle_generator
+
+# Build rule for target.
+example_puzzle_generator: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example_puzzle_generator
+.PHONY : example_puzzle_generator
+
+# fast build rule for target.
+example_puzzle_generator/fast:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/example_puzzle_generator.dir/build.make examples/CMakeFiles/example_puzzle_generator.dir/build
+.PHONY : example_puzzle_generator/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -153,6 +338,198 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink.dir/build.make CMakeFiles/slitherlink.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/core/Config.o: src/core/Config.cpp.o
+.PHONY : src/core/Config.o
+
+# target to build an object file
+src/core/Config.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink_lib.dir/build.make CMakeFiles/slitherlink_lib.dir/src/core/Config.cpp.o
+.PHONY : src/core/Config.cpp.o
+
+src/core/Config.i: src/core/Config.cpp.i
+.PHONY : src/core/Config.i
+
+# target to preprocess a source file
+src/core/Config.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink_lib.dir/build.make CMakeFiles/slitherlink_lib.dir/src/core/Config.cpp.i
+.PHONY : src/core/Config.cpp.i
+
+src/core/Config.s: src/core/Config.cpp.s
+.PHONY : src/core/Config.s
+
+# target to generate assembly for a file
+src/core/Config.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink_lib.dir/build.make CMakeFiles/slitherlink_lib.dir/src/core/Config.cpp.s
+.PHONY : src/core/Config.cpp.s
+
+src/factory/SlitherlinkSolver.o: src/factory/SlitherlinkSolver.cpp.o
+.PHONY : src/factory/SlitherlinkSolver.o
+
+# target to build an object file
+src/factory/SlitherlinkSolver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink_lib.dir/build.make CMakeFiles/slitherlink_lib.dir/src/factory/SlitherlinkSolver.cpp.o
+.PHONY : src/factory/SlitherlinkSolver.cpp.o
+
+src/factory/SlitherlinkSolver.i: src/factory/SlitherlinkSolver.cpp.i
+.PHONY : src/factory/SlitherlinkSolver.i
+
+# target to preprocess a source file
+src/factory/SlitherlinkSolver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink_lib.dir/build.make CMakeFiles/slitherlink_lib.dir/src/factory/SlitherlinkSolver.cpp.i
+.PHONY : src/factory/SlitherlinkSolver.cpp.i
+
+src/factory/SlitherlinkSolver.s: src/factory/SlitherlinkSolver.cpp.s
+.PHONY : src/factory/SlitherlinkSolver.s
+
+# target to generate assembly for a file
+src/factory/SlitherlinkSolver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink_lib.dir/build.make CMakeFiles/slitherlink_lib.dir/src/factory/SlitherlinkSolver.cpp.s
+.PHONY : src/factory/SlitherlinkSolver.cpp.s
+
+src/factory/SolverFactory.o: src/factory/SolverFactory.cpp.o
+.PHONY : src/factory/SolverFactory.o
+
+# target to build an object file
+src/factory/SolverFactory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink_lib.dir/build.make CMakeFiles/slitherlink_lib.dir/src/factory/SolverFactory.cpp.o
+.PHONY : src/factory/SolverFactory.cpp.o
+
+src/factory/SolverFactory.i: src/factory/SolverFactory.cpp.i
+.PHONY : src/factory/SolverFactory.i
+
+# target to preprocess a source file
+src/factory/SolverFactory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink_lib.dir/build.make CMakeFiles/slitherlink_lib.dir/src/factory/SolverFactory.cpp.i
+.PHONY : src/factory/SolverFactory.cpp.i
+
+src/factory/SolverFactory.s: src/factory/SolverFactory.cpp.s
+.PHONY : src/factory/SolverFactory.s
+
+# target to generate assembly for a file
+src/factory/SolverFactory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink_lib.dir/build.make CMakeFiles/slitherlink_lib.dir/src/factory/SolverFactory.cpp.s
+.PHONY : src/factory/SolverFactory.cpp.s
+
+src/io/GridReader.o: src/io/GridReader.cpp.o
+.PHONY : src/io/GridReader.o
+
+# target to build an object file
+src/io/GridReader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink_lib.dir/build.make CMakeFiles/slitherlink_lib.dir/src/io/GridReader.cpp.o
+.PHONY : src/io/GridReader.cpp.o
+
+src/io/GridReader.i: src/io/GridReader.cpp.i
+.PHONY : src/io/GridReader.i
+
+# target to preprocess a source file
+src/io/GridReader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink_lib.dir/build.make CMakeFiles/slitherlink_lib.dir/src/io/GridReader.cpp.i
+.PHONY : src/io/GridReader.cpp.i
+
+src/io/GridReader.s: src/io/GridReader.cpp.s
+.PHONY : src/io/GridReader.s
+
+# target to generate assembly for a file
+src/io/GridReader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink_lib.dir/build.make CMakeFiles/slitherlink_lib.dir/src/io/GridReader.cpp.s
+.PHONY : src/io/GridReader.cpp.s
+
+src/io/SolutionCollector.o: src/io/SolutionCollector.cpp.o
+.PHONY : src/io/SolutionCollector.o
+
+# target to build an object file
+src/io/SolutionCollector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink_lib.dir/build.make CMakeFiles/slitherlink_lib.dir/src/io/SolutionCollector.cpp.o
+.PHONY : src/io/SolutionCollector.cpp.o
+
+src/io/SolutionCollector.i: src/io/SolutionCollector.cpp.i
+.PHONY : src/io/SolutionCollector.i
+
+# target to preprocess a source file
+src/io/SolutionCollector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink_lib.dir/build.make CMakeFiles/slitherlink_lib.dir/src/io/SolutionCollector.cpp.i
+.PHONY : src/io/SolutionCollector.cpp.i
+
+src/io/SolutionCollector.s: src/io/SolutionCollector.cpp.s
+.PHONY : src/io/SolutionCollector.s
+
+# target to generate assembly for a file
+src/io/SolutionCollector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink_lib.dir/build.make CMakeFiles/slitherlink_lib.dir/src/io/SolutionCollector.cpp.s
+.PHONY : src/io/SolutionCollector.cpp.s
+
+src/io/SolutionPrinter.o: src/io/SolutionPrinter.cpp.o
+.PHONY : src/io/SolutionPrinter.o
+
+# target to build an object file
+src/io/SolutionPrinter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink_lib.dir/build.make CMakeFiles/slitherlink_lib.dir/src/io/SolutionPrinter.cpp.o
+.PHONY : src/io/SolutionPrinter.cpp.o
+
+src/io/SolutionPrinter.i: src/io/SolutionPrinter.cpp.i
+.PHONY : src/io/SolutionPrinter.i
+
+# target to preprocess a source file
+src/io/SolutionPrinter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink_lib.dir/build.make CMakeFiles/slitherlink_lib.dir/src/io/SolutionPrinter.cpp.i
+.PHONY : src/io/SolutionPrinter.cpp.i
+
+src/io/SolutionPrinter.s: src/io/SolutionPrinter.cpp.s
+.PHONY : src/io/SolutionPrinter.s
+
+# target to generate assembly for a file
+src/io/SolutionPrinter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink_lib.dir/build.make CMakeFiles/slitherlink_lib.dir/src/io/SolutionPrinter.cpp.s
+.PHONY : src/io/SolutionPrinter.cpp.s
+
+src/solver/GraphBuilder.o: src/solver/GraphBuilder.cpp.o
+.PHONY : src/solver/GraphBuilder.o
+
+# target to build an object file
+src/solver/GraphBuilder.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink_lib.dir/build.make CMakeFiles/slitherlink_lib.dir/src/solver/GraphBuilder.cpp.o
+.PHONY : src/solver/GraphBuilder.cpp.o
+
+src/solver/GraphBuilder.i: src/solver/GraphBuilder.cpp.i
+.PHONY : src/solver/GraphBuilder.i
+
+# target to preprocess a source file
+src/solver/GraphBuilder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink_lib.dir/build.make CMakeFiles/slitherlink_lib.dir/src/solver/GraphBuilder.cpp.i
+.PHONY : src/solver/GraphBuilder.cpp.i
+
+src/solver/GraphBuilder.s: src/solver/GraphBuilder.cpp.s
+.PHONY : src/solver/GraphBuilder.s
+
+# target to generate assembly for a file
+src/solver/GraphBuilder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink_lib.dir/build.make CMakeFiles/slitherlink_lib.dir/src/solver/GraphBuilder.cpp.s
+.PHONY : src/solver/GraphBuilder.cpp.s
+
+src/solver/Solver.o: src/solver/Solver.cpp.o
+.PHONY : src/solver/Solver.o
+
+# target to build an object file
+src/solver/Solver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink_lib.dir/build.make CMakeFiles/slitherlink_lib.dir/src/solver/Solver.cpp.o
+.PHONY : src/solver/Solver.cpp.o
+
+src/solver/Solver.i: src/solver/Solver.cpp.i
+.PHONY : src/solver/Solver.i
+
+# target to preprocess a source file
+src/solver/Solver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink_lib.dir/build.make CMakeFiles/slitherlink_lib.dir/src/solver/Solver.cpp.i
+.PHONY : src/solver/Solver.cpp.i
+
+src/solver/Solver.s: src/solver/Solver.cpp.s
+.PHONY : src/solver/Solver.s
+
+# target to generate assembly for a file
+src/solver/Solver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slitherlink_lib.dir/build.make CMakeFiles/slitherlink_lib.dir/src/solver/Solver.cpp.s
+.PHONY : src/solver/Solver.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -160,11 +537,50 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
+	@echo "... example_puzzle_generator"
+	@echo "... example_simple_usage"
+	@echo "... example_thread_config"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest"
+	@echo "... gtest_main"
 	@echo "... slitherlink"
+	@echo "... slitherlink_lib"
+	@echo "... test_grid"
+	@echo "... test_solver_basic"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/core/Config.o"
+	@echo "... src/core/Config.i"
+	@echo "... src/core/Config.s"
+	@echo "... src/factory/SlitherlinkSolver.o"
+	@echo "... src/factory/SlitherlinkSolver.i"
+	@echo "... src/factory/SlitherlinkSolver.s"
+	@echo "... src/factory/SolverFactory.o"
+	@echo "... src/factory/SolverFactory.i"
+	@echo "... src/factory/SolverFactory.s"
+	@echo "... src/io/GridReader.o"
+	@echo "... src/io/GridReader.i"
+	@echo "... src/io/GridReader.s"
+	@echo "... src/io/SolutionCollector.o"
+	@echo "... src/io/SolutionCollector.i"
+	@echo "... src/io/SolutionCollector.s"
+	@echo "... src/io/SolutionPrinter.o"
+	@echo "... src/io/SolutionPrinter.i"
+	@echo "... src/io/SolutionPrinter.s"
+	@echo "... src/solver/GraphBuilder.o"
+	@echo "... src/solver/GraphBuilder.i"
+	@echo "... src/solver/GraphBuilder.s"
+	@echo "... src/solver/Solver.o"
+	@echo "... src/solver/Solver.i"
+	@echo "... src/solver/Solver.s"
 .PHONY : help
 
 

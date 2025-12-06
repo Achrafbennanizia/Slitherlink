@@ -1,0 +1,21 @@
+<map id="include/slitherlink/interfaces/ISolutionPrinter.h" name="include/slitherlink/interfaces/ISolutionPrinter.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="264,5,449,46"/>
+<area shape="rect" id="Node000002" href="$_slitherlink_solver_8h.html" title=" " alt="" coords="182,94,355,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="328,59,290,95,287,92,324,55"/>
+<area shape="rect" id="Node000008" href="$_solution_printer_8h.html" title=" " alt="" coords="463,94,597,135"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="411,51,492,91,490,96,408,56"/>
+<area shape="rect" id="Node000003" href="$_slitherlink_8h.html" title=" " alt="" coords="5,271,127,312"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="168,138,127,157,93,184,81,205,73,228,68,271,63,270,68,227,76,202,89,181,125,152,166,133"/>
+<area shape="rect" id="Node000004" href="$_solver_factory_8h.html" title=" " alt="" coords="104,183,263,223"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="241,148,205,184,201,180,237,144"/>
+<area shape="rect" id="Node000007" href="$_slitherlink_solver_8cpp.html" title=" " alt="" coords="287,190,493,216"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="310,142,375,187,372,192,307,146"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="146,235,94,273,91,269,143,230"/>
+<area shape="rect" id="Node000005" href="$_solver_factory_8cpp.html" title=" " alt="" coords="353,279,544,304"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="259,226,412,276,410,281,257,231"/>
+<area shape="rect" id="Node000006" href="$src_2main_8cpp.html" title=" " alt="" coords="151,279,248,304"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="192,238,200,278,195,279,187,239"/>
+<area shape="poly" id="edge9_Node000008_Node000005" title=" " alt="" coords="529,150,521,187,507,225,486,256,464,280,460,276,482,253,502,222,516,185,523,149"/>
+<area shape="rect" id="Node000009" href="$_solution_printer_8cpp.html" title=" " alt="" coords="567,190,733,216"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="571,142,635,187,632,192,568,146"/>
+</map>

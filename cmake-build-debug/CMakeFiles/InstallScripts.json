@@ -1,7 +1,12 @@
 {
 	"InstallScripts" : 
 	[
-		"/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/cmake_install.cmake"
+		"/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/cmake_install.cmake",
+		"/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/tests/cmake_install.cmake",
+		"/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-build/cmake_install.cmake",
+		"/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-build/googlemock/cmake_install.cmake",
+		"/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/_deps/googletest-build/googletest/cmake_install.cmake",
+		"/Users/achraf/CLionProjects/Slitherlink/cmake-build-debug/examples/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

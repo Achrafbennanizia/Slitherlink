@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['impact_0',['Puzzle Difficulty Impact',['../md__r_e_a_d_m_e.html#autotoc_md19',1,'']]],
+  ['impact_20breakdown_1',['Optimization Impact Breakdown',['../md__r_e_a_d_m_e.html#autotoc_md102',1,'']]],
+  ['implementation_20baseline_2',['Version 1: Initial Implementation (Baseline)',['../md__r_e_a_d_m_e.html#autotoc_md53',1,'']]],
+  ['improved_20architecture_3',['Quick Reference - Improved Architecture',['../md__q_u_i_c_k___r_e_f_e_r_e_n_c_e.html',1,'']]],
+  ['improvements_4',['Future Improvements',['../md__r_e_a_d_m_e.html#autotoc_md173',1,'']]],
+  ['in_20final_20check_5',['Version 9: TBB Optimization in Final Check',['../md__r_e_a_d_m_e.html#autotoc_md93',1,'']]],
+  ['in_20your_20cmakelists_20txt_6',['In your CMakeLists.txt',['../md__q_u_i_c_k___r_e_f_e_r_e_n_c_e.html#autotoc_md226',1,'']]],
+  ['include_20paths_7',['🔍 Include Paths',['../md__q_u_i_c_k___r_e_f_e_r_e_n_c_e.html#autotoc_md221',1,'']]],
+  ['index_8',['Complete Documentation Index',['../md__r_e_a_d_m_e.html#autotoc_md199',1,'']]],
+  ['initial_20implementation_20baseline_9',['Version 1: Initial Implementation (Baseline)',['../md__r_e_a_d_m_e.html#autotoc_md53',1,'']]],
+  ['initialstate_10',['3. &lt;span class=&quot;tt&quot;&gt;initialState()&lt;/span&gt;',['../md__r_e_a_d_m_e.html#autotoc_md33',1,'']]],
+  ['inline_20hints_20for_20hot_20functions_11',['3. Added Inline Hints for Hot Functions',['../md__r_e_a_d_m_e.html#autotoc_md98',1,'']]],
+  ['insights_12',['Key Technical Insights',['../md__r_e_a_d_m_e.html#autotoc_md107',1,'']]],
+  ['int_20depth_13',['9. &lt;span class=&quot;tt&quot;&gt;search(State s, int depth)&lt;/span&gt;',['../md__r_e_a_d_m_e.html#autotoc_md39',1,'']]],
+  ['int_20edgeidx_20int_20val_14',['4. &lt;span class=&quot;tt&quot;&gt;applyDecision(State &amp;amp;s, int edgeIdx, int val)&lt;/span&gt;',['../md__r_e_a_d_m_e.html#autotoc_md34',1,'']]],
+  ['int_20val_15',['4. &lt;span class=&quot;tt&quot;&gt;applyDecision(State &amp;amp;s, int edgeIdx, int val)&lt;/span&gt;',['../md__r_e_a_d_m_e.html#autotoc_md34',1,'']]],
+  ['integration_16',['Integration',['../md__q_u_i_c_k___r_e_f_e_r_e_n_c_e.html#autotoc_md225',1,'📝 CMake Integration'],['../md__r_e_a_d_m_e.html#autotoc_md79',1,'Version 2: TBB Integration']]],
+  ['integration_20c_17',['Library Integration (C++)',['../md__q_u_i_c_k___r_e_f_e_r_e_n_c_e.html#autotoc_md218',1,'']]],
+  ['integration_20major_20failure_18',['Experiment 4A: Google OR-Tools Integration (Major Failure)',['../md__r_e_a_d_m_e.html#autotoc_md73',1,'']]],
+  ['integration_20success_19',['Version 2: TBB Integration (Success)',['../md__r_e_a_d_m_e.html#autotoc_md57',1,'']]],
+  ['integration_20week_201_20',['Phase 2: TBB Integration (Week 1)',['../md__r_e_a_d_m_e.html#autotoc_md187',1,'']]],
+  ['intelligent_20edge_20selection_21',['Intelligent Edge Selection',['../md__r_e_a_d_m_e.html#autotoc_md67',1,'Version 5: Intelligent Edge Selection'],['../md__r_e_a_d_m_e.html#autotoc_md85',1,'Version 5: Intelligent Edge Selection']]],
+  ['is_20slitherlink_22',['What is Slitherlink?',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'']]],
+  ['issues_23',['Common Issues',['../md__r_e_a_d_m_e.html#autotoc_md167',1,'']]]
+];

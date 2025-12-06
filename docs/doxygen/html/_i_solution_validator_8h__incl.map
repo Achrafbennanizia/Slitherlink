@@ -1,0 +1,9 @@
+<map id="include/slitherlink/interfaces/ISolutionValidator.h" name="include/slitherlink/interfaces/ISolutionValidator.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,203,46"/>
+<area shape="rect" id="Node000002" href="$_solution_8h.html" title=" " alt="" coords="20,94,188,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,46,107,78,101,78,101,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="39,168,92,193"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="100,121,81,155,77,153,95,119"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="115,168,173,193"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="113,119,132,153,128,155,108,121"/>
+</map>

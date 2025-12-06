@@ -2,6 +2,8 @@
 
 A high-performance parallel Slitherlink puzzle solver using Intel oneAPI Threading Building Blocks (TBB) with intelligent backtracking and constraint propagation. Versions **V1–V9** (std::async era) are archived under `tests/old_versions/`; **V10** is the first TBB rewrite and is the basis of `main.cpp`.
 
+**Version reality:** V1–V9 are std::async-only. V10 is the first and only TBB rewrite (now `main.cpp`). If an older note suggests gradual TBB integration before V10, treat it as historical commentary rather than code. For the reconciled history, see `docs/analysis/COMPLETE_VERSION_ANALYSIS.md` and `docs/VERSION_ARCHIVE_README.md`.
+
 ## 📁 Project Structure
 
 ```
@@ -46,10 +48,9 @@ Slitherlink/
     ├── v03_from_history.cpp / v04_from_history.cpp / v05_from_history.cpp
     ├── v07_from_history.cpp / v09_from_history.cpp
     ├── v10_final.cpp       # First TBB version (basis for main.cpp)
-    └── version.txt         # Notes for V1–V9 (async era)
+    └── version.txt         # Notes for V1–V9 (async era; V6/V8 covered via notes)
 ```
-
-**Version reality:** V1–V9 are std::async-only; V10 is the first and only TBB rewrite (now `main.cpp`). If an older note suggests gradual TBB integration before V10, treat it as historical commentary rather than code.
+V6 and V8 were incremental async refinements and are represented via notes in `version.txt` rather than standalone source files.
 
 ## Table of Contents
 
@@ -102,12 +103,16 @@ Slitherlink is a logic puzzle where you draw a single continuous loop through a 
 
 ## Quick Start
 
+> If you are starting fresh, configure a build directory before building:
+>
+> ```bash
+> cmake -S . -B cmake-build-debug -DUSE_TBB=ON
+> cmake --build cmake-build-debug
+> ```
+
 ### Run a Test Puzzle
 
 ```bash
-# Build the solver
-cmake --build cmake-build-debug
-
 # Test with a simple 4×4 puzzle
 ./cmake-build-debug/slitherlink puzzles/examples/example4x4.txt
 

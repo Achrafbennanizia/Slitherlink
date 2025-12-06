@@ -1,0 +1,5 @@
+<map id="slitherlink::Solver" name="slitherlink::Solver">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,102,127,128"/>
+<area shape="rect" id="Node000002" href="$structslitherlink_1_1_grid.html" title=" " alt="" coords="12,5,120,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="69,46,69,101,63,101,63,46"/>
+</map>
