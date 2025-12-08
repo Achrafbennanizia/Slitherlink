@@ -39,29 +39,18 @@ option(SLITHERLINK_ENABLE_SANITIZERS "Enable address/UB sanitizers (Debug only, 
 # -------------------------------------------------------
 # Library Target (Reusable Core - SOLID Architecture)
 # -------------------------------------------------------
-set(SLITHERLINK_SOURCES
-    # Core Data Classes
-    src/Grid.cpp
-    src/State.cpp
-    
-    # Strategy Implementations
-    src/SmartHeuristic.cpp
-    src/StandardValidator.cpp
-    src/OptimizedPropagator.cpp
-    
-    # Solver
-    src/Solver.cpp
-    
-    # Legacy (if they exist)
-    src/core/Config.cpp
-    src/solver/GraphBuilder.cpp
-    src/io/GridReader.cpp
-    src/io/SolutionCollector.cpp
-    src/io/SolutionPrinter.cpp
-    src/factory/SlitherlinkSolver.cpp
-    src/factory/SolverFactory.cpp
-)
+# Note: Current main.cpp is monolithic and doesn't use these sources
+# This library is for future modular usage and examples
 
+# Dummy source to satisfy CMake (library infrastructure reserved for future)
+file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/dummy.cpp "// Placeholder for future library sources\n")
+set(SLITHERLINK_SOURCES ${CMAKE_CURRENT_BINARY_DIR}/dummy.cpp)
+
+# -------------------------------------------------------
+# Library Target (Reusable Core - SOLID Architecture)
+# -------------------------------------------------------
+# Note: Current main.cpp is monolithic and doesn't use these sources
+# This library section kept for future modular architecture
 if(SLITHERLINK_BUILD_SHARED_LIBS)
     add_library(slitherlink_lib SHARED ${SLITHERLINK_SOURCES})
 else()
@@ -80,45 +69,37 @@ set_target_properties(slitherlink_lib PROPERTIES
     OUTPUT_NAME slitherlink
     VERSION ${PROJECT_VERSION}
     SOVERSION ${PROJECT_VERSION_MAJOR}
+    EXCLUDE_FROM_ALL TRUE  # Don't build by default since not used yet
 )
 
 # -------------------------------------------------------
-# Executable (CLI Application)
+# Executable (CLI Application) - Monolithic
 # -------------------------------------------------------
 add_executable(slitherlink
-        main.cpp
+        apps/slitherlink_cli/main.cpp
 )
 
-target_link_libraries(slitherlink PRIVATE slitherlink_lib)
+# Main executable doesn't link library - it's self-contained
+# target_link_libraries(slitherlink PRIVATE slitherlink_lib)
 
 # -------------------------------------------------------
 # Optimization Flags
 # -------------------------------------------------------
 if(CMAKE_BUILD_TYPE STREQUAL "Release")
     if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang|AppleClang")
-        target_compile_options(slitherlink_lib PRIVATE
+        target_compile_options(slitherlink PRIVATE
             -O3                    # Maximum optimization
             -march=native          # Use CPU-specific instructions
             -funroll-loops         # Unroll loops for better performance
             -ffast-math            # Aggressive floating-point optimizations
         )
-        target_compile_options(slitherlink PRIVATE
-            -O3
-            -march=native
-            -funroll-loops
-            -ffast-math
-        )
         # Link-time optimization
         if(NOT APPLE)  # LTO can be problematic on macOS
-            set_target_properties(slitherlink_lib PROPERTIES
-                INTERPROCEDURAL_OPTIMIZATION TRUE
-            )
             set_target_properties(slitherlink PROPERTIES
                 INTERPROCEDURAL_OPTIMIZATION TRUE
             )
         endif()
     elseif(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
-        target_compile_options(slitherlink_lib PRIVATE /O2 /GL)
         target_compile_options(slitherlink PRIVATE /O2 /GL)
     endif()
 endif()
@@ -127,7 +108,7 @@ endif()
 # Threading (for std::async / std::thread)
 # -------------------------------------------------------
 find_package(Threads REQUIRED)
-target_link_libraries(slitherlink_lib PUBLIC Threads::Threads)
+target_link_libraries(slitherlink PUBLIC Threads::Threads)
 
 # -------------------------------------------------------
 # Intel oneAPI TBB (Threading Building Blocks)
@@ -135,8 +116,8 @@ target_link_libraries(slitherlink_lib PUBLIC Threads::Threads)
 find_package(TBB QUIET)
 if(TBB_FOUND)
     message(STATUS "Found Intel TBB: ${TBB_VERSION}")
-    target_link_libraries(slitherlink_lib PUBLIC TBB::tbb)
-    target_compile_definitions(slitherlink_lib PUBLIC USE_TBB)
+    target_link_libraries(slitherlink PUBLIC TBB::tbb)
+    target_compile_definitions(slitherlink PUBLIC USE_TBB)
 else()
     message(WARNING "Intel TBB not found. Install with: brew install tbb (macOS)")
 endif()

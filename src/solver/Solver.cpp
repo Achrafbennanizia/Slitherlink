@@ -1,4 +1,4 @@
-#include "slitherlink/solver/Solver.h"
+#include "Solver.h"
 #include <algorithm>
 #include <future>
 #include <iostream>
