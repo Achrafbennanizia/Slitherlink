@@ -93,22 +93,28 @@ $(function(){initNavTree('classslitherlink_1_1_i_heuristic.html','','classslithe
 </div><!--header-->
 <div class="contents">
 
+<p>Interface for edge selection heuristics.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_i_heuristic_8h_source.html">IHeuristic.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Inheritance diagram for slitherlink::IHeuristic:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classslitherlink_1_1_i_heuristic__inherit__graph.svg" width="179" height="126"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classslitherlink_1_1_i_heuristic__inherit__graph.svg" width="183" height="111"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4334534bb34f01d7821e4329ba57108e" id="r_a4334534bb34f01d7821e4329ba57108e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4334534bb34f01d7821e4329ba57108e">~IHeuristic</a> ()=default</td></tr>
 <tr class="memitem:ac4e0f584f230d5c084c64e9a88e18d57" id="r_ac4e0f584f230d5c084c64e9a88e18d57"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4e0f584f230d5c084c64e9a88e18d57">selectNextEdge</a> (const <a class="el" href="struct_state.html">State</a> &amp;state) const =0</td></tr>
+<tr class="memdesc:ac4e0f584f230d5c084c64e9a88e18d57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select next edge to decide.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_i_heuristic_8h_source.html#l00008">8</a> of file <a class="el" href="_i_heuristic_8h_source.html">IHeuristic.h</a>.</p>
+<div class="textblock"><p>Interface for edge selection heuristics. </p>
+<p>Interface Segregation Principle: Separate interface for heuristic strategy Open/Closed Principle: Open for extension (new heuristics), closed for modification </p>
+
+<p class="definition">Definition at line <a class="el" href="_i_heuristic_8h_source.html#l00015">15</a> of file <a class="el" href="_i_heuristic_8h_source.html">IHeuristic.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4334534bb34f01d7821e4329ba57108e" name="a4334534bb34f01d7821e4329ba57108e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4334534bb34f01d7821e4329ba57108e">&#9670;&#160;</a></span>~IHeuristic()</h2>
@@ -159,12 +165,21 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classslitherlink_1_1_edge_selection_heuristic.html#add682a23e6d3f342699ed080332edc8e">slitherlink::EdgeSelectionHeuristic</a>.</p>
+<p>Select next edge to decide. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>Current search state </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Index of selected edge, or size() if no edges left </dd></dl>
+
+<p>Implemented in <a class="el" href="classslitherlink_1_1_smart_heuristic.html#a59cfc20a5012be0587c0ad0fdd772193">slitherlink::SmartHeuristic</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/slitherlink/interfaces/<a class="el" href="_i_heuristic_8h_source.html">IHeuristic.h</a></li>
+<li>include/interfaces/<a class="el" href="_i_heuristic_8h_source.html">IHeuristic.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

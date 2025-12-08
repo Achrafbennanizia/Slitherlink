@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['→_20v10_0',['Version Evolution (V1 → V10)',['../md__r_e_a_d_m_e.html#autotoc_md17',1,'']]]
+  ['🎨_20extending_20the_20architecture_0',['🎨 Extending the Architecture',['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md122',1,'']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['📚_20documentation_0',['📚 Documentation',['../md__r_e_a_d_m_e.html#autotoc_md198',1,'']]],
-  ['📚_20documentation_20files_1',['📚 Documentation Files',['../md__q_u_i_c_k___r_e_f_e_r_e_n_c_e.html#autotoc_md230',1,'']]]
+  ['🔧_20building_20the_20solid_20architecture_0',['🔧 Building the SOLID Architecture',['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md106',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var _solution_8h =
 [
-    [ "slitherlink::Solution", "structslitherlink_1_1_solution.html", "structslitherlink_1_1_solution" ]
+    [ "slitherlink::Solution", "classslitherlink_1_1_solution.html", "classslitherlink_1_1_solution" ]
 ];

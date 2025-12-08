@@ -38,11 +38,12 @@ WARN_NO_PARAMDOC       = NO
 #---------------------------------------------------------------------------
 # Configuration options related to the input files
 #---------------------------------------------------------------------------
-INPUT                  = main.cpp \
-                         include/slitherlink \
+INPUT                  = apps/slitherlink_cli/main.cpp \
+                         include \
                          src \
                          README.md \
-                         QUICK_REFERENCE.md
+                         docs/user/USER_GUIDE.md \
+                         docs/developer
 
 FILE_PATTERNS          = *.cpp \
                          *.h \
@@ -51,16 +52,17 @@ FILE_PATTERNS          = *.cpp \
 
 RECURSIVE              = YES
 EXCLUDE                = cmake-build-debug \
+                         cmake-build-release \
                          build \
                          .git \
-                         BackUp_oldCode
+                         BackUp_oldCode \
+                         docs/history \
+                         docs/technical
 
 EXCLUDE_PATTERNS       = */cmake-build-*/* \
                          */build/* \
                          */.git/* \
-                         */tests/* \
-                         */examples/* \
-                         */benchmarks/*
+                         */BackUp_oldCode/*
 
 EXAMPLE_PATH           = examples
 EXAMPLE_PATTERNS       = *.cpp

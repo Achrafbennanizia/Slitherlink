@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['📁_20project_20structure_0',['📁 Project Structure',['../md__r_e_a_d_m_e.html#autotoc_md1',1,'📁 Project Structure'],['../md__q_u_i_c_k___r_e_f_e_r_e_n_c_e.html#autotoc_md208',1,'📁 Project Structure']]]
+  ['📚_20references_0',['📚 References',['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md140',1,'']]]
 ];

@@ -93,7 +93,10 @@ $(function(){initNavTree('classslitherlink_1_1_i_solution_collector.html','','cl
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_i_solution_collector_8h_source.html">ISolutionCollector.h</a>&gt;</code></p>
+<p>Interface for collecting solutions.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_solution_collector_8h_source.html">SolutionCollector.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Inheritance diagram for slitherlink::ISolutionCollector:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -104,14 +107,14 @@ $(function(){initNavTree('classslitherlink_1_1_i_solution_collector.html','','cl
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae42d3f0b600707922633a099c75b788e" id="r_ae42d3f0b600707922633a099c75b788e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae42d3f0b600707922633a099c75b788e">~ISolutionCollector</a> ()=default</td></tr>
-<tr class="memitem:aae6706dca66ab1ce0fa350adad59d323" id="r_aae6706dca66ab1ce0fa350adad59d323"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae6706dca66ab1ce0fa350adad59d323">addSolution</a> (const <a class="el" href="struct_solution.html">Solution</a> &amp;solution)=0</td></tr>
+<tr class="memitem:aa576cce500ace7d7811e15df7da015ab" id="r_aa576cce500ace7d7811e15df7da015ab"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa576cce500ace7d7811e15df7da015ab">addSolution</a> (const <a class="el" href="struct_solution.html">Solution</a> &amp;sol)=0</td></tr>
 <tr class="memitem:aa9de43af9439924fb611e8a0bcb23acb" id="r_aa9de43af9439924fb611e8a0bcb23acb"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; <a class="el" href="struct_solution.html">Solution</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9de43af9439924fb611e8a0bcb23acb">getSolutions</a> () const =0</td></tr>
-<tr class="memitem:ab1a9279026c081a015e9a1633a56051f" id="r_ab1a9279026c081a015e9a1633a56051f"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1a9279026c081a015e9a1633a56051f">getCount</a> () const =0</td></tr>
-<tr class="memitem:a82a36d52aa23d07ec1c141a4c63df045" id="r_a82a36d52aa23d07ec1c141a4c63df045"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82a36d52aa23d07ec1c141a4c63df045">shouldStop</a> () const =0</td></tr>
+<tr class="memitem:a4f523e65c54b4d3666d5d1d154fed5a9" id="r_a4f523e65c54b4d3666d5d1d154fed5a9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f523e65c54b4d3666d5d1d154fed5a9">shouldContinue</a> () const =0</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_i_solution_collector_8h_source.html#l00009">9</a> of file <a class="el" href="_i_solution_collector_8h_source.html">ISolutionCollector.h</a>.</p>
+<div class="textblock"><p>Interface for collecting solutions. </p>
+
+<p class="definition">Definition at line <a class="el" href="_solution_collector_8h_source.html#l00014">14</a> of file <a class="el" href="_solution_collector_8h_source.html">SolutionCollector.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae42d3f0b600707922633a099c75b788e" name="ae42d3f0b600707922633a099c75b788e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae42d3f0b600707922633a099c75b788e">&#9670;&#160;</a></span>~ISolutionCollector()</h2>
@@ -139,8 +142,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="aae6706dca66ab1ce0fa350adad59d323" name="aae6706dca66ab1ce0fa350adad59d323"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae6706dca66ab1ce0fa350adad59d323">&#9670;&#160;</a></span>addSolution()</h2>
+<a id="aa576cce500ace7d7811e15df7da015ab" name="aa576cce500ace7d7811e15df7da015ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa576cce500ace7d7811e15df7da015ab">&#9670;&#160;</a></span>addSolution()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -151,7 +154,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void slitherlink::ISolutionCollector::addSolution </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_solution.html">Solution</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>solution</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="struct_solution.html">Solution</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>sol</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -162,34 +165,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classslitherlink_1_1_solution_collector.html#afde67edca4b5724ffa4f61dc0e49321b">slitherlink::SolutionCollector</a>.</p>
-
-</div>
-</div>
-<a id="ab1a9279026c081a015e9a1633a56051f" name="ab1a9279026c081a015e9a1633a56051f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1a9279026c081a015e9a1633a56051f">&#9670;&#160;</a></span>getCount()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int slitherlink::ISolutionCollector::getCount </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="classslitherlink_1_1_solution_collector.html#a2c9cccf2ae6d9124df2783ff2cd13518">slitherlink::SolutionCollector</a>.</p>
+<p>Implemented in <a class="el" href="classslitherlink_1_1_solution_collector.html#aa494cec1e39fb30ccbe53a8d28a251b5">slitherlink::SolutionCollector</a>.</p>
 
 </div>
 </div>
@@ -220,8 +196,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a82a36d52aa23d07ec1c141a4c63df045" name="a82a36d52aa23d07ec1c141a4c63df045"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82a36d52aa23d07ec1c141a4c63df045">&#9670;&#160;</a></span>shouldStop()</h2>
+<a id="a4f523e65c54b4d3666d5d1d154fed5a9" name="a4f523e65c54b4d3666d5d1d154fed5a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f523e65c54b4d3666d5d1d154fed5a9">&#9670;&#160;</a></span>shouldContinue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -230,7 +206,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool slitherlink::ISolutionCollector::shouldStop </td>
+          <td class="memname">virtual bool slitherlink::ISolutionCollector::shouldContinue </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -243,12 +219,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classslitherlink_1_1_solution_collector.html#aaa01256c7292600a82babfc45e666985">slitherlink::SolutionCollector</a>.</p>
+<p>Implemented in <a class="el" href="classslitherlink_1_1_solution_collector.html#a02fa2ce70d6b12ee665fb76b6ae94664">slitherlink::SolutionCollector</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/slitherlink/interfaces/<a class="el" href="_i_solution_collector_8h_source.html">ISolutionCollector.h</a></li>
+<li>include/io/<a class="el" href="_solution_collector_8h_source.html">SolutionCollector.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,14 +1,18 @@
 var searchData=
 [
-  ['getcelledges_0',['getCellEdges',['../classslitherlink_1_1_graph_builder.html#abe6e68e79e146c9eb84d36690e2d3d34',1,'slitherlink::GraphBuilder']]],
-  ['getcluecells_1',['getClueCells',['../classslitherlink_1_1_graph_builder.html#acfc4da3dcc58feeab0a6a5073360b7b7',1,'slitherlink::GraphBuilder']]],
-  ['getcount_2',['getCount',['../classslitherlink_1_1_i_solution_collector.html#ab1a9279026c081a015e9a1633a56051f',1,'slitherlink::ISolutionCollector::getCount()'],['../classslitherlink_1_1_solution_collector.html#a2c9cccf2ae6d9124df2783ff2cd13518',1,'slitherlink::SolutionCollector::getCount()']]],
-  ['getedges_3',['getEdges',['../classslitherlink_1_1_graph_builder.html#a5a81357268c488c5b31a9f20a8d8a153',1,'slitherlink::GraphBuilder']]],
-  ['gethorizedgeindex_4',['getHorizEdgeIndex',['../classslitherlink_1_1_graph_builder.html#a416e6d312e31ff45fc3316e39bb804e6',1,'slitherlink::GraphBuilder']]],
-  ['getinstance_5',['getInstance',['../classslitherlink_1_1utils_1_1_logger.html#af01b8e55abcc7d7e5b2845f44c654651',1,'slitherlink::utils::Logger']]],
-  ['getnumpoints_6',['getNumPoints',['../classslitherlink_1_1_i_graph_builder.html#a1dc8b4a85245eda77791e9fdceec9949',1,'slitherlink::IGraphBuilder::getNumPoints()'],['../classslitherlink_1_1_graph_builder.html#a8b78524f94f4ff3973158eff6647c0f9',1,'slitherlink::GraphBuilder::getNumPoints() const override']]],
-  ['getpointedges_7',['getPointEdges',['../classslitherlink_1_1_graph_builder.html#ab332e2a2d29ae3b91f6a7317c4d4cf5e',1,'slitherlink::GraphBuilder']]],
-  ['getsolutions_8',['getSolutions',['../classslitherlink_1_1_i_solution_collector.html#aa9de43af9439924fb611e8a0bcb23acb',1,'slitherlink::ISolutionCollector::getSolutions()'],['../classslitherlink_1_1_solution_collector.html#a3cb9cc3b8c9a911fa03c53e4764a3280',1,'slitherlink::SolutionCollector::getSolutions()']]],
-  ['getversion_9',['getVersion',['../namespaceslitherlink.html#a64ebd5a186a5682085606ab3dadb792d',1,'slitherlink']]],
-  ['getvertedgeindex_10',['getVertEdgeIndex',['../classslitherlink_1_1_graph_builder.html#a2b98dbe2463d77a762f0e819eec5db51',1,'slitherlink::GraphBuilder']]]
+  ['getcelledgecount_0',['getCellEdgeCount',['../classslitherlink_1_1_state.html#aad2771e9c6649a4697f16b491379a441',1,'slitherlink::State']]],
+  ['getcellundecided_1',['getCellUndecided',['../classslitherlink_1_1_state.html#adf5e4f446f381d591669ddc0e56c4f03',1,'slitherlink::State']]],
+  ['getclue_2',['getClue',['../classslitherlink_1_1_grid.html#a53a75acc7af00c7cc36d5fe2e6a362c4',1,'slitherlink::Grid']]],
+  ['getclues_3',['getClues',['../classslitherlink_1_1_grid.html#aa0bd5f0afd808d12853907791410a4ac',1,'slitherlink::Grid']]],
+  ['getcols_4',['getCols',['../classslitherlink_1_1_grid.html#af3aa307af9c65d99cdfb26f81d3f4e05',1,'slitherlink::Grid']]],
+  ['getcyclepoints_5',['getCyclePoints',['../classslitherlink_1_1_solution.html#a9f0d6b8aef964462d6b573cb63f7997e',1,'slitherlink::Solution']]],
+  ['getedgestate_6',['getEdgeState',['../classslitherlink_1_1_solution.html#a9d554b1dcb0b178a14f54950312b028f',1,'slitherlink::Solution::getEdgeState()'],['../classslitherlink_1_1_state.html#a6be184f1237f032fa9c8d4a1311913a3',1,'slitherlink::State::getEdgeState(int idx) const']]],
+  ['getedgestatevector_7',['getEdgeStateVector',['../classslitherlink_1_1_state.html#a5190c800f5558a8ed6db02baa4baac70',1,'slitherlink::State::getEdgeStateVector()'],['../classslitherlink_1_1_state.html#ac93ec3989f87a88738a343c359bb0ebe',1,'slitherlink::State::getEdgeStateVector() const']]],
+  ['gethorizedgeindex_8',['getHorizEdgeIndex',['../classslitherlink_1_1_graph_builder.html#ac70f0ee57b522a52204d290f007b06ab',1,'slitherlink::GraphBuilder']]],
+  ['getpointdegree_9',['getPointDegree',['../classslitherlink_1_1_state.html#acfec278f579e7c5f2b13d9c3d46ea16d',1,'slitherlink::State']]],
+  ['getpointundecided_10',['getPointUndecided',['../classslitherlink_1_1_state.html#a8ca0b06152f998b0c07e76b0705f1ee3',1,'slitherlink::State']]],
+  ['getrows_11',['getRows',['../classslitherlink_1_1_grid.html#acb02cb2f46834de32884a8cac9994b58',1,'slitherlink::Grid']]],
+  ['getsolutions_12',['getSolutions',['../classslitherlink_1_1_i_solution_collector.html#aa9de43af9439924fb611e8a0bcb23acb',1,'slitherlink::ISolutionCollector::getSolutions()'],['../classslitherlink_1_1_solution_collector.html#a3cb9cc3b8c9a911fa03c53e4764a3280',1,'slitherlink::SolutionCollector::getSolutions()'],['../classslitherlink_1_1_solver.html#a658ce6bc5763045f774bac6230ca38c9',1,'slitherlink::Solver::getSolutions()']]],
+  ['getvertedgeindex_13',['getVertEdgeIndex',['../classslitherlink_1_1_graph_builder.html#a6dc6a37d31fc3795a42f3d0b7e60c0fb',1,'slitherlink::GraphBuilder']]],
+  ['grid_14',['Grid',['../classslitherlink_1_1_grid.html#aba27efeb172bf1d94aa7500c972f478e',1,'slitherlink::Grid::Grid()=default'],['../classslitherlink_1_1_grid.html#a75b3bc6513919ca7de1a7ef82822c27b',1,'slitherlink::Grid::Grid(int rows, int cols)']]]
 ];

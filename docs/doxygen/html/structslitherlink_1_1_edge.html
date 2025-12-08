@@ -93,19 +93,76 @@ $(function(){initNavTree('structslitherlink_1_1_edge.html','','structslitherlink
 </div><!--header-->
 <div class="contents">
 
+<p>Represents an edge in the puzzle graph.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_edge_8h_source.html">Edge.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a6a09f468302c886a4d292b1c4b6c11f4" id="r_a6a09f468302c886a4d292b1c4b6c11f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a09f468302c886a4d292b1c4b6c11f4">Edge</a> (int <a class="el" href="#a55d3a34dfbdc31710a7d70f9c79d1ef6">u</a>, int <a class="el" href="#ace66e560bbaf86891ca88d4acdf6a9d9">v</a>, int <a class="el" href="#abd1e66b22c468ee9294311359bbbb244">cellA</a>, int <a class="el" href="#a135c376af4e697999816e712bb1ac9db">cellB</a>)</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a55d3a34dfbdc31710a7d70f9c79d1ef6" id="r_a55d3a34dfbdc31710a7d70f9c79d1ef6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55d3a34dfbdc31710a7d70f9c79d1ef6">u</a></td></tr>
+<tr class="memdesc:a55d3a34dfbdc31710a7d70f9c79d1ef6"><td class="mdescLeft">&#160;</td><td class="mdescRight">First endpoint (point index).  <br /></td></tr>
 <tr class="memitem:ace66e560bbaf86891ca88d4acdf6a9d9" id="r_ace66e560bbaf86891ca88d4acdf6a9d9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace66e560bbaf86891ca88d4acdf6a9d9">v</a></td></tr>
+<tr class="memdesc:ace66e560bbaf86891ca88d4acdf6a9d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Second endpoint (point index).  <br /></td></tr>
 <tr class="memitem:abd1e66b22c468ee9294311359bbbb244" id="r_abd1e66b22c468ee9294311359bbbb244"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd1e66b22c468ee9294311359bbbb244">cellA</a></td></tr>
+<tr class="memdesc:abd1e66b22c468ee9294311359bbbb244"><td class="mdescLeft">&#160;</td><td class="mdescRight">First adjacent cell (-1 if none).  <br /></td></tr>
 <tr class="memitem:a135c376af4e697999816e712bb1ac9db" id="r_a135c376af4e697999816e712bb1ac9db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a135c376af4e697999816e712bb1ac9db">cellB</a></td></tr>
+<tr class="memdesc:a135c376af4e697999816e712bb1ac9db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Second adjacent cell (-1 if none).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_edge_8h_source.html#l00006">6</a> of file <a class="el" href="_edge_8h_source.html">Edge.h</a>.</p>
-</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<div class="textblock"><p>Represents an edge in the puzzle graph. </p>
+<p>Single Responsibility: <a class="el" href="structslitherlink_1_1_edge.html" title="Represents an edge in the puzzle graph.">Edge</a> structure and properties </p>
+
+<p class="definition">Definition at line <a class="el" href="_edge_8h_source.html#l00012">12</a> of file <a class="el" href="_edge_8h_source.html">Edge.h</a>.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a6a09f468302c886a4d292b1c4b6c11f4" name="a6a09f468302c886a4d292b1c4b6c11f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a09f468302c886a4d292b1c4b6c11f4">&#9670;&#160;</a></span>Edge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">slitherlink::Edge::Edge </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>u</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>v</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>cellA</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>cellB</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_edge_8h_source.html#l00019">19</a> of file <a class="el" href="_edge_8h_source.html">Edge.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_edge_8h_source.html#l00016">cellA</a>, <a class="el" href="_edge_8h_source.html#l00017">cellB</a>, <a class="el" href="_edge_8h_source.html#l00014">u</a>, and <a class="el" href="_edge_8h_source.html#l00015">v</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="abd1e66b22c468ee9294311359bbbb244" name="abd1e66b22c468ee9294311359bbbb244"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abd1e66b22c468ee9294311359bbbb244">&#9670;&#160;</a></span>cellA</h2>
 
@@ -118,9 +175,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_edge_8h_source.html#l00009">9</a> of file <a class="el" href="_edge_8h_source.html">Edge.h</a>.</p>
+<p>First adjacent cell (-1 if none). </p>
 
-<p class="reference">Referenced by <a class="el" href="_solver_8cpp_source.html#l00110">slitherlink::Solver::applyDecision()</a>, <a class="el" href="_solver_8cpp_source.html#l00036">slitherlink::Solver::buildEdges()</a>, <a class="el" href="_graph_builder_8cpp_source.html#l00004">slitherlink::GraphBuilder::buildGraph()</a>, <a class="el" href="_solver_8cpp_source.html#l00215">slitherlink::Solver::propagateConstraints()</a>, and <a class="el" href="_solver_8cpp_source.html#l00395">slitherlink::Solver::selectNextEdge()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_edge_8h_source.html#l00016">16</a> of file <a class="el" href="_edge_8h_source.html">Edge.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_optimized_propagator_8cpp_source.html#l00272">slitherlink::OptimizedPropagator::applyDecision()</a>, <a class="el" href="_graph_builder_8cpp_source.html#l00005">slitherlink::GraphBuilder::buildGraph()</a>, <a class="el" href="_edge_8h_source.html#l00019">Edge()</a>, <a class="el" href="_optimized_propagator_8cpp_source.html#l00045">slitherlink::OptimizedPropagator::propagate()</a>, and <a class="el" href="_smart_heuristic_8cpp_source.html#l00060">slitherlink::SmartHeuristic::selectNextEdge()</a>.</p>
 
 </div>
 </div>
@@ -136,9 +195,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_edge_8h_source.html#l00010">10</a> of file <a class="el" href="_edge_8h_source.html">Edge.h</a>.</p>
+<p>Second adjacent cell (-1 if none). </p>
 
-<p class="reference">Referenced by <a class="el" href="_solver_8cpp_source.html#l00110">slitherlink::Solver::applyDecision()</a>, <a class="el" href="_solver_8cpp_source.html#l00036">slitherlink::Solver::buildEdges()</a>, <a class="el" href="_graph_builder_8cpp_source.html#l00004">slitherlink::GraphBuilder::buildGraph()</a>, <a class="el" href="_solver_8cpp_source.html#l00215">slitherlink::Solver::propagateConstraints()</a>, and <a class="el" href="_solver_8cpp_source.html#l00395">slitherlink::Solver::selectNextEdge()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_edge_8h_source.html#l00017">17</a> of file <a class="el" href="_edge_8h_source.html">Edge.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_optimized_propagator_8cpp_source.html#l00272">slitherlink::OptimizedPropagator::applyDecision()</a>, <a class="el" href="_graph_builder_8cpp_source.html#l00005">slitherlink::GraphBuilder::buildGraph()</a>, <a class="el" href="_edge_8h_source.html#l00019">Edge()</a>, <a class="el" href="_optimized_propagator_8cpp_source.html#l00045">slitherlink::OptimizedPropagator::propagate()</a>, and <a class="el" href="_smart_heuristic_8cpp_source.html#l00060">slitherlink::SmartHeuristic::selectNextEdge()</a>.</p>
 
 </div>
 </div>
@@ -154,9 +215,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_edge_8h_source.html#l00008">8</a> of file <a class="el" href="_edge_8h_source.html">Edge.h</a>.</p>
+<p>First endpoint (point index). </p>
 
-<p class="reference">Referenced by <a class="el" href="_solver_8cpp_source.html#l00110">slitherlink::Solver::applyDecision()</a>, <a class="el" href="_solver_8cpp_source.html#l00036">slitherlink::Solver::buildEdges()</a>, <a class="el" href="_graph_builder_8cpp_source.html#l00004">slitherlink::GraphBuilder::buildGraph()</a>, <a class="el" href="_solver_8cpp_source.html#l00215">slitherlink::Solver::propagateConstraints()</a>, <a class="el" href="_solver_8cpp_source.html#l00633">slitherlink::Solver::search()</a>, and <a class="el" href="_solver_8cpp_source.html#l00395">slitherlink::Solver::selectNextEdge()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_edge_8h_source.html#l00014">14</a> of file <a class="el" href="_edge_8h_source.html">Edge.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_optimized_propagator_8cpp_source.html#l00272">slitherlink::OptimizedPropagator::applyDecision()</a>, <a class="el" href="_graph_builder_8cpp_source.html#l00005">slitherlink::GraphBuilder::buildGraph()</a>, <a class="el" href="_edge_8h_source.html#l00019">Edge()</a>, <a class="el" href="_optimized_propagator_8cpp_source.html#l00045">slitherlink::OptimizedPropagator::propagate()</a>, and <a class="el" href="_smart_heuristic_8cpp_source.html#l00060">slitherlink::SmartHeuristic::selectNextEdge()</a>.</p>
 
 </div>
 </div>
@@ -172,14 +235,16 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_edge_8h_source.html#l00008">8</a> of file <a class="el" href="_edge_8h_source.html">Edge.h</a>.</p>
+<p>Second endpoint (point index). </p>
 
-<p class="reference">Referenced by <a class="el" href="_solver_8cpp_source.html#l00110">slitherlink::Solver::applyDecision()</a>, <a class="el" href="_solver_8cpp_source.html#l00036">slitherlink::Solver::buildEdges()</a>, <a class="el" href="_graph_builder_8cpp_source.html#l00004">slitherlink::GraphBuilder::buildGraph()</a>, <a class="el" href="_solver_8cpp_source.html#l00215">slitherlink::Solver::propagateConstraints()</a>, <a class="el" href="_solver_8cpp_source.html#l00633">slitherlink::Solver::search()</a>, and <a class="el" href="_solver_8cpp_source.html#l00395">slitherlink::Solver::selectNextEdge()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_edge_8h_source.html#l00015">15</a> of file <a class="el" href="_edge_8h_source.html">Edge.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_optimized_propagator_8cpp_source.html#l00272">slitherlink::OptimizedPropagator::applyDecision()</a>, <a class="el" href="_graph_builder_8cpp_source.html#l00005">slitherlink::GraphBuilder::buildGraph()</a>, <a class="el" href="_edge_8h_source.html#l00019">Edge()</a>, <a class="el" href="_optimized_propagator_8cpp_source.html#l00045">slitherlink::OptimizedPropagator::propagate()</a>, and <a class="el" href="_smart_heuristic_8cpp_source.html#l00060">slitherlink::SmartHeuristic::selectNextEdge()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>include/slitherlink/core/<a class="el" href="_edge_8h_source.html">Edge.h</a></li>
+<li>include/core/<a class="el" href="_edge_8h_source.html">Edge.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

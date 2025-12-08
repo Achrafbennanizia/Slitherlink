@@ -93,7 +93,10 @@ $(function(){initNavTree('classslitherlink_1_1_i_solution_printer.html','','clas
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_i_solution_printer_8h_source.html">ISolutionPrinter.h</a>&gt;</code></p>
+<p>Interface for printing solutions.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_solution_printer_8h_source.html">SolutionPrinter.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Inheritance diagram for slitherlink::ISolutionPrinter:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -104,12 +107,13 @@ $(function(){initNavTree('classslitherlink_1_1_i_solution_printer.html','','clas
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae45970866095c9b2fb885601913d8d66" id="r_ae45970866095c9b2fb885601913d8d66"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae45970866095c9b2fb885601913d8d66">~ISolutionPrinter</a> ()=default</td></tr>
-<tr class="memitem:ad23ae29b03738ec43db2acf4be09be9c" id="r_ad23ae29b03738ec43db2acf4be09be9c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad23ae29b03738ec43db2acf4be09be9c">print</a> (const <a class="el" href="struct_solution.html">Solution</a> &amp;solution, std::ostream &amp;out) const =0</td></tr>
-<tr class="memitem:aaaf0f32378bf9b297dcb729c2f355fa2" id="r_aaaf0f32378bf9b297dcb729c2f355fa2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaaf0f32378bf9b297dcb729c2f355fa2">printSummary</a> (int count, std::ostream &amp;out) const =0</td></tr>
+<tr class="memitem:a9d6c92601081199959a4c4e67759b8c4" id="r_a9d6c92601081199959a4c4e67759b8c4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d6c92601081199959a4c4e67759b8c4">printSolution</a> (const <a class="el" href="struct_solution.html">Solution</a> &amp;sol, std::ostream &amp;out=std::cout) const =0</td></tr>
+<tr class="memitem:ac502351927611d6f9d34f001cf76a316" id="r_ac502351927611d6f9d34f001cf76a316"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac502351927611d6f9d34f001cf76a316">printSummary</a> (size_t count, std::ostream &amp;out=std::cout) const =0</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_i_solution_printer_8h_source.html#l00009">9</a> of file <a class="el" href="_i_solution_printer_8h_source.html">ISolutionPrinter.h</a>.</p>
+<div class="textblock"><p>Interface for printing solutions. </p>
+
+<p class="definition">Definition at line <a class="el" href="_solution_printer_8h_source.html#l00016">16</a> of file <a class="el" href="_solution_printer_8h_source.html">SolutionPrinter.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae45970866095c9b2fb885601913d8d66" name="ae45970866095c9b2fb885601913d8d66"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae45970866095c9b2fb885601913d8d66">&#9670;&#160;</a></span>~ISolutionPrinter()</h2>
@@ -137,8 +141,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="ad23ae29b03738ec43db2acf4be09be9c" name="ad23ae29b03738ec43db2acf4be09be9c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad23ae29b03738ec43db2acf4be09be9c">&#9670;&#160;</a></span>print()</h2>
+<a id="a9d6c92601081199959a4c4e67759b8c4" name="a9d6c92601081199959a4c4e67759b8c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d6c92601081199959a4c4e67759b8c4">&#9670;&#160;</a></span>printSolution()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -147,14 +151,14 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void slitherlink::ISolutionPrinter::print </td>
+          <td class="memname">virtual void slitherlink::ISolutionPrinter::printSolution </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_solution.html">Solution</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>solution</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="struct_solution.html">Solution</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>sol</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span>&#160;) const</td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::cout</span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -164,12 +168,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classslitherlink_1_1_solution_printer.html#a870b66a76a67ee1ca7b7ca54c07225b6">slitherlink::SolutionPrinter</a>.</p>
+<p>Implemented in <a class="el" href="classslitherlink_1_1_solution_printer.html#a9b1dec5f3c6c9d6590ac5dfa791f63e9">slitherlink::SolutionPrinter</a>.</p>
 
 </div>
 </div>
-<a id="aaaf0f32378bf9b297dcb729c2f355fa2" name="aaaf0f32378bf9b297dcb729c2f355fa2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaaf0f32378bf9b297dcb729c2f355fa2">&#9670;&#160;</a></span>printSummary()</h2>
+<a id="ac502351927611d6f9d34f001cf76a316" name="ac502351927611d6f9d34f001cf76a316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac502351927611d6f9d34f001cf76a316">&#9670;&#160;</a></span>printSummary()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -180,12 +184,12 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void slitherlink::ISolutionPrinter::printSummary </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>count</em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>count</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span>&#160;) const</td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::cout</span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -195,12 +199,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classslitherlink_1_1_solution_printer.html#abb50317733a4a4253f6a6e6337e1e6d4">slitherlink::SolutionPrinter</a>.</p>
+<p>Implemented in <a class="el" href="classslitherlink_1_1_solution_printer.html#aa72bbc05e25daa0793514771613f76e0">slitherlink::SolutionPrinter</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/slitherlink/interfaces/<a class="el" href="_i_solution_printer_8h_source.html">ISolutionPrinter.h</a></li>
+<li>include/io/<a class="el" href="_solution_printer_8h_source.html">SolutionPrinter.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

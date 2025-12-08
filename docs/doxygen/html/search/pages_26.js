@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['💻_20usage_20examples_0',['💻 Usage Examples',['../md__q_u_i_c_k___r_e_f_e_r_e_n_c_e.html#autotoc_md216',1,'']]]
+  ['📊_20benefits_20of_20solid_20architecture_0',['📊 Benefits of SOLID Architecture',['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md126',1,'']]]
 ];

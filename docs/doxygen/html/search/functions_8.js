@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp']]]
+  ['loadfromfile_0',['loadFromFile',['../classslitherlink_1_1_grid.html#a99750ffe8cdeee205ef8642367f766a1',1,'slitherlink::Grid']]]
 ];

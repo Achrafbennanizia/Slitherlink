@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['📝_20cmake_20integration_0',['📝 CMake Integration',['../md__q_u_i_c_k___r_e_f_e_r_e_n_c_e.html#autotoc_md225',1,'']]]
+  ['🚀_20performance_20optimizations_20preserved_0',['🚀 Performance Optimizations Preserved',['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md113',1,'']]]
 ];

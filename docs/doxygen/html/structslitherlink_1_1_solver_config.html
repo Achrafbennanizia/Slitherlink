@@ -93,328 +93,64 @@ $(function(){initNavTree('structslitherlink_1_1_solver_config.html','','structsl
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_config_8h_source.html">Config.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_solver_8h_source.html">Solver.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:ae83f40f48c1aa5973afa2b942802b38f" id="r_ae83f40f48c1aa5973afa2b942802b38f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae83f40f48c1aa5973afa2b942802b38f">validate</a> ()</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a24fad878f5f3ead5285fb43dc47115aa" id="r_a24fad878f5f3ead5285fb43dc47115aa"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structslitherlink_1_1_solver_config.html">SolverConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24fad878f5f3ead5285fb43dc47115aa">fromCommandLine</a> (int argc, char *argv[])</td></tr>
-<tr class="memitem:a66ee93de09ba3ed2cebb63adaf18861d" id="r_a66ee93de09ba3ed2cebb63adaf18861d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structslitherlink_1_1_solver_config.html">SolverConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66ee93de09ba3ed2cebb63adaf18861d">defaults</a> ()</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a4b5ee31f3e57d0b57b4dec3a1364004f" id="r_a4b5ee31f3e57d0b57b4dec3a1364004f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b5ee31f3e57d0b57b4dec3a1364004f">stopAfterFirst</a> = true</td></tr>
-<tr class="memitem:a8b0e3abc8f82523660ce824065b9d96d" id="r_a8b0e3abc8f82523660ce824065b9d96d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b0e3abc8f82523660ce824065b9d96d">maxSolutions</a> = 1</td></tr>
-<tr class="memitem:ad3ce5746e35476a7e0c49a3972cd687f" id="r_ad3ce5746e35476a7e0c49a3972cd687f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3ce5746e35476a7e0c49a3972cd687f">timeoutSeconds</a> = 0.0</td></tr>
-<tr class="memitem:a5187ac96b79097659458a437ebdde5c4" id="r_a5187ac96b79097659458a437ebdde5c4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5187ac96b79097659458a437ebdde5c4">cpuUsagePercent</a> = 100.0</td></tr>
-<tr class="memitem:a8bebd6207f440141139bfff4cadccae3" id="r_a8bebd6207f440141139bfff4cadccae3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bebd6207f440141139bfff4cadccae3">numThreads</a> = 0</td></tr>
-<tr class="memitem:a0dcecbfd4c5742bb20805ae4e55574f7" id="r_a0dcecbfd4c5742bb20805ae4e55574f7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0dcecbfd4c5742bb20805ae4e55574f7">enableParallelization</a> = true</td></tr>
-<tr class="memitem:a2f096dfc5de934be41d930afe2abcd2d" id="r_a2f096dfc5de934be41d930afe2abcd2d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f096dfc5de934be41d930afe2abcd2d">enableConstraintPropagation</a> = true</td></tr>
-<tr class="memitem:a45a5b5c0e0b6dc1af3e8a7756d530e65" id="r_a45a5b5c0e0b6dc1af3e8a7756d530e65"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45a5b5c0e0b6dc1af3e8a7756d530e65">enableEarlyPruning</a> = true</td></tr>
+<tr class="memitem:af091ec874863ffd2a34ba3cec43d5847" id="r_af091ec874863ffd2a34ba3cec43d5847"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af091ec874863ffd2a34ba3cec43d5847">threads</a> = 1</td></tr>
+<tr class="memitem:a3d45b7b10b6de5c80da877b4ce89d994" id="r_a3d45b7b10b6de5c80da877b4ce89d994"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d45b7b10b6de5c80da877b4ce89d994">findAll</a> = false</td></tr>
 <tr class="memitem:aad0ef1a7ac63a2efc9ade2ee5cef3f51" id="r_aad0ef1a7ac63a2efc9ade2ee5cef3f51"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad0ef1a7ac63a2efc9ade2ee5cef3f51">verbose</a> = false</td></tr>
-<tr class="memitem:af568a5b8b7709e59ac27a3cd20e9c016" id="r_af568a5b8b7709e59ac27a3cd20e9c016"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af568a5b8b7709e59ac27a3cd20e9c016">printSolutions</a> = true</td></tr>
-<tr class="memitem:a2b7eb8d9597db7b75a0afa6b85667ed4" id="r_a2b7eb8d9597db7b75a0afa6b85667ed4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b7eb8d9597db7b75a0afa6b85667ed4">printStatistics</a> = true</td></tr>
-<tr class="memitem:a0f5692601718df40508f603c7542f861" id="r_a0f5692601718df40508f603c7542f861"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f5692601718df40508f603c7542f861">enableMemoryPool</a> = false</td></tr>
-<tr class="memitem:a413af9cc7e5f5a01fc06af1295488b0f" id="r_a413af9cc7e5f5a01fc06af1295488b0f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a413af9cc7e5f5a01fc06af1295488b0f">enableBitPacking</a> = false</td></tr>
+<tr class="memitem:af857abaefa12d895585fcfd462a835f6" id="r_af857abaefa12d895585fcfd462a835f6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af857abaefa12d895585fcfd462a835f6">enableParallel</a> = true</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_config_8h_source.html#l00010">10</a> of file <a class="el" href="_config_8h_source.html">Config.h</a>.</p>
-</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a66ee93de09ba3ed2cebb63adaf18861d" name="a66ee93de09ba3ed2cebb63adaf18861d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66ee93de09ba3ed2cebb63adaf18861d">&#9670;&#160;</a></span>defaults()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structslitherlink_1_1_solver_config.html">SolverConfig</a> slitherlink::SolverConfig::defaults </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_config_8h_source.html#l00037">37</a> of file <a class="el" href="_config_8h_source.html">Config.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="classslitherlink_1_1_solver_factory.html#ad43a6de352c58d460c38d4dc713aaf58">slitherlink::SolverFactory::createSolver()</a>, <a class="el" href="_slitherlink_8h_source.html#l00041">slitherlink::SlitherlinkAPI::solve()</a>, and <a class="el" href="_slitherlink_8h_source.html#l00033">slitherlink::SlitherlinkAPI::solve()</a>.</p>
-
-</div>
-</div>
-<a id="a24fad878f5f3ead5285fb43dc47115aa" name="a24fad878f5f3ead5285fb43dc47115aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24fad878f5f3ead5285fb43dc47115aa">&#9670;&#160;</a></span>fromCommandLine()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structslitherlink_1_1_solver_config.html">SolverConfig</a> slitherlink::SolverConfig::fromCommandLine </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>[]&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_config_8cpp_source.html#l00037">37</a> of file <a class="el" href="_config_8cpp_source.html">Config.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="_config_8h_source.html#l00018">cpuUsagePercent</a>, <a class="el" href="_config_8h_source.html#l00020">enableParallelization</a>, <a class="el" href="_config_8h_source.html#l00014">maxSolutions</a>, <a class="el" href="_config_8h_source.html#l00019">numThreads</a>, <a class="el" href="_config_8h_source.html#l00028">printSolutions</a>, <a class="el" href="_config_8h_source.html#l00029">printStatistics</a>, <a class="el" href="_config_8h_source.html#l00013">stopAfterFirst</a>, <a class="el" href="_config_8h_source.html#l00015">timeoutSeconds</a>, <a class="el" href="_config_8cpp_source.html#l00008">validate()</a>, and <a class="el" href="_config_8h_source.html#l00027">verbose</a>.</p>
-
-</div>
-</div>
-<a id="ae83f40f48c1aa5973afa2b942802b38f" name="ae83f40f48c1aa5973afa2b942802b38f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae83f40f48c1aa5973afa2b942802b38f">&#9670;&#160;</a></span>validate()</h2>
+<p class="definition">Definition at line <a class="el" href="_solver_8h_source.html#l00018">18</a> of file <a class="el" href="_solver_8h_source.html">Solver.h</a>.</p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="af857abaefa12d895585fcfd462a835f6" name="af857abaefa12d895585fcfd462a835f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af857abaefa12d895585fcfd462a835f6">&#9670;&#160;</a></span>enableParallel</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void slitherlink::SolverConfig::validate </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td class="memname">bool slitherlink::SolverConfig::enableParallel = true</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_config_8cpp_source.html#l00008">8</a> of file <a class="el" href="_config_8cpp_source.html">Config.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="_config_8h_source.html#l00018">cpuUsagePercent</a>, <a class="el" href="_config_8h_source.html#l00014">maxSolutions</a>, <a class="el" href="_config_8h_source.html#l00019">numThreads</a>, <a class="el" href="_config_8h_source.html#l00013">stopAfterFirst</a>, and <a class="el" href="_config_8h_source.html#l00015">timeoutSeconds</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_config_8cpp_source.html#l00037">fromCommandLine()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_solver_8h_source.html#l00023">23</a> of file <a class="el" href="_solver_8h_source.html">Solver.h</a>.</p>
 
 </div>
 </div>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
-<a id="a5187ac96b79097659458a437ebdde5c4" name="a5187ac96b79097659458a437ebdde5c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5187ac96b79097659458a437ebdde5c4">&#9670;&#160;</a></span>cpuUsagePercent</h2>
+<a id="a3d45b7b10b6de5c80da877b4ce89d994" name="a3d45b7b10b6de5c80da877b4ce89d994"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d45b7b10b6de5c80da877b4ce89d994">&#9670;&#160;</a></span>findAll</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double slitherlink::SolverConfig::cpuUsagePercent = 100.0</td>
+          <td class="memname">bool slitherlink::SolverConfig::findAll = false</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_config_8h_source.html#l00018">18</a> of file <a class="el" href="_config_8h_source.html">Config.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_config_8cpp_source.html#l00037">fromCommandLine()</a>, and <a class="el" href="_config_8cpp_source.html#l00008">validate()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_solver_8h_source.html#l00021">21</a> of file <a class="el" href="_solver_8h_source.html">Solver.h</a>.</p>
 
 </div>
 </div>
-<a id="a413af9cc7e5f5a01fc06af1295488b0f" name="a413af9cc7e5f5a01fc06af1295488b0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a413af9cc7e5f5a01fc06af1295488b0f">&#9670;&#160;</a></span>enableBitPacking</h2>
+<a id="af091ec874863ffd2a34ba3cec43d5847" name="af091ec874863ffd2a34ba3cec43d5847"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af091ec874863ffd2a34ba3cec43d5847">&#9670;&#160;</a></span>threads</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool slitherlink::SolverConfig::enableBitPacking = false</td>
+          <td class="memname">int slitherlink::SolverConfig::threads = 1</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_config_8h_source.html#l00033">33</a> of file <a class="el" href="_config_8h_source.html">Config.h</a>.</p>
-
-</div>
-</div>
-<a id="a2f096dfc5de934be41d930afe2abcd2d" name="a2f096dfc5de934be41d930afe2abcd2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f096dfc5de934be41d930afe2abcd2d">&#9670;&#160;</a></span>enableConstraintPropagation</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool slitherlink::SolverConfig::enableConstraintPropagation = true</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_config_8h_source.html#l00023">23</a> of file <a class="el" href="_config_8h_source.html">Config.h</a>.</p>
-
-</div>
-</div>
-<a id="a45a5b5c0e0b6dc1af3e8a7756d530e65" name="a45a5b5c0e0b6dc1af3e8a7756d530e65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45a5b5c0e0b6dc1af3e8a7756d530e65">&#9670;&#160;</a></span>enableEarlyPruning</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool slitherlink::SolverConfig::enableEarlyPruning = true</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_config_8h_source.html#l00024">24</a> of file <a class="el" href="_config_8h_source.html">Config.h</a>.</p>
-
-</div>
-</div>
-<a id="a0f5692601718df40508f603c7542f861" name="a0f5692601718df40508f603c7542f861"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f5692601718df40508f603c7542f861">&#9670;&#160;</a></span>enableMemoryPool</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool slitherlink::SolverConfig::enableMemoryPool = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_config_8h_source.html#l00032">32</a> of file <a class="el" href="_config_8h_source.html">Config.h</a>.</p>
-
-</div>
-</div>
-<a id="a0dcecbfd4c5742bb20805ae4e55574f7" name="a0dcecbfd4c5742bb20805ae4e55574f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0dcecbfd4c5742bb20805ae4e55574f7">&#9670;&#160;</a></span>enableParallelization</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool slitherlink::SolverConfig::enableParallelization = true</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_config_8h_source.html#l00020">20</a> of file <a class="el" href="_config_8h_source.html">Config.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_config_8cpp_source.html#l00037">fromCommandLine()</a>.</p>
-
-</div>
-</div>
-<a id="a8b0e3abc8f82523660ce824065b9d96d" name="a8b0e3abc8f82523660ce824065b9d96d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b0e3abc8f82523660ce824065b9d96d">&#9670;&#160;</a></span>maxSolutions</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int slitherlink::SolverConfig::maxSolutions = 1</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_config_8h_source.html#l00014">14</a> of file <a class="el" href="_config_8h_source.html">Config.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_config_8cpp_source.html#l00037">fromCommandLine()</a>, and <a class="el" href="_config_8cpp_source.html#l00008">validate()</a>.</p>
-
-</div>
-</div>
-<a id="a8bebd6207f440141139bfff4cadccae3" name="a8bebd6207f440141139bfff4cadccae3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8bebd6207f440141139bfff4cadccae3">&#9670;&#160;</a></span>numThreads</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int slitherlink::SolverConfig::numThreads = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_config_8h_source.html#l00019">19</a> of file <a class="el" href="_config_8h_source.html">Config.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_config_8cpp_source.html#l00037">fromCommandLine()</a>, and <a class="el" href="_config_8cpp_source.html#l00008">validate()</a>.</p>
-
-</div>
-</div>
-<a id="af568a5b8b7709e59ac27a3cd20e9c016" name="af568a5b8b7709e59ac27a3cd20e9c016"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af568a5b8b7709e59ac27a3cd20e9c016">&#9670;&#160;</a></span>printSolutions</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool slitherlink::SolverConfig::printSolutions = true</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_config_8h_source.html#l00028">28</a> of file <a class="el" href="_config_8h_source.html">Config.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_config_8cpp_source.html#l00037">fromCommandLine()</a>.</p>
-
-</div>
-</div>
-<a id="a2b7eb8d9597db7b75a0afa6b85667ed4" name="a2b7eb8d9597db7b75a0afa6b85667ed4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b7eb8d9597db7b75a0afa6b85667ed4">&#9670;&#160;</a></span>printStatistics</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool slitherlink::SolverConfig::printStatistics = true</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_config_8h_source.html#l00029">29</a> of file <a class="el" href="_config_8h_source.html">Config.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_config_8cpp_source.html#l00037">fromCommandLine()</a>.</p>
-
-</div>
-</div>
-<a id="a4b5ee31f3e57d0b57b4dec3a1364004f" name="a4b5ee31f3e57d0b57b4dec3a1364004f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b5ee31f3e57d0b57b4dec3a1364004f">&#9670;&#160;</a></span>stopAfterFirst</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool slitherlink::SolverConfig::stopAfterFirst = true</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_config_8h_source.html#l00013">13</a> of file <a class="el" href="_config_8h_source.html">Config.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_config_8cpp_source.html#l00037">fromCommandLine()</a>, and <a class="el" href="_config_8cpp_source.html#l00008">validate()</a>.</p>
-
-</div>
-</div>
-<a id="ad3ce5746e35476a7e0c49a3972cd687f" name="ad3ce5746e35476a7e0c49a3972cd687f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3ce5746e35476a7e0c49a3972cd687f">&#9670;&#160;</a></span>timeoutSeconds</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double slitherlink::SolverConfig::timeoutSeconds = 0.0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_config_8h_source.html#l00015">15</a> of file <a class="el" href="_config_8h_source.html">Config.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_config_8cpp_source.html#l00037">fromCommandLine()</a>, and <a class="el" href="_config_8cpp_source.html#l00008">validate()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_solver_8h_source.html#l00020">20</a> of file <a class="el" href="_solver_8h_source.html">Solver.h</a>.</p>
 
 </div>
 </div>
@@ -430,15 +166,12 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_config_8h_source.html#l00027">27</a> of file <a class="el" href="_config_8h_source.html">Config.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_config_8cpp_source.html#l00037">fromCommandLine()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_solver_8h_source.html#l00022">22</a> of file <a class="el" href="_solver_8h_source.html">Solver.h</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following files:<ul>
-<li>include/slitherlink/<a class="el" href="_config_8h_source.html">Config.h</a></li>
-<li>src/core/<a class="el" href="_config_8cpp_source.html">Config.cpp</a></li>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>include/solver/<a class="el" href="_solver_8h_source.html">Solver.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

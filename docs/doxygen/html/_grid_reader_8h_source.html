@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Slitherlink Solver: include/slitherlink/io/GridReader.h Source File</title>
+<title>Slitherlink Solver: include/io/GridReader.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,28 +92,38 @@ $(function(){initNavTree('_grid_reader_8h_source.html','',''); });
   <div class="headertitle"><div class="title">GridReader.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_grid_reader_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_grid_8h.html">slitherlink/core/Grid.h</a>&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceslitherlink.html">slitherlink</a></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <a class="code hl_struct" href="structslitherlink_1_1_grid.html">Grid</a> <a class="code hl_function" href="namespaceslitherlink.html#abd93ab9768c1bc82590992558f675722">readGridFromFile</a>(<span class="keyword">const</span> std::string &amp;filename);</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>} <span class="comment">// namespace slitherlink</span></div>
+<a href="_grid_reader_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef SLITHERLINK_IO_GRIDREADER_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define SLITHERLINK_IO_GRIDREADER_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_grid_8h.html">core/Grid.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceslitherlink.html">slitherlink</a></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classslitherlink_1_1_grid_reader.html">   15</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classslitherlink_1_1_grid_reader.html">GridReader</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classslitherlink_1_1_grid_reader.html#aeff9cc4f17bfef5bb0fdc2973416f648">   18</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="classslitherlink_1_1_grid.html">Grid</a> <a class="code hl_function" href="classslitherlink_1_1_grid_reader.html#aeff9cc4f17bfef5bb0fdc2973416f648">readFromFile</a>(<span class="keyword">const</span> std::string &amp;filename);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    };</div>
+</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>} <span class="comment">// namespace slitherlink</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#endif </span><span class="comment">// SLITHERLINK_IO_GRIDREADER_H</span></div>
 <div class="ttc" id="a_grid_8h_html"><div class="ttname"><a href="_grid_8h.html">Grid.h</a></div></div>
-<div class="ttc" id="anamespaceslitherlink_html"><div class="ttname"><a href="namespaceslitherlink.html">slitherlink</a></div><div class="ttdef"><b>Definition</b> <a href="_common_8h_source.html#l00011">Common.h:12</a></div></div>
-<div class="ttc" id="anamespaceslitherlink_html_abd93ab9768c1bc82590992558f675722"><div class="ttname"><a href="namespaceslitherlink.html#abd93ab9768c1bc82590992558f675722">slitherlink::readGridFromFile</a></div><div class="ttdeci">Grid readGridFromFile(const std::string &amp;filename)</div><div class="ttdef"><b>Definition</b> <a href="_grid_reader_8cpp_source.html#l00007">GridReader.cpp:7</a></div></div>
-<div class="ttc" id="astructslitherlink_1_1_grid_html"><div class="ttname"><a href="structslitherlink_1_1_grid.html">slitherlink::Grid</a></div><div class="ttdef"><b>Definition</b> <a href="_grid_8h_source.html#l00008">Grid.h:9</a></div></div>
+<div class="ttc" id="aclassslitherlink_1_1_grid_html"><div class="ttname"><a href="classslitherlink_1_1_grid.html">slitherlink::Grid</a></div><div class="ttdoc">Represents a Slitherlink puzzle grid.</div><div class="ttdef"><b>Definition</b> <a href="_grid_8h_source.html#l00015">Grid.h:16</a></div></div>
+<div class="ttc" id="aclassslitherlink_1_1_grid_reader_html"><div class="ttname"><a href="classslitherlink_1_1_grid_reader.html">slitherlink::GridReader</a></div><div class="ttdoc">Reads puzzle grid from file (SOLID architecture).</div><div class="ttdef"><b>Definition</b> <a href="#l00015">GridReader.h:16</a></div></div>
+<div class="ttc" id="aclassslitherlink_1_1_grid_reader_html_aeff9cc4f17bfef5bb0fdc2973416f648"><div class="ttname"><a href="classslitherlink_1_1_grid_reader.html#aeff9cc4f17bfef5bb0fdc2973416f648">slitherlink::GridReader::readFromFile</a></div><div class="ttdeci">static Grid readFromFile(const std::string &amp;filename)</div></div>
+<div class="ttc" id="anamespaceslitherlink_html"><div class="ttname"><a href="namespaceslitherlink.html">slitherlink</a></div><div class="ttdef"><b>Definition</b> <a href="_edge_8h_source.html#l00004">Edge.h:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_4c81db1a71084b812306b69d77185a79.html">slitherlink</a></li><li class="navelem"><a href="dir_f45df4d53e99950b8207438294f8ed36.html">io</a></li><li class="navelem"><a href="_grid_reader_8h.html">GridReader.h</a></li>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_a00b633439466cbb1729245c7f66f564.html">io</a></li><li class="navelem"><a href="_grid_reader_8h.html">GridReader.h</a></li>
     <li class="footer">Generated on <span class="timestamp"></span> for Slitherlink Solver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
   </ul>
 </div>

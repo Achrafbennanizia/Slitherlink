@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['🔍_20include_20paths_0',['🔍 Include Paths',['../md__q_u_i_c_k___r_e_f_e_r_e_n_c_e.html#autotoc_md221',1,'']]]
+  ['🧪_20ready_20for_20testing_0',['🧪 Ready for Testing',['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md136',1,'']]],
+  ['🧪_20testing_1',['🧪 Testing',['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md117',1,'']]]
 ];

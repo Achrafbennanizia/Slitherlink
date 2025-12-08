@@ -47,6 +47,11 @@ test_output/
 benchmark_results.csv
 benchmark_detailed.log
 
+# Documentation Output
+docs/doxygen/html/
+docs/doxygen/latex/
+docs/doxygen/xml/
+
 # macOS
 .DS_Store
 .AppleDouble

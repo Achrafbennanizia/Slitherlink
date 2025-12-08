@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="structslitherlink_1_1_solution.html" target="_top" xlink:title=" ">
+<g id="a_Node000000"><a xlink:href="classslitherlink_1_1_solution.html" target="_top" xlink:title="Represents a complete solution to the puzzle.">
 <polygon fill="white" stroke="#666666" points="98.5,-19.25 0,-19.25 0,0 98.5,0 98.5,-19.25"/>
 <text xml:space="preserve" text-anchor="middle" x="49.25" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">slitherlink::Solution</text>
 </a>

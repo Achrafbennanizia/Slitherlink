@@ -1,5 +1,7 @@
-<map id="include/slitherlink/core/Grid.h" name="include/slitherlink/core/Grid.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,127,46"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="37,94,95,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="69,46,69,78,63,78,63,46"/>
+<map id="include/core/Grid.h" name="include/core/Grid.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="9,5,139,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,63,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,33,50,67,46,64,65,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="87,79,141,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="83,30,102,64,98,67,78,33"/>
 </map>

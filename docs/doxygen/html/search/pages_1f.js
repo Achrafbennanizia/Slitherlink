@@ -1,25 +1,4 @@
 var searchData=
 [
-  ['v1_20→_20v10_0',['Version Evolution (V1 → V10)',['../md__r_e_a_d_m_e.html#autotoc_md17',1,'']]],
-  ['v10_1',['Version Evolution (V1 → V10)',['../md__r_e_a_d_m_e.html#autotoc_md17',1,'']]],
-  ['val_2',['4. &lt;span class=&quot;tt&quot;&gt;applyDecision(State &amp;amp;s, int edgeIdx, int val)&lt;/span&gt;',['../md__r_e_a_d_m_e.html#autotoc_md34',1,'']]],
-  ['verification_3',['Verification',['../md__q_u_i_c_k___r_e_f_e_r_e_n_c_e.html#autotoc_md231',1,'✅ Verification'],['../md__r_e_a_d_m_e.html#autotoc_md46',1,'Cycle Verification']]],
-  ['version_4',['📈 Version',['../md__q_u_i_c_k___r_e_f_e_r_e_n_c_e.html#autotoc_md234',1,'']]],
-  ['version_2010_3a_20lambda_20optimization_20code_20polish_5',['Version 10: Lambda Optimization &amp;amp; Code Polish',['../md__r_e_a_d_m_e.html#autotoc_md95',1,'']]],
-  ['version_201_3a_20initial_20implementation_20baseline_6',['Version 1: Initial Implementation (Baseline)',['../md__r_e_a_d_m_e.html#autotoc_md53',1,'']]],
-  ['version_202_3a_20tbb_20integration_7',['Version 2: TBB Integration',['../md__r_e_a_d_m_e.html#autotoc_md79',1,'']]],
-  ['version_202_3a_20tbb_20integration_20success_8',['Version 2: TBB Integration (Success)',['../md__r_e_a_d_m_e.html#autotoc_md57',1,'']]],
-  ['version_203_3a_20cpu_20limiting_2050_20usage_9',['Version 3: CPU Limiting 50 Usage',['../md__r_e_a_d_m_e.html#autotoc_md59',1,'Version 3: CPU Limiting (50% Usage)'],['../md__r_e_a_d_m_e.html#autotoc_md81',1,'Version 3: CPU Limiting (50% Usage)']]],
-  ['version_204_3a_20dynamic_20parallel_20depth_10',['Version 4: Dynamic Parallel Depth',['../md__r_e_a_d_m_e.html#autotoc_md83',1,'']]],
-  ['version_204_3a_20dynamic_20parallel_20depth_20success_11',['Version 4: Dynamic Parallel Depth (Success)',['../md__r_e_a_d_m_e.html#autotoc_md65',1,'']]],
-  ['version_205_3a_20intelligent_20edge_20selection_12',['Version 5: Intelligent Edge Selection',['../md__r_e_a_d_m_e.html#autotoc_md67',1,'Version 5: Intelligent Edge Selection'],['../md__r_e_a_d_m_e.html#autotoc_md85',1,'Version 5: Intelligent Edge Selection']]],
-  ['version_206_3a_20enhanced_20constraint_20propagation_13',['Version 6: Enhanced Constraint Propagation',['../md__r_e_a_d_m_e.html#autotoc_md71',1,'Version 6: Enhanced Constraint Propagation'],['../md__r_e_a_d_m_e.html#autotoc_md87',1,'Version 6: Enhanced Constraint Propagation']]],
-  ['version_207_3a_20or_20tools_20experiment_20failed_14',['Version 7: OR-Tools Experiment (Failed)',['../md__r_e_a_d_m_e.html#autotoc_md89',1,'']]],
-  ['version_207_3a_20or_20tools_20removal_20recovery_15',['Version 7: OR-Tools Removal &amp;amp; Recovery',['../md__r_e_a_d_m_e.html#autotoc_md75',1,'']]],
-  ['version_208_3a_20code_20cleanup_16',['Version 8: Code Cleanup',['../md__r_e_a_d_m_e.html#autotoc_md77',1,'Version 8: Code Cleanup'],['../md__r_e_a_d_m_e.html#autotoc_md91',1,'Version 8: Code Cleanup']]],
-  ['version_209_3a_20tbb_20optimization_20in_20final_20check_17',['Version 9: TBB Optimization in Final Check',['../md__r_e_a_d_m_e.html#autotoc_md93',1,'']]],
-  ['version_20evolution_20v1_20→_20v10_18',['Version Evolution (V1 → V10)',['../md__r_e_a_d_m_e.html#autotoc_md17',1,'']]],
-  ['versions_19',['Historical Code Versions',['../md__r_e_a_d_m_e.html#autotoc_md205',1,'']]],
-  ['view_20results_20',['View Results',['../md__r_e_a_d_m_e.html#autotoc_md14',1,'']]],
-  ['vs_20release_20performance_21',['Debug vs Release Performance',['../md__r_e_a_d_m_e.html#autotoc_md160',1,'']]]
+  ['your_20own_20puzzles_0',['Creating Your Own Puzzles',['../md_docs_2user_2_u_s_e_r___g_u_i_d_e.html#autotoc_md55',1,'']]]
 ];

@@ -1,5 +1,5 @@
-<map id="include/slitherlink/core/State.h" name="include/slitherlink/core/State.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,127,46"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="37,94,95,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="69,46,69,78,63,78,63,46"/>
+<map id="include/core/State.h" name="include/core/State.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,143,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="45,79,103,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,31,77,63,71,63,71,31"/>
 </map>

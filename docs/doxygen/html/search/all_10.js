@@ -1,23 +1,12 @@
 var searchData=
 [
-  ['getcelledges_0',['getCellEdges',['../classslitherlink_1_1_graph_builder.html#abe6e68e79e146c9eb84d36690e2d3d34',1,'slitherlink::GraphBuilder']]],
-  ['getcluecells_1',['getClueCells',['../classslitherlink_1_1_graph_builder.html#acfc4da3dcc58feeab0a6a5073360b7b7',1,'slitherlink::GraphBuilder']]],
-  ['getcount_2',['getCount',['../classslitherlink_1_1_i_solution_collector.html#ab1a9279026c081a015e9a1633a56051f',1,'slitherlink::ISolutionCollector::getCount()'],['../classslitherlink_1_1_solution_collector.html#a2c9cccf2ae6d9124df2783ff2cd13518',1,'slitherlink::SolutionCollector::getCount()']]],
-  ['getedges_3',['getEdges',['../classslitherlink_1_1_graph_builder.html#a5a81357268c488c5b31a9f20a8d8a153',1,'slitherlink::GraphBuilder']]],
-  ['gethorizedgeindex_4',['getHorizEdgeIndex',['../classslitherlink_1_1_graph_builder.html#a416e6d312e31ff45fc3316e39bb804e6',1,'slitherlink::GraphBuilder']]],
-  ['getinstance_5',['getInstance',['../classslitherlink_1_1utils_1_1_logger.html#af01b8e55abcc7d7e5b2845f44c654651',1,'slitherlink::utils::Logger']]],
-  ['getnumpoints_6',['getNumPoints',['../classslitherlink_1_1_i_graph_builder.html#a1dc8b4a85245eda77791e9fdceec9949',1,'slitherlink::IGraphBuilder::getNumPoints()'],['../classslitherlink_1_1_graph_builder.html#a8b78524f94f4ff3973158eff6647c0f9',1,'slitherlink::GraphBuilder::getNumPoints() const override']]],
-  ['getpointedges_7',['getPointEdges',['../classslitherlink_1_1_graph_builder.html#ab332e2a2d29ae3b91f6a7317c4d4cf5e',1,'slitherlink::GraphBuilder']]],
-  ['getsolutions_8',['getSolutions',['../classslitherlink_1_1_i_solution_collector.html#aa9de43af9439924fb611e8a0bcb23acb',1,'slitherlink::ISolutionCollector::getSolutions()'],['../classslitherlink_1_1_solution_collector.html#a3cb9cc3b8c9a911fa03c53e4764a3280',1,'slitherlink::SolutionCollector::getSolutions()']]],
-  ['getversion_9',['getVersion',['../namespaceslitherlink.html#a64ebd5a186a5682085606ab3dadb792d',1,'slitherlink']]],
-  ['getvertedgeindex_10',['getVertEdgeIndex',['../classslitherlink_1_1_graph_builder.html#a2b98dbe2463d77a762f0e819eec5db51',1,'slitherlink::GraphBuilder']]],
-  ['google_20or_20tools_20integration_20major_20failure_11',['Experiment 4A: Google OR-Tools Integration (Major Failure)',['../md__r_e_a_d_m_e.html#autotoc_md73',1,'']]],
-  ['graphbuilder_12',['GraphBuilder',['../classslitherlink_1_1_graph_builder.html',1,'slitherlink']]],
-  ['graphbuilder_2ecpp_13',['GraphBuilder.cpp',['../_graph_builder_8cpp.html',1,'']]],
-  ['graphbuilder_2eh_14',['GraphBuilder.h',['../_graph_builder_8h.html',1,'']]],
-  ['grid_15',['Grid',['../md__r_e_a_d_m_e.html#autotoc_md23',1,'&lt;span class=&quot;tt&quot;&gt;Grid&lt;/span&gt;'],['../struct_grid.html',1,'Grid'],['../structslitherlink_1_1_grid.html',1,'slitherlink::Grid']]],
-  ['grid_16',['grid',['../struct_solver.html#a98ab7b88d8ad3992195a3813ec4fdbf8',1,'Solver::grid'],['../classslitherlink_1_1_solver.html#a5093e7f6e3ac5163742dd6aaef53897a',1,'slitherlink::Solver::grid']]],
-  ['grid_2eh_17',['Grid.h',['../_grid_8h.html',1,'']]],
-  ['gridreader_2ecpp_18',['GridReader.cpp',['../_grid_reader_8cpp.html',1,'']]],
-  ['gridreader_2eh_19',['GridReader.h',['../_grid_reader_8h.html',1,'']]]
+  ['h_0',['h',['../md_docs_2developer_2_c_o_d_e___s_t_r_u_c_t_u_r_e.html#autotoc_md86',1,'Edge.h'],['../md_docs_2developer_2_c_o_d_e___s_t_r_u_c_t_u_r_e.html#autotoc_md85',1,'Grid.h'],['../md_docs_2developer_2_c_o_d_e___s_t_r_u_c_t_u_r_e.html#autotoc_md90',1,'GridReader.h'],['../md_docs_2developer_2_c_o_d_e___s_t_r_u_c_t_u_r_e.html#autotoc_md88',1,'Solution.h'],['../md_docs_2developer_2_c_o_d_e___s_t_r_u_c_t_u_r_e.html#autotoc_md89',1,'Solver.h'],['../md_docs_2developer_2_c_o_d_e___s_t_r_u_c_t_u_r_e.html#autotoc_md87',1,'State.h']]],
+  ['help_1',['Need Help?',['../md_docs_2user_2_u_s_e_r___g_u_i_d_e.html#autotoc_md70',1,'']]],
+  ['heuristic_2',['Add a New Heuristic',['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md123',1,'']]],
+  ['heuristics_3',['4. &lt;b&gt;Smart Heuristics&lt;/b&gt;',['../md_docs_2user_2_u_s_e_r___g_u_i_d_e.html#autotoc_md19',1,'']]],
+  ['heuristics_20ocp_20lsp_4',['2. Alternative Heuristics (OCP + LSP)',['../md_docs_2developer_2_s_o_l_i_d___p_r_i_n_c_i_p_l_e_s.html#autotoc_md235',1,'']]],
+  ['high_20level_5',['Modules (high level)',['../md_docs_2developer_2_a_r_c_h_i_t_e_c_t_u_r_e.html#autotoc_md76',1,'']]],
+  ['history_6',['Notes on Versions and History',['../md__r_e_a_d_m_e.html#autotoc_md7',1,'']]],
+  ['horizedgeindex_7',['horizEdgeIndex',['../struct_solver.html#a615948c09ff8186f8f47a7912032c276',1,'Solver']]],
+  ['how_20the_20program_20works_8',['How the Program Works',['../md_docs_2user_2_u_s_e_r___g_u_i_d_e.html#autotoc_md15',1,'']]]
 ];

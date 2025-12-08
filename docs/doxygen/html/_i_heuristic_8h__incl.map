@@ -1,7 +1,7 @@
-<map id="include/slitherlink/interfaces/IHeuristic.h" name="include/slitherlink/interfaces/IHeuristic.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,159,46"/>
-<area shape="rect" id="Node000002" href="$_state_8h.html" title=" " alt="" coords="6,94,158,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,46,85,78,79,78,79,46"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="53,168,111,193"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="85,120,85,152,79,152,79,120"/>
+<map id="include/interfaces/IHeuristic.h" name="include/interfaces/IHeuristic.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,129,46"/>
+<area shape="rect" id="Node000002" href="$_state_8h.html" title=" " alt="" coords="35,94,99,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,46,70,78,64,78,64,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="38,168,96,193"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="70,120,70,152,64,152,64,120"/>
 </map>

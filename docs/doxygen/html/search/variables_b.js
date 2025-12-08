@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['tbbsolutions_0',['tbbSolutions',['../struct_solver.html#a29939b3e8cc66c88822d6907e810f4bb',1,'Solver::tbbSolutions'],['../classslitherlink_1_1_solver.html#a857e234b9cb6fbcb18d0b9269b3129d3',1,'slitherlink::Solver::tbbSolutions']]],
-  ['timeoutseconds_1',['timeoutSeconds',['../structslitherlink_1_1_solver_config.html#ad3ce5746e35476a7e0c49a3972cd687f',1,'slitherlink::SolverConfig']]]
+  ['u_0',['u',['../struct_edge.html#a60a34279415f9bff8844f0c0a8675ae3',1,'Edge::u'],['../structslitherlink_1_1_edge.html#a55d3a34dfbdc31710a7d70f9c79d1ef6',1,'slitherlink::Edge::u']]]
 ];

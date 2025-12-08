@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['📊_20architecture_20layers_0',['📊 Architecture Layers',['../md__q_u_i_c_k___r_e_f_e_r_e_n_c_e.html#autotoc_md220',1,'']]]
+  ['🔄_20migration_20from_20original_20main_20cpp_0',['🔄 Migration from Original main.cpp',['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md132',1,'']]]
 ];

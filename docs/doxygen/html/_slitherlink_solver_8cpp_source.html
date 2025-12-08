@@ -92,52 +92,52 @@ $(function(){initNavTree('_slitherlink_solver_8cpp_source.html','',''); });
   <div class="headertitle"><div class="title">SlitherlinkSolver.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_slitherlink_solver_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="_slitherlink_solver_8h.html">slitherlink/factory/SlitherlinkSolver.h</a>&quot;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceslitherlink.html">slitherlink</a> {</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="foldopen" id="foldopen00005" data-start="{" data-end="}">
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classslitherlink_1_1_slitherlink_solver.html#a4c0a0614587f12a97d2ba78deab2b37c">    5</a></span><a class="code hl_function" href="classslitherlink_1_1_slitherlink_solver.html#a4c0a0614587f12a97d2ba78deab2b37c">SlitherlinkSolver::SlitherlinkSolver</a>(</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structslitherlink_1_1_grid.html">Grid</a> &amp;g,</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    std::shared_ptr&lt;ISolutionCollector&gt; sc,</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    std::shared_ptr&lt;ISolutionPrinter&gt; sp</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>) : grid(g), solutionCollector(sc), solutionPrinter(sp)</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    solver = std::make_unique&lt;Solver&gt;();</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    solver-&gt;grid = grid;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>}</div>
+<a href="_slitherlink_solver_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="_slitherlink_solver_8h.html">factory/SlitherlinkSolver.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_solution_collector_8h.html">io/SolutionCollector.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_solution_printer_8h.html">io/SolutionPrinter.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceslitherlink.html">slitherlink</a></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="}">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="classslitherlink_1_1_slitherlink_solver.html#a4c0a0614587f12a97d2ba78deab2b37c">    8</a></span>    <a class="code hl_function" href="classslitherlink_1_1_slitherlink_solver.html#a4c0a0614587f12a97d2ba78deab2b37c">SlitherlinkSolver::SlitherlinkSolver</a>(</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keyword">const</span> <a class="code hl_class" href="classslitherlink_1_1_grid.html">Grid</a> &amp;g,</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        std::shared_ptr&lt;ISolutionCollector&gt; sc,</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        std::shared_ptr&lt;ISolutionPrinter&gt; sp) : grid(g), solutionCollector(sc), solutionPrinter(sp)</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="comment">// NOTE: This SOLID architecture is not fully implemented yet</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="comment">// The monolithic main.cpp is currently used instead</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="comment">// TODO: Complete Solver integration when refactoring is done</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="comment">// solver = std::make_unique&lt;Solver&gt;(...);</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    }</div>
 </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classslitherlink_1_1_slitherlink_solver.html#af824933ac3b80b0beac47d1c004f7183">   15</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classslitherlink_1_1_slitherlink_solver.html#af824933ac3b80b0beac47d1c004f7183">SlitherlinkSolver::solve</a>()</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    solver-&gt;run(<span class="keyword">false</span>); <span class="comment">// Find first solution by default</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>}</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classslitherlink_1_1_slitherlink_solver.html#af824933ac3b80b0beac47d1c004f7183">   19</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classslitherlink_1_1_slitherlink_solver.html#af824933ac3b80b0beac47d1c004f7183">SlitherlinkSolver::solve</a>()</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="comment">// TODO: Implement when Solver API is finalized</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="comment">// solver-&gt;solve();</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
 </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classslitherlink_1_1_slitherlink_solver.html#a6008902e2ecfaf8e74d70dc4fcfed0b4">   20</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classslitherlink_1_1_slitherlink_solver.html#a6008902e2ecfaf8e74d70dc4fcfed0b4">SlitherlinkSolver::printResults</a>(std::ostream &amp;out)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">const</span> <span class="keyword">auto</span> &amp;solutions = solver-&gt;solutions;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">if</span> (solutions.empty())</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        out &lt;&lt; <span class="stringliteral">&quot;\nNo solutions found.\n&quot;</span>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">// Print summary using injected printer (SOLID: Dependency Inversion)</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    solutionPrinter-&gt;printSummary(solutions.size(), out);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classslitherlink_1_1_slitherlink_solver.html#a96c3dee7f173a109a225619c2bda4d64">   25</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classslitherlink_1_1_slitherlink_solver.html#a96c3dee7f173a109a225619c2bda4d64">SlitherlinkSolver::printResults</a>(std::ostream &amp;out)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="comment">// TODO: Implement when solution collection is integrated</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        out &lt;&lt; <span class="stringliteral">&quot;\nSOLID architecture not yet fully integrated.\n&quot;</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        out &lt;&lt; <span class="stringliteral">&quot;Please use the monolithic executable instead.\n&quot;</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
 </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>} <span class="comment">// namespace slitherlink</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>} <span class="comment">// namespace slitherlink</span></div>
 <div class="ttc" id="a_slitherlink_solver_8h_html"><div class="ttname"><a href="_slitherlink_solver_8h.html">SlitherlinkSolver.h</a></div></div>
-<div class="ttc" id="aclassslitherlink_1_1_slitherlink_solver_html_a4c0a0614587f12a97d2ba78deab2b37c"><div class="ttname"><a href="classslitherlink_1_1_slitherlink_solver.html#a4c0a0614587f12a97d2ba78deab2b37c">slitherlink::SlitherlinkSolver::SlitherlinkSolver</a></div><div class="ttdeci">SlitherlinkSolver(const Grid &amp;g, std::shared_ptr&lt; ISolutionCollector &gt; sc, std::shared_ptr&lt; ISolutionPrinter &gt; sp)</div><div class="ttdef"><b>Definition</b> <a href="#l00005">SlitherlinkSolver.cpp:5</a></div></div>
-<div class="ttc" id="aclassslitherlink_1_1_slitherlink_solver_html_a6008902e2ecfaf8e74d70dc4fcfed0b4"><div class="ttname"><a href="classslitherlink_1_1_slitherlink_solver.html#a6008902e2ecfaf8e74d70dc4fcfed0b4">slitherlink::SlitherlinkSolver::printResults</a></div><div class="ttdeci">void printResults(std::ostream &amp;out) const</div><div class="ttdef"><b>Definition</b> <a href="#l00020">SlitherlinkSolver.cpp:20</a></div></div>
-<div class="ttc" id="aclassslitherlink_1_1_slitherlink_solver_html_af824933ac3b80b0beac47d1c004f7183"><div class="ttname"><a href="classslitherlink_1_1_slitherlink_solver.html#af824933ac3b80b0beac47d1c004f7183">slitherlink::SlitherlinkSolver::solve</a></div><div class="ttdeci">void solve()</div><div class="ttdef"><b>Definition</b> <a href="#l00015">SlitherlinkSolver.cpp:15</a></div></div>
-<div class="ttc" id="anamespaceslitherlink_html"><div class="ttname"><a href="namespaceslitherlink.html">slitherlink</a></div><div class="ttdef"><b>Definition</b> <a href="_common_8h_source.html#l00011">Common.h:12</a></div></div>
-<div class="ttc" id="astructslitherlink_1_1_grid_html"><div class="ttname"><a href="structslitherlink_1_1_grid.html">slitherlink::Grid</a></div><div class="ttdef"><b>Definition</b> <a href="_grid_8h_source.html#l00008">Grid.h:9</a></div></div>
+<div class="ttc" id="a_solution_collector_8h_html"><div class="ttname"><a href="_solution_collector_8h.html">SolutionCollector.h</a></div></div>
+<div class="ttc" id="a_solution_printer_8h_html"><div class="ttname"><a href="_solution_printer_8h.html">SolutionPrinter.h</a></div></div>
+<div class="ttc" id="aclassslitherlink_1_1_grid_html"><div class="ttname"><a href="classslitherlink_1_1_grid.html">slitherlink::Grid</a></div><div class="ttdoc">Represents a Slitherlink puzzle grid.</div><div class="ttdef"><b>Definition</b> <a href="_grid_8h_source.html#l00015">Grid.h:16</a></div></div>
+<div class="ttc" id="aclassslitherlink_1_1_slitherlink_solver_html_a4c0a0614587f12a97d2ba78deab2b37c"><div class="ttname"><a href="classslitherlink_1_1_slitherlink_solver.html#a4c0a0614587f12a97d2ba78deab2b37c">slitherlink::SlitherlinkSolver::SlitherlinkSolver</a></div><div class="ttdeci">SlitherlinkSolver(const Grid &amp;g, std::shared_ptr&lt; ISolutionCollector &gt; sc, std::shared_ptr&lt; ISolutionPrinter &gt; sp)</div><div class="ttdef"><b>Definition</b> <a href="#l00008">SlitherlinkSolver.cpp:8</a></div></div>
+<div class="ttc" id="aclassslitherlink_1_1_slitherlink_solver_html_a96c3dee7f173a109a225619c2bda4d64"><div class="ttname"><a href="classslitherlink_1_1_slitherlink_solver.html#a96c3dee7f173a109a225619c2bda4d64">slitherlink::SlitherlinkSolver::printResults</a></div><div class="ttdeci">void printResults(std::ostream &amp;out=std::cout) const</div><div class="ttdef"><b>Definition</b> <a href="#l00025">SlitherlinkSolver.cpp:25</a></div></div>
+<div class="ttc" id="aclassslitherlink_1_1_slitherlink_solver_html_af824933ac3b80b0beac47d1c004f7183"><div class="ttname"><a href="classslitherlink_1_1_slitherlink_solver.html#af824933ac3b80b0beac47d1c004f7183">slitherlink::SlitherlinkSolver::solve</a></div><div class="ttdeci">void solve()</div><div class="ttdef"><b>Definition</b> <a href="#l00019">SlitherlinkSolver.cpp:19</a></div></div>
+<div class="ttc" id="anamespaceslitherlink_html"><div class="ttname"><a href="namespaceslitherlink.html">slitherlink</a></div><div class="ttdef"><b>Definition</b> <a href="_edge_8h_source.html#l00004">Edge.h:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

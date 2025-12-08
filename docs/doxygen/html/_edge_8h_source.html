@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Slitherlink Solver: include/slitherlink/core/Edge.h Source File</title>
+<title>Slitherlink Solver: include/core/Edge.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,34 +92,45 @@ $(function(){initNavTree('_edge_8h_source.html','',''); });
   <div class="headertitle"><div class="title">Edge.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_edge_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceslitherlink.html">slitherlink</a></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="structslitherlink_1_1_edge.html">    6</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structslitherlink_1_1_edge.html">Edge</a></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="structslitherlink_1_1_edge.html#a55d3a34dfbdc31710a7d70f9c79d1ef6">    8</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structslitherlink_1_1_edge.html#a55d3a34dfbdc31710a7d70f9c79d1ef6">u</a>, <a class="code hl_variable" href="structslitherlink_1_1_edge.html#ace66e560bbaf86891ca88d4acdf6a9d9">v</a>;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="structslitherlink_1_1_edge.html#abd1e66b22c468ee9294311359bbbb244">    9</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structslitherlink_1_1_edge.html#abd1e66b22c468ee9294311359bbbb244">cellA</a>;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="structslitherlink_1_1_edge.html#a135c376af4e697999816e712bb1ac9db">   10</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structslitherlink_1_1_edge.html#a135c376af4e697999816e712bb1ac9db">cellB</a>;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    };</div>
+<a href="_edge_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef SLITHERLINK_EDGE_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define SLITHERLINK_EDGE_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="foldopen" id="foldopen00004" data-start="{" data-end="}">
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="namespaceslitherlink.html">    4</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceslitherlink.html">slitherlink</a></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structslitherlink_1_1_edge.html">   12</a></span>    <span class="keyword">struct </span><a class="code hl_function" href="structslitherlink_1_1_edge.html#a6a09f468302c886a4d292b1c4b6c11f4">Edge</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structslitherlink_1_1_edge.html#a55d3a34dfbdc31710a7d70f9c79d1ef6">   14</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structslitherlink_1_1_edge.html#a55d3a34dfbdc31710a7d70f9c79d1ef6">u</a>;     </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structslitherlink_1_1_edge.html#ace66e560bbaf86891ca88d4acdf6a9d9">   15</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structslitherlink_1_1_edge.html#ace66e560bbaf86891ca88d4acdf6a9d9">v</a>;     </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structslitherlink_1_1_edge.html#abd1e66b22c468ee9294311359bbbb244">   16</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structslitherlink_1_1_edge.html#abd1e66b22c468ee9294311359bbbb244">cellA</a>; </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structslitherlink_1_1_edge.html#a135c376af4e697999816e712bb1ac9db">   17</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structslitherlink_1_1_edge.html#a135c376af4e697999816e712bb1ac9db">cellB</a>; </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structslitherlink_1_1_edge.html#a6a09f468302c886a4d292b1c4b6c11f4">   19</a></span>        <a class="code hl_function" href="structslitherlink_1_1_edge.html#a6a09f468302c886a4d292b1c4b6c11f4">Edge</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="structslitherlink_1_1_edge.html#a55d3a34dfbdc31710a7d70f9c79d1ef6">u</a>, <span class="keywordtype">int</span> <a class="code hl_variable" href="structslitherlink_1_1_edge.html#ace66e560bbaf86891ca88d4acdf6a9d9">v</a>, <span class="keywordtype">int</span> <a class="code hl_variable" href="structslitherlink_1_1_edge.html#abd1e66b22c468ee9294311359bbbb244">cellA</a>, <span class="keywordtype">int</span> <a class="code hl_variable" href="structslitherlink_1_1_edge.html#a135c376af4e697999816e712bb1ac9db">cellB</a>)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            : <a class="code hl_variable" href="structslitherlink_1_1_edge.html#a55d3a34dfbdc31710a7d70f9c79d1ef6">u</a>(<a class="code hl_variable" href="structslitherlink_1_1_edge.html#a55d3a34dfbdc31710a7d70f9c79d1ef6">u</a>), <a class="code hl_variable" href="structslitherlink_1_1_edge.html#ace66e560bbaf86891ca88d4acdf6a9d9">v</a>(<a class="code hl_variable" href="structslitherlink_1_1_edge.html#ace66e560bbaf86891ca88d4acdf6a9d9">v</a>), <a class="code hl_variable" href="structslitherlink_1_1_edge.html#abd1e66b22c468ee9294311359bbbb244">cellA</a>(<a class="code hl_variable" href="structslitherlink_1_1_edge.html#abd1e66b22c468ee9294311359bbbb244">cellA</a>), <a class="code hl_variable" href="structslitherlink_1_1_edge.html#a135c376af4e697999816e712bb1ac9db">cellB</a>(<a class="code hl_variable" href="structslitherlink_1_1_edge.html#a135c376af4e697999816e712bb1ac9db">cellB</a>) {}</div>
 </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>} <span class="comment">// namespace slitherlink</span></div>
-<div class="ttc" id="anamespaceslitherlink_html"><div class="ttname"><a href="namespaceslitherlink.html">slitherlink</a></div><div class="ttdef"><b>Definition</b> <a href="_common_8h_source.html#l00011">Common.h:12</a></div></div>
-<div class="ttc" id="astructslitherlink_1_1_edge_html"><div class="ttname"><a href="structslitherlink_1_1_edge.html">slitherlink::Edge</a></div><div class="ttdef"><b>Definition</b> <a href="#l00006">Edge.h:7</a></div></div>
-<div class="ttc" id="astructslitherlink_1_1_edge_html_a135c376af4e697999816e712bb1ac9db"><div class="ttname"><a href="structslitherlink_1_1_edge.html#a135c376af4e697999816e712bb1ac9db">slitherlink::Edge::cellB</a></div><div class="ttdeci">int cellB</div><div class="ttdef"><b>Definition</b> <a href="#l00010">Edge.h:10</a></div></div>
-<div class="ttc" id="astructslitherlink_1_1_edge_html_a55d3a34dfbdc31710a7d70f9c79d1ef6"><div class="ttname"><a href="structslitherlink_1_1_edge.html#a55d3a34dfbdc31710a7d70f9c79d1ef6">slitherlink::Edge::u</a></div><div class="ttdeci">int u</div><div class="ttdef"><b>Definition</b> <a href="#l00008">Edge.h:8</a></div></div>
-<div class="ttc" id="astructslitherlink_1_1_edge_html_abd1e66b22c468ee9294311359bbbb244"><div class="ttname"><a href="structslitherlink_1_1_edge.html#abd1e66b22c468ee9294311359bbbb244">slitherlink::Edge::cellA</a></div><div class="ttdeci">int cellA</div><div class="ttdef"><b>Definition</b> <a href="#l00009">Edge.h:9</a></div></div>
-<div class="ttc" id="astructslitherlink_1_1_edge_html_ace66e560bbaf86891ca88d4acdf6a9d9"><div class="ttname"><a href="structslitherlink_1_1_edge.html#ace66e560bbaf86891ca88d4acdf6a9d9">slitherlink::Edge::v</a></div><div class="ttdeci">int v</div><div class="ttdef"><b>Definition</b> <a href="#l00008">Edge.h:8</a></div></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    };</div>
+</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>} <span class="comment">// namespace slitherlink</span></div>
+</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#endif </span><span class="comment">// SLITHERLINK_EDGE_H</span></div>
+<div class="ttc" id="anamespaceslitherlink_html"><div class="ttname"><a href="namespaceslitherlink.html">slitherlink</a></div><div class="ttdef"><b>Definition</b> <a href="#l00004">Edge.h:5</a></div></div>
+<div class="ttc" id="astructslitherlink_1_1_edge_html_a135c376af4e697999816e712bb1ac9db"><div class="ttname"><a href="structslitherlink_1_1_edge.html#a135c376af4e697999816e712bb1ac9db">slitherlink::Edge::cellB</a></div><div class="ttdeci">int cellB</div><div class="ttdoc">Second adjacent cell (-1 if none).</div><div class="ttdef"><b>Definition</b> <a href="#l00017">Edge.h:17</a></div></div>
+<div class="ttc" id="astructslitherlink_1_1_edge_html_a55d3a34dfbdc31710a7d70f9c79d1ef6"><div class="ttname"><a href="structslitherlink_1_1_edge.html#a55d3a34dfbdc31710a7d70f9c79d1ef6">slitherlink::Edge::u</a></div><div class="ttdeci">int u</div><div class="ttdoc">First endpoint (point index).</div><div class="ttdef"><b>Definition</b> <a href="#l00014">Edge.h:14</a></div></div>
+<div class="ttc" id="astructslitherlink_1_1_edge_html_a6a09f468302c886a4d292b1c4b6c11f4"><div class="ttname"><a href="structslitherlink_1_1_edge.html#a6a09f468302c886a4d292b1c4b6c11f4">slitherlink::Edge::Edge</a></div><div class="ttdeci">Edge(int u, int v, int cellA, int cellB)</div><div class="ttdef"><b>Definition</b> <a href="#l00019">Edge.h:19</a></div></div>
+<div class="ttc" id="astructslitherlink_1_1_edge_html_abd1e66b22c468ee9294311359bbbb244"><div class="ttname"><a href="structslitherlink_1_1_edge.html#abd1e66b22c468ee9294311359bbbb244">slitherlink::Edge::cellA</a></div><div class="ttdeci">int cellA</div><div class="ttdoc">First adjacent cell (-1 if none).</div><div class="ttdef"><b>Definition</b> <a href="#l00016">Edge.h:16</a></div></div>
+<div class="ttc" id="astructslitherlink_1_1_edge_html_ace66e560bbaf86891ca88d4acdf6a9d9"><div class="ttname"><a href="structslitherlink_1_1_edge.html#ace66e560bbaf86891ca88d4acdf6a9d9">slitherlink::Edge::v</a></div><div class="ttdeci">int v</div><div class="ttdoc">Second endpoint (point index).</div><div class="ttdef"><b>Definition</b> <a href="#l00015">Edge.h:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_4c81db1a71084b812306b69d77185a79.html">slitherlink</a></li><li class="navelem"><a href="dir_189042d36de83d14517f9eb1027bc5c6.html">core</a></li><li class="navelem"><a href="_edge_8h.html">Edge.h</a></li>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_3d69f64eaf81436fe2b22361382717e5.html">core</a></li><li class="navelem"><a href="_edge_8h.html">Edge.h</a></li>
     <li class="footer">Generated on <span class="timestamp"></span> for Slitherlink Solver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
   </ul>
 </div>

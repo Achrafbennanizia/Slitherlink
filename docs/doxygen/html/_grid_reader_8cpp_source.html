@@ -92,76 +92,74 @@ $(function(){initNavTree('_grid_reader_8cpp_source.html','',''); });
   <div class="headertitle"><div class="title">GridReader.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_grid_reader_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="_grid_reader_8h.html">slitherlink/io/GridReader.h</a>&quot;</span></div>
+<a href="_grid_reader_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="_grid_reader_8h.html">io/GridReader.h</a>&quot;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceslitherlink.html">slitherlink</a> {</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="foldopen" id="foldopen00007" data-start="{" data-end="}">
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="namespaceslitherlink.html#abd93ab9768c1bc82590992558f675722">    7</a></span><a class="code hl_struct" href="structslitherlink_1_1_grid.html">Grid</a> <a class="code hl_function" href="namespaceslitherlink.html#abd93ab9768c1bc82590992558f675722">readGridFromFile</a>(<span class="keyword">const</span> std::string &amp;filename)</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    std::ifstream in(filename);</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordflow">if</span> (!in)</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Could not open file &quot;</span> + filename);</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    }</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_struct" href="structslitherlink_1_1_grid.html">Grid</a> g;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    in &gt;&gt; g.<a class="code hl_variable" href="structslitherlink_1_1_grid.html#aeccf439f2e326a466f444d2b434298fa">n</a> &gt;&gt; g.<a class="code hl_variable" href="structslitherlink_1_1_grid.html#a2f10e6e269355e90bf4ea24bfdc91a2e">m</a>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    std::string line;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    getline(in, line);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    g.<a class="code hl_variable" href="structslitherlink_1_1_grid.html#a36d56a73753f0b2bb32b99d062b5f3d3">clues</a>.assign(g.<a class="code hl_variable" href="structslitherlink_1_1_grid.html#aeccf439f2e326a466f444d2b434298fa">n</a> * g.<a class="code hl_variable" href="structslitherlink_1_1_grid.html#a2f10e6e269355e90bf4ea24bfdc91a2e">m</a>, -1);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> r = 0; r &lt; g.<a class="code hl_variable" href="structslitherlink_1_1_grid.html#aeccf439f2e326a466f444d2b434298fa">n</a>; ++r)</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordflow">if</span> (!getline(in, line))</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Not enough grid lines in file&quot;</span>);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        }</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordflow">if</span> (line.empty())</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            r--;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        }</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        std::vector&lt;int&gt; row;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">for</span> (<span class="keywordtype">char</span> ch : line)</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordflow">if</span> (ch == <span class="charliteral">&#39; &#39;</span> || ch == <span class="charliteral">&#39;\t&#39;</span>)</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordflow">if</span> (ch &gt;= <span class="charliteral">&#39;0&#39;</span> &amp;&amp; ch &lt;= <span class="charliteral">&#39;3&#39;</span>)</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                row.push_back(ch - <span class="charliteral">&#39;0&#39;</span>);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            }</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                row.push_back(-1);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            }</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">int</span>)row.size() == g.<a class="code hl_variable" href="structslitherlink_1_1_grid.html#a2f10e6e269355e90bf4ea24bfdc91a2e">m</a>)</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        }</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">int</span>)row.size() != g.<a class="code hl_variable" href="structslitherlink_1_1_grid.html#a2f10e6e269355e90bf4ea24bfdc91a2e">m</a>)</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Row &quot;</span> + std::to_string(r) + <span class="stringliteral">&quot; does not have m entries&quot;</span>);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c = 0; c &lt; g.<a class="code hl_variable" href="structslitherlink_1_1_grid.html#a2f10e6e269355e90bf4ea24bfdc91a2e">m</a>; ++c)</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            g.<a class="code hl_variable" href="structslitherlink_1_1_grid.html#a36d56a73753f0b2bb32b99d062b5f3d3">clues</a>[g.<a class="code hl_function" href="structslitherlink_1_1_grid.html#acd7260934718cb0e2e4bc44867a3d94d">cellIndex</a>(r, c)] = row[c];</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        }</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">return</span> g;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceslitherlink.html">slitherlink</a></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="}">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="namespaceslitherlink.html#abd93ab9768c1bc82590992558f675722">    8</a></span>    <a class="code hl_class" href="classslitherlink_1_1_grid.html">Grid</a> <a class="code hl_function" href="namespaceslitherlink.html#abd93ab9768c1bc82590992558f675722">readGridFromFile</a>(<span class="keyword">const</span> std::string &amp;filename)</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        std::ifstream in(filename);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keywordflow">if</span> (!in)</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Could not open file &quot;</span> + filename);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        }</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <a class="code hl_class" href="classslitherlink_1_1_grid.html">Grid</a> g;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        in &gt;&gt; g.n &gt;&gt; g.m;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        std::string line;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        getline(in, line);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        g.clues.assign(g.n * g.m, -1);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> r = 0; r &lt; g.n; ++r)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keywordflow">if</span> (!getline(in, line))</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Not enough grid lines in file&quot;</span>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="keywordflow">if</span> (line.empty())</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                r--;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            std::vector&lt;int&gt; row;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordflow">for</span> (<span class="keywordtype">char</span> ch : line)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                <span class="keywordflow">if</span> (ch == <span class="charliteral">&#39; &#39;</span> || ch == <span class="charliteral">&#39;\t&#39;</span>)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                <span class="keywordflow">if</span> (ch &gt;= <span class="charliteral">&#39;0&#39;</span> &amp;&amp; ch &lt;= <span class="charliteral">&#39;3&#39;</span>)</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                    row.push_back(ch - <span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                    row.push_back(-1);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                <span class="keywordflow">if</span> ((<span class="keywordtype">int</span>)row.size() == g.m)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">int</span>)row.size() != g.m)</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Row &quot;</span> + std::to_string(r) + <span class="stringliteral">&quot; does not have m entries&quot;</span>);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c = 0; c &lt; g.m; ++c)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                g.clues[g.<a class="code hl_function" href="classslitherlink_1_1_grid.html#acd7260934718cb0e2e4bc44867a3d94d">cellIndex</a>(r, c)] = row[c];</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">return</span> g;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
 </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>} <span class="comment">// namespace slitherlink</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>} <span class="comment">// namespace slitherlink</span></div>
 <div class="ttc" id="a_grid_reader_8h_html"><div class="ttname"><a href="_grid_reader_8h.html">GridReader.h</a></div></div>
-<div class="ttc" id="anamespaceslitherlink_html"><div class="ttname"><a href="namespaceslitherlink.html">slitherlink</a></div><div class="ttdef"><b>Definition</b> <a href="_common_8h_source.html#l00011">Common.h:12</a></div></div>
-<div class="ttc" id="anamespaceslitherlink_html_abd93ab9768c1bc82590992558f675722"><div class="ttname"><a href="namespaceslitherlink.html#abd93ab9768c1bc82590992558f675722">slitherlink::readGridFromFile</a></div><div class="ttdeci">Grid readGridFromFile(const std::string &amp;filename)</div><div class="ttdef"><b>Definition</b> <a href="#l00007">GridReader.cpp:7</a></div></div>
-<div class="ttc" id="astructslitherlink_1_1_grid_html"><div class="ttname"><a href="structslitherlink_1_1_grid.html">slitherlink::Grid</a></div><div class="ttdef"><b>Definition</b> <a href="_grid_8h_source.html#l00008">Grid.h:9</a></div></div>
-<div class="ttc" id="astructslitherlink_1_1_grid_html_a2f10e6e269355e90bf4ea24bfdc91a2e"><div class="ttname"><a href="structslitherlink_1_1_grid.html#a2f10e6e269355e90bf4ea24bfdc91a2e">slitherlink::Grid::m</a></div><div class="ttdeci">int m</div><div class="ttdef"><b>Definition</b> <a href="_grid_8h_source.html#l00010">Grid.h:10</a></div></div>
-<div class="ttc" id="astructslitherlink_1_1_grid_html_a36d56a73753f0b2bb32b99d062b5f3d3"><div class="ttname"><a href="structslitherlink_1_1_grid.html#a36d56a73753f0b2bb32b99d062b5f3d3">slitherlink::Grid::clues</a></div><div class="ttdeci">std::vector&lt; int &gt; clues</div><div class="ttdef"><b>Definition</b> <a href="_grid_8h_source.html#l00011">Grid.h:11</a></div></div>
-<div class="ttc" id="astructslitherlink_1_1_grid_html_acd7260934718cb0e2e4bc44867a3d94d"><div class="ttname"><a href="structslitherlink_1_1_grid.html#acd7260934718cb0e2e4bc44867a3d94d">slitherlink::Grid::cellIndex</a></div><div class="ttdeci">int cellIndex(int r, int c) const</div><div class="ttdef"><b>Definition</b> <a href="_grid_8h_source.html#l00013">Grid.h:13</a></div></div>
-<div class="ttc" id="astructslitherlink_1_1_grid_html_aeccf439f2e326a466f444d2b434298fa"><div class="ttname"><a href="structslitherlink_1_1_grid.html#aeccf439f2e326a466f444d2b434298fa">slitherlink::Grid::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>Definition</b> <a href="_grid_8h_source.html#l00010">Grid.h:10</a></div></div>
+<div class="ttc" id="aclassslitherlink_1_1_grid_html"><div class="ttname"><a href="classslitherlink_1_1_grid.html">slitherlink::Grid</a></div><div class="ttdoc">Represents a Slitherlink puzzle grid.</div><div class="ttdef"><b>Definition</b> <a href="_grid_8h_source.html#l00015">Grid.h:16</a></div></div>
+<div class="ttc" id="aclassslitherlink_1_1_grid_html_acd7260934718cb0e2e4bc44867a3d94d"><div class="ttname"><a href="classslitherlink_1_1_grid.html#acd7260934718cb0e2e4bc44867a3d94d">slitherlink::Grid::cellIndex</a></div><div class="ttdeci">int cellIndex(int r, int c) const</div><div class="ttdef"><b>Definition</b> <a href="_grid_8h_source.html#l00026">Grid.h:26</a></div></div>
+<div class="ttc" id="anamespaceslitherlink_html"><div class="ttname"><a href="namespaceslitherlink.html">slitherlink</a></div><div class="ttdef"><b>Definition</b> <a href="_edge_8h_source.html#l00004">Edge.h:5</a></div></div>
+<div class="ttc" id="anamespaceslitherlink_html_abd93ab9768c1bc82590992558f675722"><div class="ttname"><a href="namespaceslitherlink.html#abd93ab9768c1bc82590992558f675722">slitherlink::readGridFromFile</a></div><div class="ttdeci">Grid readGridFromFile(const std::string &amp;filename)</div><div class="ttdef"><b>Definition</b> <a href="#l00008">GridReader.cpp:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

@@ -105,10 +105,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa696e71f234317b000395e47a86b140a" id="r_aa696e71f234317b000395e47a86b140a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa696e71f234317b000395e47a86b140a">buildEdges</a> ()</td></tr>
 <tr class="memitem:a490b8f71e7c973ae13eec5a09ad8e444" id="r_a490b8f71e7c973ae13eec5a09ad8e444"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_state.html">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a490b8f71e7c973ae13eec5a09ad8e444">initialState</a> () const</td></tr>
 <tr class="memitem:aa639038e2d8ce6eafa4f2e4d5db2981c" id="r_aa639038e2d8ce6eafa4f2e4d5db2981c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa639038e2d8ce6eafa4f2e4d5db2981c">applyDecision</a> (<a class="el" href="struct_state.html">State</a> &amp;s, int edgeIdx, int val) const</td></tr>
+<tr class="memdesc:aa639038e2d8ce6eafa4f2e4d5db2981c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply edge decision and update state (#13 - inlined hot path).  <br /></td></tr>
 <tr class="memitem:ac4baec964008ec7ef86d830a158740a8" id="r_ac4baec964008ec7ef86d830a158740a8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4baec964008ec7ef86d830a158740a8">quickValidityCheck</a> (const <a class="el" href="struct_state.html">State</a> &amp;s) const</td></tr>
+<tr class="memdesc:ac4baec964008ec7ef86d830a158740a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quick validity check (#13 - inlined hot path).  <br /></td></tr>
 <tr class="memitem:a705228ee9a94811eb93b27c39d79013a" id="r_a705228ee9a94811eb93b27c39d79013a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a705228ee9a94811eb93b27c39d79013a">propagateConstraints</a> (<a class="el" href="struct_state.html">State</a> &amp;s) const</td></tr>
+<tr class="memitem:a8ec233f487ebcd3d5bdf10fe04345316" id="r_a8ec233f487ebcd3d5bdf10fe04345316"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ec233f487ebcd3d5bdf10fe04345316">estimateBranches</a> (const <a class="el" href="struct_state.html">State</a> &amp;s, int edgeIdx) const</td></tr>
+<tr class="memdesc:a8ec233f487ebcd3d5bdf10fe04345316"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimate branching factor for an edge decision (#11).  <br /></td></tr>
 <tr class="memitem:af3f59a274f63e9919b4135baeaef17cb" id="r_af3f59a274f63e9919b4135baeaef17cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3f59a274f63e9919b4135baeaef17cb">selectNextEdge</a> (const <a class="el" href="struct_state.html">State</a> &amp;s) const</td></tr>
+<tr class="memdesc:af3f59a274f63e9919b4135baeaef17cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select next edge using smart heuristics (#11).  <br /></td></tr>
 <tr class="memitem:acdc81ccbd01a76947c24fbb13a5fa320" id="r_acdc81ccbd01a76947c24fbb13a5fa320"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdc81ccbd01a76947c24fbb13a5fa320">finalCheckAndStore</a> (<a class="el" href="struct_state.html">State</a> &amp;s)</td></tr>
+<tr class="memitem:a152377fc8dd52e014481b3f7a1f236fd" id="r_a152377fc8dd52e014481b3f7a1f236fd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a152377fc8dd52e014481b3f7a1f236fd">testEdgeDecision</a> (const <a class="el" href="struct_state.html">State</a> &amp;s, int edgeIdx, int val) const</td></tr>
+<tr class="memdesc:a152377fc8dd52e014481b3f7a1f236fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Look-ahead pruning (#12) - Test if edge decision leads to valid state.  <br /></td></tr>
+<tr class="memitem:aa566c7693f7420c38e0256e1b227532e" id="r_aa566c7693f7420c38e0256e1b227532e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa566c7693f7420c38e0256e1b227532e">isCanonicalSolution</a> (const <a class="el" href="struct_solution.html">Solution</a> &amp;sol) const</td></tr>
+<tr class="memdesc:aa566c7693f7420c38e0256e1b227532e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symmetry breaking (#9) - Check if solution is in canonical form.  <br /></td></tr>
+<tr class="memitem:a57e99e6df9c9ecd2dbf994256ecd3a49" id="r_a57e99e6df9c9ecd2dbf994256ecd3a49"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57e99e6df9c9ecd2dbf994256ecd3a49">isDefinitelyUnsolvable</a> (const <a class="el" href="struct_state.html">State</a> &amp;s) const</td></tr>
+<tr class="memdesc:a57e99e6df9c9ecd2dbf994256ecd3a49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Early detection of definitely unsolvable states.  <br /></td></tr>
 <tr class="memitem:a29dd345069037ff21ecd6ccb76576d77" id="r_a29dd345069037ff21ecd6ccb76576d77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29dd345069037ff21ecd6ccb76576d77">search</a> (<a class="el" href="struct_state.html">State</a> s, int depth)</td></tr>
 <tr class="memitem:a9c7415c3c3ba6f2e4bb2cdd5eff7421f" id="r_a9c7415c3c3ba6f2e4bb2cdd5eff7421f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c7415c3c3ba6f2e4bb2cdd5eff7421f">run</a> (bool allSolutions, int numThreads=0, double cpuPercent=1.0)</td></tr>
 <tr class="memitem:a30dff7691e4a5e4c0bbd1cb37182209b" id="r_a30dff7691e4a5e4c0bbd1cb37182209b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30dff7691e4a5e4c0bbd1cb37182209b">printSolution</a> (const <a class="el" href="struct_solution.html">Solution</a> &amp;sol) const</td></tr>
@@ -137,7 +148,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00093">93</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00166">166</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="aa639038e2d8ce6eafa4f2e4d5db2981c" name="aa639038e2d8ce6eafa4f2e4d5db2981c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa639038e2d8ce6eafa4f2e4d5db2981c">&#9670;&#160;</a></span>applyDecision()</h2>
@@ -171,11 +182,13 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00214">214</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p>Apply edge decision and update state (#13 - inlined hot path). </p>
 
-<p class="reference">References <a class="el" href="main_8cpp_source.html#l00059">Edge::cellA</a>, <a class="el" href="main_8cpp_source.html#l00060">Edge::cellB</a>, <a class="el" href="main_8cpp_source.html#l00073">State::cellEdgeCount</a>, <a class="el" href="main_8cpp_source.html#l00074">State::cellUndecided</a>, <a class="el" href="main_8cpp_source.html#l00096">edges</a>, <a class="el" href="main_8cpp_source.html#l00071">State::edgeState</a>, <a class="el" href="main_8cpp_source.html#l00095">grid</a>, <a class="el" href="main_8cpp_source.html#l00072">State::pointDegree</a>, <a class="el" href="main_8cpp_source.html#l00075">State::pointUndecided</a>, <a class="el" href="main_8cpp_source.html#l00057">Edge::u</a>, and <a class="el" href="main_8cpp_source.html#l00058">Edge::v</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00300">300</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_solver_8cpp_source.html#l00215">slitherlink::Solver::propagateConstraints()</a>, <a class="el" href="main_8cpp_source.html#l00318">propagateConstraints()</a>, <a class="el" href="_solver_8cpp_source.html#l00633">slitherlink::Solver::search()</a>, and <a class="el" href="main_8cpp_source.html#l00736">search()</a>.</p>
+<p class="reference">References <a class="el" href="main_8cpp_source.html#l00059">Edge::cellA</a>, <a class="el" href="main_8cpp_source.html#l00060">Edge::cellB</a>, <a class="el" href="main_8cpp_source.html#l00077">State::cellEdgeCount</a>, <a class="el" href="main_8cpp_source.html#l00078">State::cellUndecided</a>, <a class="el" href="main_8cpp_source.html#l00169">edges</a>, <a class="el" href="main_8cpp_source.html#l00074">State::edgeState</a>, <a class="el" href="main_8cpp_source.html#l00168">grid</a>, <a class="el" href="main_8cpp_source.html#l00075">State::pointDegree</a>, <a class="el" href="main_8cpp_source.html#l00076">State::pointUndecided</a>, <a class="el" href="main_8cpp_source.html#l00057">Edge::u</a>, and <a class="el" href="main_8cpp_source.html#l00058">Edge::v</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00407">propagateConstraints()</a>, <a class="el" href="main_8cpp_source.html#l00981">search()</a>, and <a class="el" href="main_8cpp_source.html#l00876">testEdgeDecision()</a>.</p>
 
 </div>
 </div>
@@ -202,11 +215,11 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00140">140</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00213">213</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="main_8cpp_source.html#l00059">Edge::cellA</a>, <a class="el" href="main_8cpp_source.html#l00060">Edge::cellB</a>, <a class="el" href="main_8cpp_source.html#l00101">cellEdges</a>, <a class="el" href="main_8cpp_source.html#l00103">clueCells</a>, <a class="el" href="main_8cpp_source.html#l00096">edges</a>, <a class="el" href="main_8cpp_source.html#l00095">grid</a>, <a class="el" href="main_8cpp_source.html#l00099">horizEdgeIndex</a>, <a class="el" href="main_8cpp_source.html#l00097">numPoints</a>, <a class="el" href="main_8cpp_source.html#l00102">pointEdges</a>, <a class="el" href="main_8cpp_source.html#l00057">Edge::u</a>, <a class="el" href="main_8cpp_source.html#l00058">Edge::v</a>, and <a class="el" href="main_8cpp_source.html#l00100">vertEdgeIndex</a>.</p>
+<p class="reference">References <a class="el" href="main_8cpp_source.html#l00059">Edge::cellA</a>, <a class="el" href="main_8cpp_source.html#l00060">Edge::cellB</a>, <a class="el" href="main_8cpp_source.html#l00174">cellEdges</a>, <a class="el" href="main_8cpp_source.html#l00176">clueCells</a>, <a class="el" href="main_8cpp_source.html#l00169">edges</a>, <a class="el" href="main_8cpp_source.html#l00168">grid</a>, <a class="el" href="main_8cpp_source.html#l00172">horizEdgeIndex</a>, <a class="el" href="main_8cpp_source.html#l00170">numPoints</a>, <a class="el" href="main_8cpp_source.html#l00175">pointEdges</a>, <a class="el" href="main_8cpp_source.html#l00057">Edge::u</a>, <a class="el" href="main_8cpp_source.html#l00058">Edge::v</a>, and <a class="el" href="main_8cpp_source.html#l00173">vertEdgeIndex</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_solver_8cpp_source.html#l00735">slitherlink::Solver::run()</a>, and <a class="el" href="main_8cpp_source.html#l00838">run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l01124">run()</a>.</p>
 
 </div>
 </div>
@@ -233,11 +246,49 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00121">121</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00194">194</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="main_8cpp_source.html#l00095">grid</a>.</p>
+<p class="reference">References <a class="el" href="main_8cpp_source.html#l00168">grid</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_solver_8cpp_source.html#l00735">slitherlink::Solver::run()</a>, and <a class="el" href="main_8cpp_source.html#l00838">run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l01124">run()</a>.</p>
+
+</div>
+</div>
+<a id="a8ec233f487ebcd3d5bdf10fe04345316" name="a8ec233f487ebcd3d5bdf10fe04345316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ec233f487ebcd3d5bdf10fe04345316">&#9670;&#160;</a></span>estimateBranches()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Solver::estimateBranches </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_state.html">State</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>edgeIdx</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Estimate branching factor for an edge decision (#11). </p>
+<p>Tests both ON and OFF decisions with quick validity checks. Returns number of viable branches (0, 1, or 2). </p>
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00594">594</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="main_8cpp_source.html#l00169">edges</a>, <a class="el" href="main_8cpp_source.html#l00075">State::pointDegree</a>, <a class="el" href="main_8cpp_source.html#l00076">State::pointUndecided</a>, <a class="el" href="main_8cpp_source.html#l00057">Edge::u</a>, and <a class="el" href="main_8cpp_source.html#l00058">Edge::v</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00618">selectNextEdge()</a>.</p>
 
 </div>
 </div>
@@ -264,11 +315,11 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00538">538</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00668">668</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="main_8cpp_source.html#l00073">State::cellEdgeCount</a>, <a class="el" href="main_8cpp_source.html#l00103">clueCells</a>, <a class="el" href="main_8cpp_source.html#l00096">edges</a>, <a class="el" href="main_8cpp_source.html#l00095">grid</a>, <a class="el" href="main_8cpp_source.html#l00097">numPoints</a>, and <a class="el" href="main_8cpp_source.html#l00072">State::pointDegree</a>.</p>
+<p class="reference">References <a class="el" href="main_8cpp_source.html#l00077">State::cellEdgeCount</a>, <a class="el" href="main_8cpp_source.html#l00176">clueCells</a>, <a class="el" href="main_8cpp_source.html#l00169">edges</a>, <a class="el" href="main_8cpp_source.html#l00168">grid</a>, <a class="el" href="main_8cpp_source.html#l00170">numPoints</a>, and <a class="el" href="main_8cpp_source.html#l00075">State::pointDegree</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_solver_8cpp_source.html#l00633">slitherlink::Solver::search()</a>, and <a class="el" href="main_8cpp_source.html#l00736">search()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00981">search()</a>.</p>
 
 </div>
 </div>
@@ -295,11 +346,84 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00197">197</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00270">270</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="main_8cpp_source.html#l00073">State::cellEdgeCount</a>, <a class="el" href="main_8cpp_source.html#l00101">cellEdges</a>, <a class="el" href="main_8cpp_source.html#l00074">State::cellUndecided</a>, <a class="el" href="main_8cpp_source.html#l00096">edges</a>, <a class="el" href="main_8cpp_source.html#l00071">State::edgeState</a>, <a class="el" href="main_8cpp_source.html#l00095">grid</a>, <a class="el" href="main_8cpp_source.html#l00097">numPoints</a>, <a class="el" href="main_8cpp_source.html#l00072">State::pointDegree</a>, <a class="el" href="main_8cpp_source.html#l00102">pointEdges</a>, and <a class="el" href="main_8cpp_source.html#l00075">State::pointUndecided</a>.</p>
+<p class="reference">References <a class="el" href="main_8cpp_source.html#l00077">State::cellEdgeCount</a>, <a class="el" href="main_8cpp_source.html#l00174">cellEdges</a>, <a class="el" href="main_8cpp_source.html#l00078">State::cellUndecided</a>, <a class="el" href="main_8cpp_source.html#l00169">edges</a>, <a class="el" href="main_8cpp_source.html#l00074">State::edgeState</a>, <a class="el" href="main_8cpp_source.html#l00168">grid</a>, <a class="el" href="main_8cpp_source.html#l00170">numPoints</a>, <a class="el" href="main_8cpp_source.html#l00075">State::pointDegree</a>, <a class="el" href="main_8cpp_source.html#l00175">pointEdges</a>, and <a class="el" href="main_8cpp_source.html#l00076">State::pointUndecided</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_solver_8cpp_source.html#l00735">slitherlink::Solver::run()</a>, and <a class="el" href="main_8cpp_source.html#l00838">run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l01124">run()</a>.</p>
+
+</div>
+</div>
+<a id="aa566c7693f7420c38e0256e1b227532e" name="aa566c7693f7420c38e0256e1b227532e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa566c7693f7420c38e0256e1b227532e">&#9670;&#160;</a></span>isCanonicalSolution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Solver::isCanonicalSolution </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_solution.html">Solution</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>sol</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Symmetry breaking (#9) - Check if solution is in canonical form. </p>
+<p>For findAll mode, eliminates symmetric duplicates by checking if this is the lexicographically smallest rotation/reflection. </p>
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00900">900</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="main_8cpp_source.html#l00092">Solution::edgeState</a>, <a class="el" href="main_8cpp_source.html#l00178">findAll</a>, <a class="el" href="main_8cpp_source.html#l00168">grid</a>, and <a class="el" href="main_8cpp_source.html#l00172">horizEdgeIndex</a>.</p>
+
+</div>
+</div>
+<a id="a57e99e6df9c9ecd2dbf994256ecd3a49" name="a57e99e6df9c9ecd2dbf994256ecd3a49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57e99e6df9c9ecd2dbf994256ecd3a49">&#9670;&#160;</a></span>isDefinitelyUnsolvable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Solver::isDefinitelyUnsolvable </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_state.html">State</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Early detection of definitely unsolvable states. </p>
+<p>Quickly checks for conditions that make a state impossible to solve, allowing early termination without full propagation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>Current state to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if state is definitely unsolvable, false otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00941">941</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="main_8cpp_source.html#l00077">State::cellEdgeCount</a>, <a class="el" href="main_8cpp_source.html#l00078">State::cellUndecided</a>, <a class="el" href="main_8cpp_source.html#l00176">clueCells</a>, <a class="el" href="main_8cpp_source.html#l00168">grid</a>, <a class="el" href="main_8cpp_source.html#l00170">numPoints</a>, <a class="el" href="main_8cpp_source.html#l00075">State::pointDegree</a>, and <a class="el" href="main_8cpp_source.html#l00076">State::pointUndecided</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00981">search()</a>.</p>
 
 </div>
 </div>
@@ -326,9 +450,9 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00890">890</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l01176">1176</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="main_8cpp_source.html#l00090">Solution::cyclePoints</a>, <a class="el" href="main_8cpp_source.html#l00089">Solution::edgeState</a>, <a class="el" href="main_8cpp_source.html#l00095">grid</a>, <a class="el" href="main_8cpp_source.html#l00099">horizEdgeIndex</a>, and <a class="el" href="main_8cpp_source.html#l00100">vertEdgeIndex</a>.</p>
+<p class="reference">References <a class="el" href="main_8cpp_source.html#l00093">Solution::cyclePoints</a>, <a class="el" href="main_8cpp_source.html#l00092">Solution::edgeState</a>, <a class="el" href="main_8cpp_source.html#l00168">grid</a>, <a class="el" href="main_8cpp_source.html#l00172">horizEdgeIndex</a>, and <a class="el" href="main_8cpp_source.html#l00173">vertEdgeIndex</a>.</p>
 
 </div>
 </div>
@@ -355,11 +479,11 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00943">943</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l01229">1229</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="main_8cpp_source.html#l00109">solutions</a>.</p>
+<p class="reference">References <a class="el" href="main_8cpp_source.html#l00182">solutions</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l01008">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l01294">main()</a>.</p>
 
 </div>
 </div>
@@ -386,11 +510,11 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00318">318</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00407">407</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="main_8cpp_source.html#l00214">applyDecision()</a>, <a class="el" href="main_8cpp_source.html#l00059">Edge::cellA</a>, <a class="el" href="main_8cpp_source.html#l00060">Edge::cellB</a>, <a class="el" href="main_8cpp_source.html#l00073">State::cellEdgeCount</a>, <a class="el" href="main_8cpp_source.html#l00101">cellEdges</a>, <a class="el" href="main_8cpp_source.html#l00074">State::cellUndecided</a>, <a class="el" href="main_8cpp_source.html#l00103">clueCells</a>, <a class="el" href="main_8cpp_source.html#l00096">edges</a>, <a class="el" href="main_8cpp_source.html#l00071">State::edgeState</a>, <a class="el" href="main_8cpp_source.html#l00095">grid</a>, <a class="el" href="main_8cpp_source.html#l00097">numPoints</a>, <a class="el" href="main_8cpp_source.html#l00072">State::pointDegree</a>, <a class="el" href="main_8cpp_source.html#l00102">pointEdges</a>, <a class="el" href="main_8cpp_source.html#l00075">State::pointUndecided</a>, <a class="el" href="main_8cpp_source.html#l00057">Edge::u</a>, and <a class="el" href="main_8cpp_source.html#l00058">Edge::v</a>.</p>
+<p class="reference">References <a class="el" href="main_8cpp_source.html#l00300">applyDecision()</a>, <a class="el" href="main_8cpp_source.html#l00059">Edge::cellA</a>, <a class="el" href="main_8cpp_source.html#l00060">Edge::cellB</a>, <a class="el" href="main_8cpp_source.html#l00077">State::cellEdgeCount</a>, <a class="el" href="main_8cpp_source.html#l00174">cellEdges</a>, <a class="el" href="main_8cpp_source.html#l00078">State::cellUndecided</a>, <a class="el" href="main_8cpp_source.html#l00176">clueCells</a>, <a class="el" href="main_8cpp_source.html#l00169">edges</a>, <a class="el" href="main_8cpp_source.html#l00074">State::edgeState</a>, <a class="el" href="main_8cpp_source.html#l00168">grid</a>, <a class="el" href="main_8cpp_source.html#l00170">numPoints</a>, <a class="el" href="main_8cpp_source.html#l00075">State::pointDegree</a>, <a class="el" href="main_8cpp_source.html#l00175">pointEdges</a>, <a class="el" href="main_8cpp_source.html#l00076">State::pointUndecided</a>, <a class="el" href="main_8cpp_source.html#l00057">Edge::u</a>, and <a class="el" href="main_8cpp_source.html#l00058">Edge::v</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_solver_8cpp_source.html#l00633">slitherlink::Solver::search()</a>, and <a class="el" href="main_8cpp_source.html#l00736">search()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00981">search()</a>, and <a class="el" href="main_8cpp_source.html#l00876">testEdgeDecision()</a>.</p>
 
 </div>
 </div>
@@ -417,11 +541,13 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00254">254</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p>Quick validity check (#13 - inlined hot path). </p>
 
-<p class="reference">References <a class="el" href="main_8cpp_source.html#l00103">clueCells</a>, <a class="el" href="main_8cpp_source.html#l00097">numPoints</a>, <a class="el" href="main_8cpp_source.html#l00072">State::pointDegree</a>, and <a class="el" href="main_8cpp_source.html#l00075">State::pointUndecided</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00343">343</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_solver_8cpp_source.html#l00633">slitherlink::Solver::search()</a>, and <a class="el" href="main_8cpp_source.html#l00736">search()</a>.</p>
+<p class="reference">References <a class="el" href="main_8cpp_source.html#l00176">clueCells</a>, <a class="el" href="main_8cpp_source.html#l00170">numPoints</a>, <a class="el" href="main_8cpp_source.html#l00075">State::pointDegree</a>, and <a class="el" href="main_8cpp_source.html#l00076">State::pointUndecided</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00981">search()</a>.</p>
 
 </div>
 </div>
@@ -457,11 +583,11 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00838">838</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l01124">1124</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="main_8cpp_source.html#l00117">arena</a>, <a class="el" href="main_8cpp_source.html#l00140">buildEdges()</a>, <a class="el" href="main_8cpp_source.html#l00121">calculateOptimalParallelDepth()</a>, <a class="el" href="main_8cpp_source.html#l00105">findAll</a>, <a class="el" href="main_8cpp_source.html#l00095">grid</a>, <a class="el" href="main_8cpp_source.html#l00197">initialState()</a>, <a class="el" href="main_8cpp_source.html#l00112">maxParallelDepth</a>, <a class="el" href="main_8cpp_source.html#l00114">maxThreads</a>, <a class="el" href="main_8cpp_source.html#l00736">search()</a>, <a class="el" href="main_8cpp_source.html#l00110">solutionCount</a>, <a class="el" href="main_8cpp_source.html#l00109">solutions</a>, <a class="el" href="main_8cpp_source.html#l00106">stopAfterFirst</a>, and <a class="el" href="main_8cpp_source.html#l00118">tbbSolutions</a>.</p>
+<p class="reference">References <a class="el" href="main_8cpp_source.html#l00190">arena</a>, <a class="el" href="main_8cpp_source.html#l00213">buildEdges()</a>, <a class="el" href="main_8cpp_source.html#l00194">calculateOptimalParallelDepth()</a>, <a class="el" href="main_8cpp_source.html#l00178">findAll</a>, <a class="el" href="main_8cpp_source.html#l00168">grid</a>, <a class="el" href="main_8cpp_source.html#l00270">initialState()</a>, <a class="el" href="main_8cpp_source.html#l00185">maxParallelDepth</a>, <a class="el" href="main_8cpp_source.html#l00187">maxThreads</a>, <a class="el" href="main_8cpp_source.html#l00981">search()</a>, <a class="el" href="main_8cpp_source.html#l00183">solutionCount</a>, <a class="el" href="main_8cpp_source.html#l00182">solutions</a>, <a class="el" href="main_8cpp_source.html#l00179">stopAfterFirst</a>, and <a class="el" href="main_8cpp_source.html#l00191">tbbSolutions</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l01008">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l01294">main()</a>.</p>
 
 </div>
 </div>
@@ -492,11 +618,11 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00736">736</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00981">981</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="main_8cpp_source.html#l00113">activeThreads</a>, <a class="el" href="main_8cpp_source.html#l00214">applyDecision()</a>, <a class="el" href="main_8cpp_source.html#l00096">edges</a>, <a class="el" href="main_8cpp_source.html#l00538">finalCheckAndStore()</a>, <a class="el" href="main_8cpp_source.html#l00105">findAll</a>, <a class="el" href="main_8cpp_source.html#l00112">maxParallelDepth</a>, <a class="el" href="main_8cpp_source.html#l00114">maxThreads</a>, <a class="el" href="main_8cpp_source.html#l00072">State::pointDegree</a>, <a class="el" href="main_8cpp_source.html#l00075">State::pointUndecided</a>, <a class="el" href="main_8cpp_source.html#l00318">propagateConstraints()</a>, <a class="el" href="main_8cpp_source.html#l00254">quickValidityCheck()</a>, <a class="el" href="main_8cpp_source.html#l00736">search()</a>, <a class="el" href="main_8cpp_source.html#l00498">selectNextEdge()</a>, <a class="el" href="main_8cpp_source.html#l00106">stopAfterFirst</a>, <a class="el" href="main_8cpp_source.html#l00057">Edge::u</a>, and <a class="el" href="main_8cpp_source.html#l00058">Edge::v</a>.</p>
+<p class="reference">References <a class="el" href="main_8cpp_source.html#l00186">activeThreads</a>, <a class="el" href="main_8cpp_source.html#l00300">applyDecision()</a>, <a class="el" href="main_8cpp_source.html#l00169">edges</a>, <a class="el" href="main_8cpp_source.html#l00074">State::edgeState</a>, <a class="el" href="main_8cpp_source.html#l00668">finalCheckAndStore()</a>, <a class="el" href="main_8cpp_source.html#l00178">findAll</a>, <a class="el" href="main_8cpp_source.html#l00941">isDefinitelyUnsolvable()</a>, <a class="el" href="main_8cpp_source.html#l00185">maxParallelDepth</a>, <a class="el" href="main_8cpp_source.html#l00187">maxThreads</a>, <a class="el" href="main_8cpp_source.html#l00075">State::pointDegree</a>, <a class="el" href="main_8cpp_source.html#l00076">State::pointUndecided</a>, <a class="el" href="main_8cpp_source.html#l00407">propagateConstraints()</a>, <a class="el" href="main_8cpp_source.html#l00343">quickValidityCheck()</a>, <a class="el" href="main_8cpp_source.html#l00981">search()</a>, <a class="el" href="main_8cpp_source.html#l00618">selectNextEdge()</a>, <a class="el" href="main_8cpp_source.html#l00179">stopAfterFirst</a>, <a class="el" href="main_8cpp_source.html#l00057">Edge::u</a>, and <a class="el" href="main_8cpp_source.html#l00058">Edge::v</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_solver_8cpp_source.html#l00735">slitherlink::Solver::run()</a>, <a class="el" href="main_8cpp_source.html#l00838">run()</a>, <a class="el" href="_solver_8cpp_source.html#l00633">slitherlink::Solver::search()</a>, and <a class="el" href="main_8cpp_source.html#l00736">search()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l01124">run()</a>, and <a class="el" href="main_8cpp_source.html#l00981">search()</a>.</p>
 
 </div>
 </div>
@@ -523,11 +649,59 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00498">498</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p>Select next edge using smart heuristics (#11). </p>
+<p>Prioritizes:</p><ol type="1">
+<li>Forced moves (only one valid choice)</li>
+<li>Edges that minimize branching factor</li>
+<li>Edges adjacent to constrained cells </li>
+</ol>
 
-<p class="reference">References <a class="el" href="main_8cpp_source.html#l00059">Edge::cellA</a>, <a class="el" href="main_8cpp_source.html#l00060">Edge::cellB</a>, <a class="el" href="main_8cpp_source.html#l00073">State::cellEdgeCount</a>, <a class="el" href="main_8cpp_source.html#l00074">State::cellUndecided</a>, <a class="el" href="main_8cpp_source.html#l00096">edges</a>, <a class="el" href="main_8cpp_source.html#l00071">State::edgeState</a>, <a class="el" href="main_8cpp_source.html#l00095">grid</a>, <a class="el" href="main_8cpp_source.html#l00072">State::pointDegree</a>, <a class="el" href="main_8cpp_source.html#l00075">State::pointUndecided</a>, <a class="el" href="main_8cpp_source.html#l00057">Edge::u</a>, and <a class="el" href="main_8cpp_source.html#l00058">Edge::v</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00618">618</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_solver_8cpp_source.html#l00633">slitherlink::Solver::search()</a>, and <a class="el" href="main_8cpp_source.html#l00736">search()</a>.</p>
+<p class="reference">References <a class="el" href="main_8cpp_source.html#l00059">Edge::cellA</a>, <a class="el" href="main_8cpp_source.html#l00060">Edge::cellB</a>, <a class="el" href="main_8cpp_source.html#l00077">State::cellEdgeCount</a>, <a class="el" href="main_8cpp_source.html#l00078">State::cellUndecided</a>, <a class="el" href="main_8cpp_source.html#l00169">edges</a>, <a class="el" href="main_8cpp_source.html#l00074">State::edgeState</a>, <a class="el" href="main_8cpp_source.html#l00594">estimateBranches()</a>, <a class="el" href="main_8cpp_source.html#l00168">grid</a>, <a class="el" href="main_8cpp_source.html#l00075">State::pointDegree</a>, <a class="el" href="main_8cpp_source.html#l00076">State::pointUndecided</a>, <a class="el" href="main_8cpp_source.html#l00057">Edge::u</a>, and <a class="el" href="main_8cpp_source.html#l00058">Edge::v</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00981">search()</a>.</p>
+
+</div>
+</div>
+<a id="a152377fc8dd52e014481b3f7a1f236fd" name="a152377fc8dd52e014481b3f7a1f236fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a152377fc8dd52e014481b3f7a1f236fd">&#9670;&#160;</a></span>testEdgeDecision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Solver::testEdgeDecision </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_state.html">State</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>edgeIdx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>val</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Look-ahead pruning (#12) - Test if edge decision leads to valid state. </p>
+<p>Performs 1-ply look-ahead to check if a decision will lead to solvable state. Returns false if the decision definitely leads to failure. </p>
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00876">876</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="main_8cpp_source.html#l00300">applyDecision()</a>, <a class="el" href="main_8cpp_source.html#l00169">edges</a>, <a class="el" href="main_8cpp_source.html#l00074">State::edgeState</a>, and <a class="el" href="main_8cpp_source.html#l00407">propagateConstraints()</a>.</p>
 
 </div>
 </div>
@@ -544,9 +718,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00113">113</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00186">186</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00736">search()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00981">search()</a>.</p>
 
 </div>
 </div>
@@ -562,9 +736,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00117">117</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00190">190</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00838">run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l01124">run()</a>.</p>
 
 </div>
 </div>
@@ -580,9 +754,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00101">101</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00174">174</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00140">buildEdges()</a>, <a class="el" href="main_8cpp_source.html#l00197">initialState()</a>, and <a class="el" href="main_8cpp_source.html#l00318">propagateConstraints()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00213">buildEdges()</a>, <a class="el" href="main_8cpp_source.html#l00270">initialState()</a>, and <a class="el" href="main_8cpp_source.html#l00407">propagateConstraints()</a>.</p>
 
 </div>
 </div>
@@ -598,9 +772,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00103">103</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00176">176</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00140">buildEdges()</a>, <a class="el" href="main_8cpp_source.html#l00538">finalCheckAndStore()</a>, <a class="el" href="main_8cpp_source.html#l00318">propagateConstraints()</a>, and <a class="el" href="main_8cpp_source.html#l00254">quickValidityCheck()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00213">buildEdges()</a>, <a class="el" href="main_8cpp_source.html#l00668">finalCheckAndStore()</a>, <a class="el" href="main_8cpp_source.html#l00941">isDefinitelyUnsolvable()</a>, <a class="el" href="main_8cpp_source.html#l00407">propagateConstraints()</a>, and <a class="el" href="main_8cpp_source.html#l00343">quickValidityCheck()</a>.</p>
 
 </div>
 </div>
@@ -616,9 +790,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00096">96</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00169">169</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00214">applyDecision()</a>, <a class="el" href="main_8cpp_source.html#l00140">buildEdges()</a>, <a class="el" href="main_8cpp_source.html#l00538">finalCheckAndStore()</a>, <a class="el" href="main_8cpp_source.html#l00197">initialState()</a>, <a class="el" href="main_8cpp_source.html#l00318">propagateConstraints()</a>, <a class="el" href="main_8cpp_source.html#l00736">search()</a>, and <a class="el" href="main_8cpp_source.html#l00498">selectNextEdge()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00300">applyDecision()</a>, <a class="el" href="main_8cpp_source.html#l00213">buildEdges()</a>, <a class="el" href="main_8cpp_source.html#l00594">estimateBranches()</a>, <a class="el" href="main_8cpp_source.html#l00668">finalCheckAndStore()</a>, <a class="el" href="main_8cpp_source.html#l00270">initialState()</a>, <a class="el" href="main_8cpp_source.html#l00407">propagateConstraints()</a>, <a class="el" href="main_8cpp_source.html#l00981">search()</a>, <a class="el" href="main_8cpp_source.html#l00618">selectNextEdge()</a>, and <a class="el" href="main_8cpp_source.html#l00876">testEdgeDecision()</a>.</p>
 
 </div>
 </div>
@@ -634,9 +808,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00105">105</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00178">178</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00838">run()</a>, and <a class="el" href="main_8cpp_source.html#l00736">search()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00900">isCanonicalSolution()</a>, <a class="el" href="main_8cpp_source.html#l01124">run()</a>, and <a class="el" href="main_8cpp_source.html#l00981">search()</a>.</p>
 
 </div>
 </div>
@@ -652,9 +826,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00095">95</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00168">168</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00214">applyDecision()</a>, <a class="el" href="main_8cpp_source.html#l00140">buildEdges()</a>, <a class="el" href="main_8cpp_source.html#l00121">calculateOptimalParallelDepth()</a>, <a class="el" href="main_8cpp_source.html#l00538">finalCheckAndStore()</a>, <a class="el" href="main_8cpp_source.html#l00197">initialState()</a>, <a class="el" href="main_8cpp_source.html#l01008">main()</a>, <a class="el" href="main_8cpp_source.html#l00890">printSolution()</a>, <a class="el" href="main_8cpp_source.html#l00318">propagateConstraints()</a>, <a class="el" href="main_8cpp_source.html#l00838">run()</a>, and <a class="el" href="main_8cpp_source.html#l00498">selectNextEdge()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00300">applyDecision()</a>, <a class="el" href="main_8cpp_source.html#l00213">buildEdges()</a>, <a class="el" href="main_8cpp_source.html#l00194">calculateOptimalParallelDepth()</a>, <a class="el" href="main_8cpp_source.html#l00668">finalCheckAndStore()</a>, <a class="el" href="main_8cpp_source.html#l00270">initialState()</a>, <a class="el" href="main_8cpp_source.html#l00900">isCanonicalSolution()</a>, <a class="el" href="main_8cpp_source.html#l00941">isDefinitelyUnsolvable()</a>, <a class="el" href="main_8cpp_source.html#l01294">main()</a>, <a class="el" href="main_8cpp_source.html#l01176">printSolution()</a>, <a class="el" href="main_8cpp_source.html#l00407">propagateConstraints()</a>, <a class="el" href="main_8cpp_source.html#l01124">run()</a>, and <a class="el" href="main_8cpp_source.html#l00618">selectNextEdge()</a>.</p>
 
 </div>
 </div>
@@ -670,9 +844,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00099">99</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00172">172</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00140">buildEdges()</a>, and <a class="el" href="main_8cpp_source.html#l00890">printSolution()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00213">buildEdges()</a>, <a class="el" href="main_8cpp_source.html#l00900">isCanonicalSolution()</a>, and <a class="el" href="main_8cpp_source.html#l01176">printSolution()</a>.</p>
 
 </div>
 </div>
@@ -688,9 +862,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00112">112</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00185">185</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00838">run()</a>, and <a class="el" href="main_8cpp_source.html#l00736">search()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l01124">run()</a>, and <a class="el" href="main_8cpp_source.html#l00981">search()</a>.</p>
 
 </div>
 </div>
@@ -706,9 +880,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00114">114</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00187">187</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00838">run()</a>, and <a class="el" href="main_8cpp_source.html#l00736">search()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l01124">run()</a>, and <a class="el" href="main_8cpp_source.html#l00981">search()</a>.</p>
 
 </div>
 </div>
@@ -724,9 +898,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00097">97</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00170">170</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00140">buildEdges()</a>, <a class="el" href="main_8cpp_source.html#l00538">finalCheckAndStore()</a>, <a class="el" href="main_8cpp_source.html#l00197">initialState()</a>, <a class="el" href="main_8cpp_source.html#l00318">propagateConstraints()</a>, and <a class="el" href="main_8cpp_source.html#l00254">quickValidityCheck()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00213">buildEdges()</a>, <a class="el" href="main_8cpp_source.html#l00668">finalCheckAndStore()</a>, <a class="el" href="main_8cpp_source.html#l00270">initialState()</a>, <a class="el" href="main_8cpp_source.html#l00941">isDefinitelyUnsolvable()</a>, <a class="el" href="main_8cpp_source.html#l00407">propagateConstraints()</a>, and <a class="el" href="main_8cpp_source.html#l00343">quickValidityCheck()</a>.</p>
 
 </div>
 </div>
@@ -742,9 +916,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00102">102</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00175">175</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00140">buildEdges()</a>, <a class="el" href="main_8cpp_source.html#l00197">initialState()</a>, and <a class="el" href="main_8cpp_source.html#l00318">propagateConstraints()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00213">buildEdges()</a>, <a class="el" href="main_8cpp_source.html#l00270">initialState()</a>, and <a class="el" href="main_8cpp_source.html#l00407">propagateConstraints()</a>.</p>
 
 </div>
 </div>
@@ -760,7 +934,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00108">108</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00181">181</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -776,9 +950,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00110">110</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00183">183</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00838">run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l01124">run()</a>.</p>
 
 </div>
 </div>
@@ -794,9 +968,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00109">109</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00182">182</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00943">printSolutions()</a>, and <a class="el" href="main_8cpp_source.html#l00838">run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l01229">printSolutions()</a>, and <a class="el" href="main_8cpp_source.html#l01124">run()</a>.</p>
 
 </div>
 </div>
@@ -812,9 +986,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00106">106</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00179">179</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00838">run()</a>, and <a class="el" href="main_8cpp_source.html#l00736">search()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l01124">run()</a>, and <a class="el" href="main_8cpp_source.html#l00981">search()</a>.</p>
 
 </div>
 </div>
@@ -830,9 +1004,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00118">118</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00191">191</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00838">run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l01124">run()</a>.</p>
 
 </div>
 </div>
@@ -848,14 +1022,15 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00100">100</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00173">173</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00140">buildEdges()</a>, and <a class="el" href="main_8cpp_source.html#l00890">printSolution()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00213">buildEdges()</a>, and <a class="el" href="main_8cpp_source.html#l01176">printSolution()</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="main_8cpp_source.html">main.cpp</a></li>
+<hr/>The documentation for this struct was generated from the following files:<ul>
+<li>apps/slitherlink_cli/<a class="el" href="main_8cpp_source.html">main.cpp</a></li>
+<li>src/solver/<a class="el" href="_solver_8cpp_source.html">Solver.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

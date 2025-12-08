@@ -1,7 +1,9 @@
-<map id="include/slitherlink/io/SolutionPrinter.h" name="include/slitherlink/io/SolutionPrinter.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="135,5,270,46"/>
-<area shape="rect" id="Node000002" href="$_solver_factory_8cpp.html" title=" " alt="" coords="5,94,197,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,58,118,96,115,91,164,53"/>
-<area shape="rect" id="Node000003" href="$_solution_printer_8cpp.html" title=" " alt="" coords="220,94,387,120"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="241,53,290,91,286,96,238,58"/>
+<map id="include/io/SolutionPrinter.h" name="include/io/SolutionPrinter.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="243,5,418,31"/>
+<area shape="rect" id="Node000002" href="$_slitherlink_solver_8cpp.html" title=" " alt="" coords="5,79,211,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="279,39,147,81,145,76,278,34"/>
+<area shape="rect" id="Node000003" href="$_solver_factory_8cpp.html" title=" " alt="" coords="235,79,426,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="333,46,333,79,328,79,328,46"/>
+<area shape="rect" id="Node000004" href="$_solution_printer_8cpp.html" title=" " alt="" coords="450,79,616,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="380,34,500,76,498,81,379,39"/>
 </map>

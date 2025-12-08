@@ -1,7 +1,9 @@
-<map id="include/slitherlink/io/SolutionCollector.h" name="include/slitherlink/io/SolutionCollector.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="131,5,279,46"/>
-<area shape="rect" id="Node000002" href="$_solver_factory_8cpp.html" title=" " alt="" coords="5,94,197,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,58,119,96,115,91,166,53"/>
-<area shape="rect" id="Node000003" href="$_solution_collector_8cpp.html" title=" " alt="" coords="220,94,400,120"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="245,53,296,91,293,96,242,58"/>
+<map id="include/io/SolutionCollector.h" name="include/io/SolutionCollector.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="236,5,425,31"/>
+<area shape="rect" id="Node000002" href="$_slitherlink_solver_8cpp.html" title=" " alt="" coords="5,79,211,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="279,39,147,81,145,76,278,34"/>
+<area shape="rect" id="Node000003" href="$_solver_factory_8cpp.html" title=" " alt="" coords="235,79,426,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="333,46,333,79,328,79,328,46"/>
+<area shape="rect" id="Node000004" href="$_solution_collector_8cpp.html" title=" " alt="" coords="450,79,630,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="381,34,505,76,503,81,380,39"/>
 </map>

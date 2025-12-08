@@ -1,18 +1,14 @@
 var searchData=
 [
-  ['1_0',['1',['../md__r_e_a_d_m_e.html#autotoc_md186',1,'Phase 1: Baseline (Week 1)'],['../md__r_e_a_d_m_e.html#autotoc_md187',1,'Phase 2: TBB Integration (Week 1)']]],
-  ['1_207_1',['Week 1: Foundation (Days 1-7)',['../md__r_e_a_d_m_e.html#autotoc_md114',1,'']]],
-  ['1_20buildedges_2',['1. &lt;span class=&quot;tt&quot;&gt;buildEdges()&lt;/span&gt;',['../md__r_e_a_d_m_e.html#autotoc_md31',1,'']]],
-  ['1_20simplified_20edge_20selection_20with_20lambda_20helper_3',['1. Simplified Edge Selection with Lambda Helper',['../md__r_e_a_d_m_e.html#autotoc_md96',1,'']]],
-  ['1_20slow_20performance_4',['1. &lt;b&gt;Slow Performance&lt;/b&gt;',['../md__r_e_a_d_m_e.html#autotoc_md168',1,'']]],
-  ['10×10_5',['Large Puzzles (10×10+)',['../md__r_e_a_d_m_e.html#autotoc_md133',1,'']]],
-  ['10_20run_20bool_20allsolutions_6',['10. &lt;span class=&quot;tt&quot;&gt;run(bool allSolutions)&lt;/span&gt;',['../md__r_e_a_d_m_e.html#autotoc_md40',1,'']]],
-  ['10_3a_20final_20polish_20week_204_7',['Phase 10: Final Polish (Week 4)',['../md__r_e_a_d_m_e.html#autotoc_md195',1,'']]],
-  ['10_3a_20lambda_20optimization_20code_20polish_8',['Version 10: Lambda Optimization &amp;amp; Code Polish',['../md__r_e_a_d_m_e.html#autotoc_md95',1,'']]],
-  ['14_9',['Week 2: Optimization (Days 8-14)',['../md__r_e_a_d_m_e.html#autotoc_md115',1,'']]],
-  ['15_2024_10',['Week 3: Advanced Features &amp;amp; Recovery (Days 15-24)',['../md__r_e_a_d_m_e.html#autotoc_md116',1,'']]],
-  ['1_3a_20baseline_20week_201_11',['Phase 1: Baseline (Week 1)',['../md__r_e_a_d_m_e.html#autotoc_md186',1,'']]],
-  ['1_3a_20foundation_20days_201_207_12',['Week 1: Foundation (Days 1-7)',['../md__r_e_a_d_m_e.html#autotoc_md114',1,'']]],
-  ['1_3a_20initial_20implementation_20baseline_13',['Version 1: Initial Implementation (Baseline)',['../md__r_e_a_d_m_e.html#autotoc_md53',1,'']]],
-  ['1a_3a_20first_20tbb_20attempt_20partial_20failure_14',['Experiment 1A: First TBB Attempt (Partial Failure)',['../md__r_e_a_d_m_e.html#autotoc_md55',1,'']]]
+  ['1_20new_20output_20formats_20ocp_0',['1. New Output Formats (OCP)',['../md_docs_2developer_2_s_o_l_i_d___p_r_i_n_c_i_p_l_e_s.html#autotoc_md234',1,'']]],
+  ['1_20optimizations_205_2020x_20speedup_1',['Phase 1 Optimizations (5-20x speedup)',['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md114',1,'']]],
+  ['1_20reading_20the_20puzzle_2',['1. &lt;b&gt;Reading the Puzzle&lt;/b&gt;',['../md_docs_2user_2_u_s_e_r___g_u_i_d_e.html#autotoc_md16',1,'']]],
+  ['1_20s_20ingle_20responsibility_20principle_20srp_3',['1. **S**ingle Responsibility Principle (SRP)',['../md_docs_2developer_2_s_o_l_i_d___p_r_i_n_c_i_p_l_e_s.html#autotoc_md200',1,'']]],
+  ['1_20single_20responsibility_20principle_20srp_4',['1. Single Responsibility Principle (SRP)',['../md_docs_2developer_2_s_o_l_i_d___a_r_c_h_i_t_e_c_t_u_r_e.html#autotoc_md145',1,'']]],
+  ['10×10_20puzzle_5',['Example 4: Large 10×10 Puzzle',['../md_docs_2user_2_u_s_e_r___g_u_i_d_e.html#autotoc_md48',1,'']]],
+  ['111x_20additional_20speedup_6',['Phase 2 Optimizations (111x additional speedup)',['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md115',1,'']]],
+  ['1_3a_20foundation_20completed_7',['✅ Phase 1: Foundation (COMPLETED)',['../md_docs_2developer_2_s_o_l_i_d___a_r_c_h_i_t_e_c_t_u_r_e.html#autotoc_md164',1,'']]],
+  ['1_3a_20gradual_20migration_20recommended_8',['Option 1: Gradual Migration (Recommended)',['../md_docs_2developer_2_s_o_l_i_d___a_r_c_h_i_t_e_c_t_u_r_e.html#autotoc_md181',1,'']]],
+  ['1_3a_20tiny_202×2_20puzzle_9',['Example 1: Tiny 2×2 Puzzle',['../md_docs_2user_2_u_s_e_r___g_u_i_d_e.html#autotoc_md29',1,'']]],
+  ['1_3a_20trivial_202×2_20puzzle_10',['Example 1: Trivial 2×2 Puzzle',['../md_docs_2user_2_u_s_e_r___g_u_i_d_e.html#autotoc_md42',1,'']]]
 ];

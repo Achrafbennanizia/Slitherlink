@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['📈_20version_0',['📈 Version',['../md__q_u_i_c_k___r_e_f_e_r_e_n_c_e.html#autotoc_md234',1,'']]]
+  ['📝_20implementation_20checklist_0',['📝 Implementation Checklist',['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md134',1,'']]]
 ];

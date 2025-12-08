@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['🎨_20namespace_20usage_0',['🎨 Namespace Usage',['../md__q_u_i_c_k___r_e_f_e_r_e_n_c_e.html#autotoc_md224',1,'']]]
+  ['💡_20usage_20example_0',['💡 Usage Example',['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md111',1,'']]]
 ];

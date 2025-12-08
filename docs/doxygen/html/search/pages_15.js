@@ -1,15 +1,15 @@
 var searchData=
 [
-  ['lambda_20helper_0',['1. Simplified Edge Selection with Lambda Helper',['../md__r_e_a_d_m_e.html#autotoc_md96',1,'']]],
-  ['lambda_20optimization_20code_20polish_1',['Version 10: Lambda Optimization &amp;amp; Code Polish',['../md__r_e_a_d_m_e.html#autotoc_md95',1,'']]],
-  ['large_20puzzles_2010×10_2',['Large Puzzles (10×10+)',['../md__r_e_a_d_m_e.html#autotoc_md133',1,'']]],
-  ['layers_3',['📊 Architecture Layers',['../md__q_u_i_c_k___r_e_f_e_r_e_n_c_e.html#autotoc_md220',1,'']]],
-  ['learning_20from_20failures_4',['For Learning from Failures',['../md__r_e_a_d_m_e.html#autotoc_md204',1,'']]],
-  ['learning_20journey_5',['Failed Experiments (Learning Journey)',['../md__r_e_a_d_m_e.html#autotoc_md105',1,'']]],
-  ['lessons_20for_20future_20work_6',['Lessons for Future Work',['../md__r_e_a_d_m_e.html#autotoc_md109',1,'']]],
-  ['library_20integration_20c_7',['Library Integration (C++)',['../md__q_u_i_c_k___r_e_f_e_r_e_n_c_e.html#autotoc_md218',1,'']]],
-  ['license_8',['License',['../md__r_e_a_d_m_e.html#autotoc_md182',1,'']]],
-  ['limitations_9',['Known Limitations',['../md__r_e_a_d_m_e.html#autotoc_md175',1,'']]],
-  ['limiting_2050_20usage_10',['Limiting 50 Usage',['../md__r_e_a_d_m_e.html#autotoc_md59',1,'Version 3: CPU Limiting (50% Usage)'],['../md__r_e_a_d_m_e.html#autotoc_md81',1,'Version 3: CPU Limiting (50% Usage)']]],
-  ['links_20by_20purpose_11',['Quick Links by Purpose',['../md__r_e_a_d_m_e.html#autotoc_md200',1,'']]]
+  ['need_20help_0',['Need Help?',['../md_docs_2user_2_u_s_e_r___g_u_i_d_e.html#autotoc_md70',1,'']]],
+  ['new_20heuristic_1',['Add a New Heuristic',['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md123',1,'']]],
+  ['new_20output_20formats_20ocp_2',['1. New Output Formats (OCP)',['../md_docs_2developer_2_s_o_l_i_d___p_r_i_n_c_i_p_l_e_s.html#autotoc_md234',1,'']]],
+  ['new_20validator_3',['Add a New Validator',['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md124',1,'']]],
+  ['next_20steps_4',['Next Steps',['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md138',1,'🎯 Next Steps'],['../md_docs_2developer_2_s_o_l_i_d___a_r_c_h_i_t_e_c_t_u_r_e.html#autotoc_md189',1,'Next Steps']]],
+  ['no_20solution_20found_5',['Problem: &quot;No solution found&quot;',['../md_docs_2user_2_u_s_e_r___g_u_i_d_e.html#autotoc_md61',1,'']]],
+  ['not_20open_20file_6',['Problem: &quot;Could not open file&quot;',['../md_docs_2user_2_u_s_e_r___g_u_i_d_e.html#autotoc_md60',1,'']]],
+  ['not_20started_20⏳_7',['Not Started (⏳)',['../md_docs_2developer_2_s_o_l_i_d___a_r_c_h_i_t_e_c_t_u_r_e.html#autotoc_md187',1,'']]],
+  ['notes_8',['Notes',['../md_docs_2developer_2_s_o_l_i_d___a_r_c_h_i_t_e_c_t_u_r_e.html#autotoc_md193',1,'']]],
+  ['notes_20on_20accuracy_9',['Notes on accuracy',['../md_docs_2developer_2_a_r_c_h_i_t_e_c_t_u_r_e.html#autotoc_md79',1,'']]],
+  ['notes_20on_20versions_20and_20history_10',['Notes on Versions and History',['../md__r_e_a_d_m_e.html#autotoc_md7',1,'']]],
+  ['nterface_20segregation_20principle_20isp_11',['4. **I**nterface Segregation Principle (ISP)',['../md_docs_2developer_2_s_o_l_i_d___p_r_i_n_c_i_p_l_e_s.html#autotoc_md209',1,'']]]
 ];

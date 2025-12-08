@@ -1,4 +1,4 @@
 var _grid_8h =
 [
-    [ "slitherlink::Grid", "structslitherlink_1_1_grid.html", "structslitherlink_1_1_grid" ]
+    [ "slitherlink::Grid", "classslitherlink_1_1_grid.html", "classslitherlink_1_1_grid" ]
 ];
