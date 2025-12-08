@@ -1,4 +1,4 @@
-#include "Solver.h"
+#include "solver/Solver.h"
 #include <algorithm>
 #include <future>
 #include <iostream>

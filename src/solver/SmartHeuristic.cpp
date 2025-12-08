@@ -1,4 +1,4 @@
-#include "SmartHeuristic.h"
+#include "solver/SmartHeuristic.h"
 #include <algorithm>
 #include <limits>
 

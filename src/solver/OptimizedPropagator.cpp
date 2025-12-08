@@ -1,4 +1,4 @@
-#include "OptimizedPropagator.h"
+#include "solver/OptimizedPropagator.h"
 
 using namespace slitherlink;
 
