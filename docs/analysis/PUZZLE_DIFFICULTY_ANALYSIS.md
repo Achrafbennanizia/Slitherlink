@@ -1,5 +1,7 @@
 # Puzzle Difficulty Analysis: How the Algorithm Responds
 
+> Historical/performance reference. Some paths/puzzles mentioned may not match the current sample set; see `README.md` and `docs/developer/ARCHITECTURE.md` for the live layout.
+
 ## Understanding Puzzle Difficulty in Slitherlink
 
 Puzzle difficulty in Slitherlink isn't just about size—it's a complex interaction of multiple factors that affect the search tree size and pruning effectiveness.

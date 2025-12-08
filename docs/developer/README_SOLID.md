@@ -1,5 +1,7 @@
 # SOLID Architecture - Implementation Complete ✅
 
+> SOLID-oriented design reference. Current working layout is documented in `README.md` and `docs/developer/ARCHITECTURE.md`; treat this file as an experiment/design note.
+
 ## 🎯 Architecture Overview
 
 The Slitherlink solver has been successfully refactored following **SOLID principles** for better maintainability, testability, and extensibility.

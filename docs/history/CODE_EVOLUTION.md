@@ -1,5 +1,7 @@
 # Code Evolution: Side-by-Side Comparisons
 
+> Historical reference. Current layout/entrypoints are documented in `README.md` and `docs/developer/ARCHITECTURE.md`.
+
 This document shows the code changes across the 10 documented versions. Source snapshots available in the repo are:
 
 - `versions/v01_baseline.cpp` and `versions/v01_from_history.cpp`

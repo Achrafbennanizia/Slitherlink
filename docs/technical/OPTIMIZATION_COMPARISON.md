@@ -1,5 +1,7 @@
 # Complete Optimization Summary
 
+> Historical comparison. Paths, counts, and puzzle references may reflect older layouts; use `README.md` and `docs/developer/ARCHITECTURE.md` for the current structure.
+
 **Date**: December 6, 2025  
 **Status**: Comprehensive overview of all implemented optimizations
 

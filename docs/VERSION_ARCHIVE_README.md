@@ -1,7 +1,7 @@
 # Slitherlink Solver - Version Archive
 
 **Total Code:** 9,006 lines across 8 historical versions  
-**Current:** 1,023 lines (main.cpp, derived from V10)
+**Current:** `apps/slitherlink_cli/main.cpp` (derived from V10) plus modular sources in `src/`
 
 ## Overview
 
@@ -9,7 +9,7 @@ This archive documents the real code evolution preserved in `tests/old_versions/
 
 - **V1–V9:** `std::async` era (incremental improvements to parallel search)
 - **V10:** Intel TBB rewrite (architectural shift to task-based parallelism)
-- **main.cpp:** Current production code (refined V10)
+- **apps/slitherlink_cli/main.cpp:** Current CLI code (refined V10)
 
 > ⚠️ **Note:** Some headers in V7/V9 mention TBB conceptually, but these versions still use `std::async` throughout. TBB appears only in V10.
 
@@ -25,8 +25,7 @@ tests/old_versions/
 ├── v05_from_history.cpp      ← V5: hybrid pruning + parallel search
 ├── v07_from_history.cpp      ← V7: depth/heuristic tuning (still async)
 ├── v09_from_history.cpp      ← V9: final async polish
-├── v10_final.cpp             ← V10: first TBB implementation
-└── main.cpp                  ← Current production (derived from V10)
+└── v10_final.cpp             ← V10: first TBB implementation (basis for current CLI)
 ```
 
 > Note: Some headers in V7/V9 mention TBB conceptually, but the code in V1–V9 uses `std::async` throughout. TBB appears only in V10.

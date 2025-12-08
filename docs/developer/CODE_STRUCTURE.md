@@ -1,5 +1,7 @@
 # Code Structure
 
+> Historical view of structure. For the current layout (CLI in `apps/slitherlink_cli`, puzzles in `puzzles/samples`), see `README.md` and `docs/developer/ARCHITECTURE.md`.
+
 ## Overview
 
 The Slitherlink solver has been reorganized into a clean, modular structure with proper separation of concerns.

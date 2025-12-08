@@ -1,5 +1,7 @@
 # Development History & Version Archive
 
+> Archived overview. For current layout/entrypoints, see `README.md` and `docs/developer/ARCHITECTURE.md`.
+
 This section provides links to detailed development documentation and historical code versions.
 
 ## 📚 Documentation Resources

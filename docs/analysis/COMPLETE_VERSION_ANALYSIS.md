@@ -1,5 +1,7 @@
 # Complete Version Analysis (Source of Truth)
 
+> Historical analysis of archived versions. Current layout and entrypoints are described in `README.md` and `docs/developer/ARCHITECTURE.md`.
+
 This document reconciles the version history with the actual code in the repository. The authoritative files live in `tests/old_versions/` (mirrored in `BackUp_oldCode/old_versions/`). Versions **1–9** are std::async based; **Version 10** (current `main.cpp`) is the first Intel TBB rewrite.
 
 ## Where Each Version Lives

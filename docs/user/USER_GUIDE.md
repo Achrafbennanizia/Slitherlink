@@ -1,5 +1,7 @@
 # Slitherlink Solver - Complete User Guide
 
+> This guide reflects the current layout: CLI in `apps/slitherlink_cli/main.cpp`, puzzles in `puzzles/samples/`. Older mentions of root-level `main.cpp` or 4×4/8×8/10×10 puzzles are historical.
+
 ## Table of Contents
 
 1. [What is Slitherlink?](#what-is-slitherlink)
@@ -80,22 +82,23 @@ The Slitherlink solver uses a sophisticated backtracking algorithm with multiple
 
 ## Getting Started
 
-### Building the Program
+### Building the Program (current layout)
 
 ```bash
-# Navigate to the project directory
-cd /path/to/Slitherlink
+# From repo root
+cmake -S . -B cmake-build-debug -DUSE_TBB=ON
+cmake --build cmake-build-debug
 
-# Create build directory
-mkdir build && cd build
+# Run (Debug)
+./cmake-build-debug/slitherlink puzzles/samples/example5x5.txt
+./cmake-build-debug/slitherlink puzzles/samples/example7x7.txt
+```
 
-# Configure with CMake
-cmake -DCMAKE_BUILD_TYPE=Release ..
-
-# Build
-cmake --build . -j8
-
-# The executable is now at: ./build/slitherlink
+For faster runs on larger puzzles:
+```bash
+cmake -S . -B cmake-build-release -DCMAKE_BUILD_TYPE=Release -DUSE_TBB=ON
+cmake --build cmake-build-release
+./cmake-build-release/slitherlink puzzles/samples/example12x12.txt
 ```
 
 ---
@@ -129,52 +132,58 @@ ROW2
 . 2
 ```
 
-### Example 2: Standard 4×4 Puzzle
+### Example 2: 5×5 Puzzle (matches provided samples)
 
 ```
-4 4
-3 . . .
-. . 2 .
-. 2 . .
-. . . 3
+5 5
+. 3 . 2 .
+1 . . . 2
+. . 2 . .
+2 . . . 1
+. 2 . 3 .
 ```
 
-### Example 3: 6×6 Puzzle with Mixed Constraints
+### Example 3: 7×7 Puzzle (structure only)
 
 ```
-6 6
-. . 3 . . .
-. 2 . 2 . .
-3 . . . 2 .
-. 2 . . . 3
-. . 2 . . .
-. . . 3 . .
+7 7
+. . 3 . . . .
+. 2 . 2 . . .
+3 . . . 2 . .
+. 2 . . . 3 .
+. . 2 . . . .
+. . . 3 . . .
+. . . . . . .
 ```
 
 ---
 
 ## Running the Solver
 
-### Basic Usage:
+### Basic Usage (current layout):
 
 ```bash
-./build/slitherlink puzzles/examples/example4x4.txt
+# Debug build
+./cmake-build-debug/slitherlink puzzles/samples/example5x5.txt
+
+# Release build
+./cmake-build-release/slitherlink puzzles/samples/example7x7.txt
 ```
 
 ### Command Line Options:
 
 ```bash
 # Show help
-./build/slitherlink --help
+./cmake-build-debug/slitherlink --help
 
 # Specify number of threads (default: auto-detect)
-./build/slitherlink puzzle.txt --threads 4
+./cmake-build-debug/slitherlink puzzles/samples/example7x7.txt --threads 4
 
 # Find all solutions instead of just one
-./build/slitherlink puzzle.txt --all
+./cmake-build-debug/slitherlink puzzles/samples/example7x7.txt --all
 
 # Quiet mode (less output)
-./build/slitherlink puzzle.txt --quiet
+./cmake-build-debug/slitherlink puzzles/samples/example7x7.txt --quiet
 ```
 
 ---

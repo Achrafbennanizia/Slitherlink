@@ -1,5 +1,7 @@
 # Slitherlink Solver Optimization & Refactoring Report
 
+> Historical/technical summary. Some paths and metrics may reflect earlier layouts; refer to `README.md` and `docs/developer/ARCHITECTURE.md` for the current structure and samples.
+
 **Project**: High-Performance Slitherlink Puzzle Solver  
 **Date**: December 6, 2025  
 **Author**: Development Team  

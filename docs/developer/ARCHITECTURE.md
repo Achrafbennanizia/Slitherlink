@@ -1,292 +1,56 @@
-# Project Architecture
+# Project Architecture (Current)
 
-This document describes the file organization and structure of the Slitherlink solver project.
-For code architecture and algorithms, see the main [README.md](README.md).
+This document describes the current file organization. Use this as the source of truth for layout; some historical docs still reference older structures.
 
 ## Overview
+- Language: C++17
+- Build: CMake
+- Parallelism: Intel oneAPI TBB (optional, recommended)
+- CLI entrypoint: `apps/slitherlink_cli/main.cpp`
+- Solver modules: `src/`
+- Public/experimental SOLID headers: `include/`
+- Samples: `puzzles/samples/`
 
-- **Language**: C++17
-- **Build System**: CMake
-- **Parallelism**: Intel Threading Building Blocks (TBB)
-- **Code Lines**: 1,023 (main.cpp) + 9,006 (historical versions)
-- **Documentation**: 8,299 lines across 14 files
-- **Test Puzzles**: 50 files (4×4 to 20×20)
-
-## Directory Structure
-
+## Directory Structure (current)
 ```
 Slitherlink/
-│
-├── 📄 main.cpp                    # Main solver implementation (V10 with TBB)
-├── 📄 CMakeLists.txt              # Build configuration
-├── 📄 README.md                   # Project overview and quick start
-├── 📄 ARCHITECTURE.md             # This file - project structure guide
-├── 📄 .gitignore                  # Git ignore patterns
-│
-├── 📁 puzzles/                    # Test puzzles (50 total)
-│   └── 📁 examples/               # Example puzzles (4×4 to 20×20)
-│       ├── example4x4.txt
-│       ├── example4x4_easy.txt
-│       ├── example4x4_medium.txt
-│       ├── example4x4_hard.txt
-│       ├── example4x4_extreme.txt
-│       ├── example8x8_simple.txt
-│       ├── example10x10.txt
-│       └── ... (50 total puzzles)
-│
-├── 📁 scripts/                    # Automation and testing scripts (8 total)
-│   ├── benchmark_suite.sh         # Original benchmark automation
-│   ├── comprehensive_benchmark.sh # Tests all 50 puzzles
-│   ├── validate_and_benchmark.sh  # Focused validation suite
-│   ├── quick_sample_benchmark.sh  # Quick representative test
-│   ├── test_originals.sh         # Tests original puzzles only
-│   ├── test_all.sh               # Quick test runner
-│   ├── benchmark_versions.sh      # Historical version benchmarks
-│   └── compile_all_versions.sh    # Compile all old versions
-│
-├── 📁 results/                    # Benchmark results and reports
-│   ├── BENCHMARK_RESULTS.md       # Latest comprehensive benchmark
-│   ├── benchmark_results_comprehensive.txt
-│   ├── benchmark_results.txt
-│   └── benchmark_live_output.txt
-│
-├── 📁 docs/                       # Complete documentation (8,299 lines)
-│   ├── 📄 README.md              # Documentation index and navigation
-│   ├── 📄 CODE_EXPORT_INDEX.md   # Code version index
-│   ├── 📄 VERSION_ARCHIVE_README.md  # Version archive overview
-│   │
-│   ├── 📁 guides/                 # User and developer guides
-│   │   ├── TESTING_GUIDE.md      # Complete testing reference (420 lines)
-│   │   └── NAVIGATION_GUIDE.md    # Documentation navigation (230 lines)
-│   │
-│   ├── 📁 analysis/               # Performance analysis and optimization
-│   │   ├── 10x10_OPTIMIZATION_JOURNEY.md     # Complete 10×10 story (1,555 lines)
-│   │   ├── PUZZLE_DIFFICULTY_ANALYSIS.md     # Difficulty factors (696 lines)
-│   │   ├── COMPLETE_VERSION_ANALYSIS.md      # V1-V10 analysis (820 lines)
-│   │   └── TBB_INTEGRATION_STORY.md          # TBB deep dive (792 lines)
-│   │
-│   └── 📁 history/                # Development history
-│       ├── CODE_EVOLUTION.md      # Side-by-side comparisons (580 lines)
-│       ├── VERSION_HISTORY.md     # Quick timeline (145 lines)
-│       ├── CONVERSATION_HISTORY.md # Development narrative (650 lines)
-│       ├── DEVELOPMENT_ARCHIVE.md  # Complete archive (380 lines)
-│       └── UMSETZUNG_STRATEGIE.md  # Implementation strategy (104 lines)
-│
-└── 📁 tests/                      # Testing infrastructure
-    └── 📁 old_versions/           # Historical code versions (V1-V10)
-        ├── v01_baseline.cpp       # Original std::async implementation
-        ├── v02_threadpool.cpp     # Thread pool attempt
-        ├── v03-v09_from_history.cpp  # std::async refinements
-        ├── v10_final.cpp          # TBB breakthrough
-        ├── version.txt            # Complete version archive (6,543 lines)
-        └── ... (11 total versions)
+├── apps/slitherlink_cli/    # CLI sources (main.cpp, alternates/backups)
+├── src/
+│   ├── core/                # Grid/state primitives
+│   ├── solver/              # Search, heuristics, propagation, validation
+│   ├── io/                  # Grid reader, solution collector/printer
+│   ├── factory/             # Factories and facade helpers
+│   └── utils/               # Config handling
+├── include/                 # Public headers (SOLID-oriented experiments)
+├── puzzles/samples/         # Sample puzzles (5x5, 7x7, 12x12 variants)
+├── scripts/                 # Benchmarks and helpers
+├── tests/                   # Unit tests and old version archive
+│   ├── unit/                # Basic unit tests
+│   └── old_versions/        # V1–V10 snapshots (std::async → TBB)
+├── docs/                    # Guides, analysis, history, improvements
+├── CMakeLists.txt           # Build configuration
+└── Doxyfile                 # Doxygen config
 ```
 
-## File Organization Principles
+## Modules (high level)
+- **core**: grid and state data structures.
+- **solver**: edge selection, constraint propagation, validation, search driver.
+- **io**: parsing input puzzles, collecting and printing solutions.
+- **factory**: SOLID/facade helpers (experimental; CLI uses monolithic flow).
+- **utils**: config parsing/validation.
 
-### 1. **Separation of Concerns**
+## Tests
+- Unit tests live in `tests/unit/` (enable with `-DSLITHERLINK_BUILD_TESTS=ON` and run `ctest`).
+- Historical versions in `tests/old_versions/` for comparison/benchmarks.
 
-- **Source code** (main.cpp) in root for immediate visibility
-- **Build artifacts** in cmake-build-debug/ (gitignored)
-- **Puzzles** separate from code (puzzles/examples/)
-- **Scripts** for automation (scripts/)
-- **Documentation** organized by purpose (docs/)
-- **Historical code** preserved separately (tests/old_versions/)
+## Documentation
+- Hub: `docs/README.md`
+- Navigation/testing: `docs/guides/`
+- Architecture detail: this file and `docs/developer/SOLID_ARCHITECTURE.md` (experimental)
+- Performance/algorithms: `docs/analysis/`
+- History/migration: `docs/history/`
+- Improvement backlog: `docs/IMPROVEMENT_OPTIONS.md`
 
-### 2. **Documentation Structure**
-
-Three-tier organization:
-
-```
-docs/
-├── guides/      → Practical how-to (TESTING_GUIDE.md, NAVIGATION_GUIDE.md)
-├── analysis/    → Technical deep dives (optimization, performance, TBB)
-└── history/     → Evolution and decisions (versions, conversations, code)
-```
-
-This structure separates:
-
-- **What to do** (guides)
-- **How it works** (analysis)
-- **How it evolved** (history)
-
-### 3. **Clear Naming Conventions**
-
-- `example*.txt` - Puzzle files with clear size indicators
-- `*_easy.txt`, `*_hard.txt` - Difficulty-graded variants
-- `v01_*.cpp`, `v10_*.cpp` - Version-numbered code files
-- `*_GUIDE.md` - User-facing documentation
-- `*_ANALYSIS.md` - Technical documentation
-- `*_HISTORY.md` - Historical documentation
-
-### 4. **Discoverability**
-
-Multiple entry points for different needs:
-
-- **Quick start** → README.md at root
-- **Testing** → scripts/ directory
-- **Documentation** → docs/README.md
-- **Code structure** → ARCHITECTURE.md (this file)
-- **Complete history** → COMPLETE_CODE_HISTORY.md
-- docs/README.md → Documentation hub
-- Each subdirectory has clear purpose
-- Cross-references between related docs
-
-## Navigation by Purpose
-
-### "I want to..."
-
-#### Use the solver
-
-→ Root `README.md` → Quick Start section
-
-#### Run benchmarks
-
-→ `scripts/comprehensive_benchmark.sh` (all 50 puzzles)
-→ `scripts/validate_and_benchmark.sh` (focused test)
-→ `results/BENCHMARK_RESULTS.md` (latest results)
-→ `docs/guides/TESTING_GUIDE.md` for details
-
-#### Understand why my puzzle is slow
-
-→ `docs/analysis/PUZZLE_DIFFICULTY_ANALYSIS.md`
-
-#### Learn what tools failed
-
-→ `docs/analysis/10x10_OPTIMIZATION_JOURNEY.md` → "Phase 3: Tool Experiments"
-
-#### See code evolution
-
-→ `docs/history/CODE_EVOLUTION.md` (side-by-side)
-→ `docs/analysis/COMPLETE_VERSION_ANALYSIS.md` (detailed)
-
-#### Test old versions
-
-→ `tests/old_versions/` for code
-→ `scripts/benchmark_versions.sh` to compile and test
-
-#### Create custom puzzles
-
-→ `docs/guides/TESTING_GUIDE.md` → "Creating Custom Puzzles"
-→ Save in `puzzles/examples/` or custom location
-
-## Size Breakdown
-
-```
-Component                    | Lines  | Files | Purpose
------------------------------|--------|-------|------------------
-Main solver (main.cpp)       | ~1,500 | 1     | Production code
-Documentation (docs/)        | 5,900  | 15    | Learning & reference
-Old versions (tests/)        | 7,000  | 12    | Historical archive
-Example puzzles (puzzles/)   | ~170   | 17    | Testing
-Scripts (scripts/)           | ~500   | 4     | Automation
-```
-
-## Git-Tracked vs Generated
-
-### Tracked in Git
-
-✅ Source code (main.cpp)
-✅ Documentation (docs/)
-✅ Puzzles (puzzles/examples/)
-✅ Scripts (scripts/)
-✅ Old versions (tests/old_versions/)
-✅ Configuration (CMakeLists.txt, .gitignore)
-
-### Generated/Ignored (.gitignore)
-
-❌ Build directories (cmake-build-_)
-❌ Compiled binaries (slitherlink)
-❌ Benchmark results (_.csv, _.log)
-❌ IDE files (.idea/, .vscode/)
-❌ Backup files (_.backup, \*\_old.cpp)
-❌ OS files (.DS_Store, Thumbs.db)
-
-## Benefits of This Structure
-
-### 1. **Clean Root Directory**
-
-- Only essential files visible
-- Easy to find main.cpp
-- Clear entry points
-
-### 2. **Logical Grouping**
-
-- All docs together in `docs/`
-- All tests together in `tests/`
-- All puzzles together in `puzzles/`
-- All scripts together in `scripts/`
-
-### 3. **Scalability**
-
-- Easy to add new puzzles
-- Easy to add new documentation
-- Easy to add new test versions
-- No root directory clutter
-
-### 4. **Professional Appearance**
-
-```
-Before:                          After:
-├── main.cpp                     ├── main.cpp
-├── example4x4.txt               ├── CMakeLists.txt
-├── example5x5.txt               ├── README.md
-├── example6x6.txt               ├── puzzles/
-├── ... (15 more examples)       ├── scripts/
-├── benchmark_suite.sh           ├── docs/
-├── test_all.sh                  └── tests/
-├── version.txt
-├── v01_baseline.cpp
-├── v02_threadpool.cpp
-├── ... (10 more versions)
-├── main_old.cpp
-├── main_broken.cpp
-└── versions/
-    ├── TESTING_GUIDE.md
-    ├── PUZZLE_DIFFICULTY_ANALYSIS.md
-    └── ... (13 more docs)
-```
-
-### 5. **Easier Collaboration**
-
-- Contributors know where to add files
-- Clear separation of code vs docs
-- Easy to review changes by category
-
-## Quick Access
-
-### Most Used Files
-
-```bash
-# Build and run
-cmake --build cmake-build-debug
-./cmake-build-debug/slitherlink puzzles/examples/example10x10.txt
-
-# Run benchmarks
-./scripts/benchmark_suite.sh
-
-# Read documentation
-open docs/README.md  # Start here
-open docs/analysis/10x10_OPTIMIZATION_JOURNEY.md  # Optimization story
-open docs/guides/TESTING_GUIDE.md  # Testing reference
-```
-
-### Development Workflow
-
-```bash
-# Edit main solver
-vim main.cpp
-
-# Add test puzzle
-vim puzzles/examples/my_puzzle.txt
-
-# Run test
-./cmake-build-debug/slitherlink puzzles/examples/my_puzzle.txt
-
-# Update docs if needed
-vim docs/analysis/PUZZLE_DIFFICULTY_ANALYSIS.md
-```
-
----
-
-Last Updated: December 1, 2025
+## Notes on accuracy
+- Older docs may mention root-level `main.cpp` or 4×4/8×8/10×10 puzzles; current layout uses `apps/slitherlink_cli` and `puzzles/samples` (5×5, 7×7, 12×12 variants).
+- Treat this file and the root `README.md` as canonical for structure.

@@ -1,5 +1,7 @@
 # Final Optimization Summary - December 6, 2025
 
+> Archived summary. Current layout/entrypoints: `README.md`, `docs/developer/ARCHITECTURE.md`.
+
 ## Mission Accomplished! 🎯
 
 Successfully implemented **13 major optimizations** across two phases, achieving **570x speedup** on medium puzzles.
@@ -155,4 +157,3 @@ The two-phase optimization approach delivered exceptional results:
 **Lines of Code Changed**: ~200 lines  
 **Performance Gain**: 570x  
 **Return on Investment**: EXCEPTIONAL ⭐⭐⭐⭐⭐
-

@@ -1,5 +1,7 @@
 # Slitherlink Solver - Improved Architecture
 
+> This document captures an aspirational SOLID/modular layout. The current working layout is described in `README.md` and `docs/developer/ARCHITECTURE.md`; use this file as a design reference, not the live tree.
+
 ## Overview
 
 This document describes the improved, modular architecture of the Slitherlink solver, designed following modern C++ best practices and SOLID principles.

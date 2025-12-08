@@ -1,44 +1,28 @@
-# Slitherlink Documentation
+# Slitherlink Documentation Hub
 
-Welcome to the Slitherlink Solver documentation!
+This page is the entry point to the current documentation set. It reflects the structure that exists in the repository today.
 
-## 📚 Documentation Index
+## Quick Navigation
+- **User onboarding**: `docs/user/USER_GUIDE.md`
+- **Setup in 5 minutes**: `docs/user/QUICK_START.md`
+- **Architecture overview**: `docs/developer/ARCHITECTURE.md`
+- **Navigation cheatsheet**: `docs/guides/NAVIGATION_GUIDE.md`
+- **Testing & benchmarking**: `docs/guides/TESTING_GUIDE.md`
+- **Performance deep dives**: `docs/analysis/` (TBB, 10x10 journey, difficulty analysis)
+- **Technical optimization notes**: `docs/technical/`
+- **History and migration logs**: `docs/history/`
+- **Known improvement areas**: `docs/IMPROVEMENT_OPTIONS.md`
 
-### For Users
-- **[User Guide](user/USER_GUIDE.md)** - Complete guide with examples and tutorials
-- **[Quick Start](user/QUICK_START.md)** - Get started in 5 minutes
-- **[FAQ](user/FAQ.md)** - Frequently asked questions *(coming soon)*
+## What’s in here
+- `user/`: How to build, run, and use the solver.
+- `developer/`: Current architecture description and SOLID experiments.
+- `guides/`: Navigation and testing guides.
+- `analysis/`: Detailed performance and algorithm write-ups.
+- `technical/`: Optimization phases and comparisons.
+- `history/`: Migration summaries and evolution logs (reference only; some are archival).
 
-### For Developers
-- **[Architecture Overview](developer/ARCHITECTURE.md)** - System design and structure
-- **[SOLID Principles](developer/SOLID_PRINCIPLES.md)** - Design patterns used
-- **[Contributing Guide](developer/CONTRIBUTING.md)** - How to contribute *(coming soon)*
+## Notes on accuracy
+- Directory names and file lists in this hub are up to date with the current repo layout (e.g., CLI at `apps/slitherlink_cli`, puzzles under `puzzles/samples`).
+- Some historical documents describe older layouts; prefer the user/developer guides and this index for the current view.
 
-### Technical Documentation
-- **[Optimization Report](technical/OPTIMIZATION_REPORT.md)** - Detailed performance analysis
-- **[Performance Analysis](technical/PERFORMANCE_ANALYSIS.md)** - Benchmarks and profiling
-- **[Phase 2 Optimizations](technical/PHASE2_OPTIMIZATIONS.md)** - Advanced optimizations
-- **[Phase 3 Optimizations](technical/PHASE3_OPTIMIZATIONS.md)** - Final improvements
-- **[Optimization Comparison](technical/OPTIMIZATION_COMPARISON.md)** - Before/after comparison
-
-### Project History
-- **[Changelog](history/CHANGELOG.md)** - Version history *(coming soon)*
-- **[Refactoring Log](history/REFACTORING_CHANGELOG.md)** - Architecture changes
-- **[Archived Documentation](history/archived/)** - Historical documents
-
-## 🎯 Quick Links
-
-- **Main README**: [../README.md](../README.md)
-- **Source Code**: [../src/](../src/)
-- **Examples**: [../examples/](../examples/)
-- **Tests**: [../tests/](../tests/)
-
-## 📖 Getting Help
-
-1. Check the [User Guide](user/USER_GUIDE.md) for usage examples
-2. Review [Technical Documentation](technical/) for implementation details
-3. Open an issue on GitHub for questions or bug reports
-
----
-
-Last updated: December 8, 2025
+_Last updated: March 2026_

@@ -1,5 +1,7 @@
 # Architecture Improvement Summary
 
+> Archived improvements. Current layout/entrypoints: `README.md`, `docs/developer/ARCHITECTURE.md`.
+
 ## ✅ Completed Improvements
 
 ### 1. **Modular Directory Structure**

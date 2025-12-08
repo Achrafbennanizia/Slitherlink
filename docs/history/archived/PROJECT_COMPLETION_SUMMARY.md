@@ -1,5 +1,7 @@
 # Project Completion Summary
 
+> Archived summary. For current structure/commands, see `README.md` and `docs/developer/ARCHITECTURE.md`.
+
 **Date**: December 6, 2025  
 **Project**: Slitherlink Solver  
 **Version**: 0.2.0

@@ -1,5 +1,7 @@
 # Optimization Results - December 6, 2025
 
+> Archived summary. For the current layout and commands, see `README.md` and `docs/developer/ARCHITECTURE.md`.
+
 ## Implemented Optimizations
 
 ### Phase 1: Foundation Optimizations

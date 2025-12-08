@@ -1,5 +1,7 @@
 # Performance Suggestions for Slitherlink Solver
 
+> Archived suggestions. Current layout/entrypoints: `README.md`, `docs/developer/ARCHITECTURE.md`.
+
 ## 1) Backtracking with Undo Stack
 - **Issue**: Each branch clones the entire `State`, which is heavy (edge states, counters, queues).
 - **Idea**: Mutate `State` in place and record changes (edge value, point/cell counters, queue inserts). After exploring a branch, roll back the recorded diffs.

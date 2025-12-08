@@ -1,5 +1,7 @@
 # Slitherlink Solver - Complete Version History
 
+> Historical reference. For the current layout and entrypoints, see `README.md` and `docs/developer/ARCHITECTURE.md`.
+
 This directory contains all major code versions developed during the 4-week optimization journey (November 2025).
 
 ## Version Files

@@ -1,5 +1,7 @@
 # SOLID Principles Implementation
 
+> Design reference for the SOLID-oriented variant. Active layout/entrypoints: see `README.md` and `docs/developer/ARCHITECTURE.md`.
+
 ## Overview
 
 The Slitherlink solver has been refactored to follow **SOLID principles**, making it more maintainable, testable, and extensible.

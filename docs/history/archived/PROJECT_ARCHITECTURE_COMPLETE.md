@@ -1,5 +1,7 @@
 # Project Architecture Improvement - Complete
 
+> Archived architecture summary. Current layout/entrypoints: `README.md`, `docs/developer/ARCHITECTURE.md`.
+
 ## Executive Summary
 
 Successfully transformed the Slitherlink solver from a monolithic codebase into a **professional, modular architecture** following industry best practices.

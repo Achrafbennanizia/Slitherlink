@@ -1,5 +1,7 @@
 # Complete Conversation History - Slitherlink Development
 
+> Archived log. For the current layout and entrypoints, see `README.md` and `docs/developer/ARCHITECTURE.md`.
+
 This document captures the complete development journey including all conversations, decisions, experiments, and iterations that led to the final optimized solver.
 
 ## Timeline Overview

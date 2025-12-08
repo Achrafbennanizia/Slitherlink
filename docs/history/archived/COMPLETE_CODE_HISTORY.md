@@ -1,5 +1,7 @@
 # Complete Code History (Aligned with Repository)
 
+> Archived document. Current layout and entrypoints: `README.md`, `docs/developer/ARCHITECTURE.md`.
+
 **Generated:** December 2025  
 **Project:** High-Performance Slitherlink Solver  
 **Total Code:** 1,023 lines (main.cpp) + 9,006 lines (historical versions)  

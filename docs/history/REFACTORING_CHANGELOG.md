@@ -1,5 +1,7 @@
 # Refactoring Changelog
 
+> Historical log. Current layout/entrypoints: `README.md`, `docs/developer/ARCHITECTURE.md`.
+
 ## Date: December 6, 2025
 
 ## Overview

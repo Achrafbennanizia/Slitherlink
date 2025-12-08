@@ -1,5 +1,7 @@
 # Phase 3 Optimizations - Implementation Details
 
+> Historical/technical log. Paths and metrics may reflect earlier layouts; use `README.md` and `docs/developer/ARCHITECTURE.md` for the current structure.
+
 **Date**: December 6, 2025  
 **Status**: ✅ Implemented (some optimizations disabled for performance reasons)  
 **Performance Change**: Minimal impact (~neutral, within measurement variance)

@@ -1,5 +1,7 @@
 # Documentation
 
+> Doxygen/auto-generated docs reference. For current layout and entrypoints, see `README.md` and `docs/developer/ARCHITECTURE.md`.
+
 ## Generated API Documentation
 
 This directory contains auto-generated API documentation using Doxygen.

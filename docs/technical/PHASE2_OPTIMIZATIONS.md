@@ -1,5 +1,7 @@
 # Phase 2 Optimizations - Implementation Details
 
+> Historical/technical log. Paths and metrics may reflect earlier layouts; use `README.md` and `docs/developer/ARCHITECTURE.md` for the current structure.
+
 **Date**: December 6, 2025  
 **Status**: ✅ All optimizations implemented and tested  
 **Performance Gain**: 111x additional speedup over Phase 1

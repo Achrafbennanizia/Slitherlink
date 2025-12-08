@@ -1,5 +1,7 @@
 # Performance Optimization Suggestions
 
+> Historical/technical notes. Some paths and puzzles referenced may differ from the current repo; see `README.md` and `docs/developer/ARCHITECTURE.md` for the live layout.
+
 ## Overview
 
 Comprehensive analysis of the Slitherlink solver with specific, actionable performance improvements.

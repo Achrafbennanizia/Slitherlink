@@ -1,5 +1,7 @@
 # The 10×10 Puzzle Optimization Journey
 
+> Historical/performance narrative. Paths and puzzle names may differ from the current repo; see `README.md` and `docs/developer/ARCHITECTURE.md` for the live layout and samples.
+
 ## The Challenge: Making 10×10 Solvable
 
 **Initial State (V1)**: 10×10 puzzles were **unsolvable** - timeout after 300+ seconds  

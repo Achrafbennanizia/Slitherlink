@@ -1,5 +1,7 @@
 # The Intel TBB Integration Journey
 
+> Historical/performance narrative. Some file paths and counts reflect older layouts; use `README.md` and `docs/developer/ARCHITECTURE.md` for the current structure and puzzle set.
+
 ## From std::async (V1-V9) to TBB Elegance (V10/main.cpp)
 
 This document chronicles the debugging and integration of Intel's oneAPI Threading Building Blocks (TBB) into the Slitherlink solver.

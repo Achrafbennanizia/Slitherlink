@@ -6,9 +6,9 @@ Use the paths below to browse or copy each solver snapshot.
 
 ### Current & Production Versions
 
-- **Current solver (latest)**: `../main.cpp` (1023 lines, V10 production)
-- **Final optimized version**: `v10_final.cpp` (987 lines, identical to main.cpp)
-- **Baseline version**: `v01_baseline.cpp` (481 lines, no TBB)
+- **Current CLI solver**: `../apps/slitherlink_cli/main.cpp` (derived from V10)
+- **Final optimized version (archive)**: `v10_final.cpp` (basis for current CLI)
+- **Baseline version**: `v01_baseline.cpp` (no TBB)
 
 ### Historical Snapshots (from version.txt)
 

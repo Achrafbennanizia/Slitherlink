@@ -1,5 +1,7 @@
 # SOLID Architecture Refactoring - Design Document
 
+> Design reference for the SOLID-oriented variant. The active layout/entrypoints are covered in `README.md` and `docs/developer/ARCHITECTURE.md`.
+
 **Date**: December 6, 2025  
 **Status**: 🚧 In Progress - Foundation Complete  
 **Goal**: Refactor monolithic `main.cpp` into SOLID-compliant modular architecture

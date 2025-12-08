@@ -1,5 +1,7 @@
 # Umsetzungs-Strategie (Ich-Form)
 
+> Historisches Dokument. Aktuelle Struktur und Einstiegspunkte: `README.md`, `docs/developer/ARCHITECTURE.md`.
+
 ---
 
 ## 1. Was ich bauen will (kurz)

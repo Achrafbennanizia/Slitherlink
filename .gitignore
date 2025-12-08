@@ -28,8 +28,14 @@ out/
 *.bak
 *.tmp
 *_old.cpp
+*_old
 *_broken.cpp
+*_broken
+*_alternate.cpp
+*_solid.cpp.backup
 main.cpp.backup
+main_alternate.cpp
+main_solid.cpp.backup
 
 # Compiled Binaries
 slitherlink
