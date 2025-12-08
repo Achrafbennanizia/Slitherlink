@@ -1,65 +1,66 @@
-#include "slitherlink/io/SolutionPrinter.h"
+#include "io/SolutionPrinter.h"
 #include <iostream>
-namespace slitherlink {
-
-void SolutionPrinter::print(const Solution &sol, std::ostream &out) const
+namespace slitherlink
 {
-    int n = grid.n, m = grid.m;
 
-    auto isHorizOn = [&](int r, int c) -> bool
+    void SolutionPrinter::print(const Solution &sol, std::ostream &out) const
     {
-        int idx = horizEdgeIndex[r * m + c];
-        return sol.edgeState[idx] == 1;
-    };
-    auto isVertOn = [&](int r, int c) -> bool
-    {
-        int idx = vertEdgeIndex[r * (m + 1) + c];
-        return sol.edgeState[idx] == 1;
-    };
+        int n = grid.n, m = grid.m;
 
-    for (int r = 0; r <= n; ++r)
-    {
-        std::string line;
-        for (int c = 0; c < m; ++c)
+        auto isHorizOn = [&](int r, int c) -> bool
         {
+            int idx = horizEdgeIndex[r * m + c];
+            return sol.edgeState[idx] == 1;
+        };
+        auto isVertOn = [&](int r, int c) -> bool
+        {
+            int idx = vertEdgeIndex[r * (m + 1) + c];
+            return sol.edgeState[idx] == 1;
+        };
+
+        for (int r = 0; r <= n; ++r)
+        {
+            std::string line;
+            for (int c = 0; c < m; ++c)
+            {
+                line += "+";
+                line += (isHorizOn(r, c) ? "-" : " ");
+            }
             line += "+";
-            line += (isHorizOn(r, c) ? "-" : " ");
+            out << line << "\n";
+
+            if (r == n)
+                break;
+
+            std::string vline;
+            for (int c = 0; c < m; ++c)
+            {
+                vline += (isVertOn(r, c) ? "|" : " ");
+                int clue = grid.clues[grid.cellIndex(r, c)];
+                char ch = ' ';
+                if (clue >= 0)
+                    ch = char('0' + clue);
+                vline += ch;
+            }
+            vline += (isVertOn(r, m) ? "|" : " ");
+            out << vline << "\n";
         }
-        line += "+";
-        out << line << "\n";
 
-        if (r == n)
-            break;
-
-        std::string vline;
-        for (int c = 0; c < m; ++c)
+        out << "Cycle (point coordinates row,col):\n";
+        for (size_t i = 0; i < sol.cyclePoints.size(); ++i)
         {
-            vline += (isVertOn(r, c) ? "|" : " ");
-            int clue = grid.clues[grid.cellIndex(r, c)];
-            char ch = ' ';
-            if (clue >= 0)
-                ch = char('0' + clue);
-            vline += ch;
+            auto [r, c] = sol.cyclePoints[i];
+            out << "(" << r << "," << c << ")";
+            if (i + 1 < sol.cyclePoints.size())
+                out << " -> ";
         }
-        vline += (isVertOn(r, m) ? "|" : " ");
-        out << vline << "\n";
+        out << "\n";
     }
 
-    out << "Cycle (point coordinates row,col):\n";
-    for (size_t i = 0; i < sol.cyclePoints.size(); ++i)
+    void SolutionPrinter::printSummary(int count, std::ostream &out) const
     {
-        auto [r, c] = sol.cyclePoints[i];
-        out << "(" << r << "," << c << ")";
-        if (i + 1 < sol.cyclePoints.size())
-            out << " -> ";
+        out << "\n=== SUMMARY ===\n";
+        out << "Total solutions found: " << count << "\n";
     }
-    out << "\n";
-}
-
-void SolutionPrinter::printSummary(int count, std::ostream &out) const
-{
-    out << "\n=== SUMMARY ===\n";
-    out << "Total solutions found: " << count << "\n";
-}
 
 } // namespace slitherlink

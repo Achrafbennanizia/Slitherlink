@@ -1,34 +1,32 @@
-#include "slitherlink/factory/SlitherlinkSolver.h"
+#include "factory/SlitherlinkSolver.h"
+#include "io/SolutionCollector.h"
+#include "io/SolutionPrinter.h"
 #include <iostream>
-namespace slitherlink {
-
-SlitherlinkSolver::SlitherlinkSolver(
-    const Grid &g,
-    std::shared_ptr<ISolutionCollector> sc,
-    std::shared_ptr<ISolutionPrinter> sp
-) : grid(g), solutionCollector(sc), solutionPrinter(sp)
+namespace slitherlink
 {
-    solver = std::make_unique<Solver>();
-    solver->grid = grid;
-}
 
-void SlitherlinkSolver::solve()
-{
-    solver->run(false); // Find first solution by default
-}
-
-void SlitherlinkSolver::printResults(std::ostream &out) const
-{
-    const auto &solutions = solver->solutions;
-    
-    if (solutions.empty())
+    SlitherlinkSolver::SlitherlinkSolver(
+        const Grid &g,
+        std::shared_ptr<ISolutionCollector> sc,
+        std::shared_ptr<ISolutionPrinter> sp) : grid(g), solutionCollector(sc), solutionPrinter(sp)
     {
-        out << "\nNo solutions found.\n";
-        return;
+        // NOTE: This SOLID architecture is not fully implemented yet
+        // The monolithic main.cpp is currently used instead
+        // TODO: Complete Solver integration when refactoring is done
+        // solver = std::make_unique<Solver>(...);
     }
-    
-    // Print summary using injected printer (SOLID: Dependency Inversion)
-    solutionPrinter->printSummary(solutions.size(), out);
-}
+
+    void SlitherlinkSolver::solve()
+    {
+        // TODO: Implement when Solver API is finalized
+        // solver->solve();
+    }
+
+    void SlitherlinkSolver::printResults(std::ostream &out) const
+    {
+        // TODO: Implement when solution collection is integrated
+        out << "\nSOLID architecture not yet fully integrated.\n";
+        out << "Please use the monolithic executable instead.\n";
+    }
 
 } // namespace slitherlink

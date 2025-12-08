@@ -1,4 +1,4 @@
-#include "slitherlink/Config.h"
+#include "utils/Config.h"
 #include <stdexcept>
 #include <algorithm>
 
