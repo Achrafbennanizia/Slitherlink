@@ -93,55 +93,87 @@ $(function(){initNavTree('md__r_e_a_d_m_e.html','',''); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md0"></a></p>
-<p>Parallel Slitherlink solver using backtracking, heuristics, and Intel oneAPI TBB. This README reflects the current repository layout (CLI in <span class="tt">apps/slitherlink_cli</span>, puzzles in <span class="tt">puzzles/samples</span>).</p>
+<p>High-performance parallel Slitherlink puzzle solver using backtracking, constraint propagation, and Intel oneAPI TBB for parallel search.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
 Overview</h1>
 <ul>
-<li>Language: C++17</li>
-<li>Parallelism: Intel oneAPI TBB (optional but recommended)</li>
-<li>Entry point: <span class="tt"><a class="el" href="main_8cpp.html">apps/slitherlink_cli/main.cpp</a></span></li>
-<li><a class="el" href="struct_solver.html">Solver</a> core: <span class="tt">src/solver/</span> with supporting <span class="tt">src/core</span>, <span class="tt">src/io</span>, <span class="tt">src/factory</span>, <span class="tt">src/utils</span></li>
-<li>Historical versions: <span class="tt">tests/old_versions/</span> (V1–V10 snapshots)</li>
+<li><b>Language</b>: C++17</li>
+<li><b>Parallelism</b>: Intel oneAPI TBB (optional but recommended for best performance)</li>
+<li><b>Entry Point</b>: <span class="tt"><a class="el" href="main_8cpp.html">apps/slitherlink_cli/main.cpp</a></span> (monolithic solver)</li>
+<li><b><a class="el" href="struct_solver.html">Solver</a> Core</b>: Modular architecture in <span class="tt">src/</span> (core, solver, io, factory, utils)</li>
+<li><b>Headers</b>: Organized by module in <span class="tt">include/</span> (core, solver, interfaces, io, factory, utils)</li>
+<li><b>Historical Versions</b>: Preserved in <span class="tt">BackUp_oldCode/old_versions/</span> (V1–V10 snapshots)</li>
 </ul>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
-Project Structure (current)</h1>
+Project Structure</h1>
 <div class="fragment"><div class="line">Slitherlink/</div>
-<div class="line">├── apps/slitherlink_cli/    # CLI sources (main.cpp, backups)</div>
-<div class="line">├── src/                     # Solver modules</div>
-<div class="line">│   ├── core/                # Grid/state primitives</div>
-<div class="line">│   ├── solver/              # Heuristics, propagation, validation</div>
-<div class="line">│   ├── io/                  # Reader/collector/printer</div>
-<div class="line">│   ├── factory/             # Factories and facade</div>
-<div class="line">│   └── utils/               # Config parsing</div>
-<div class="line">├── include/                 # Public headers (SOLID experiments)</div>
-<div class="line">├── puzzles/samples/         # Sample puzzles (5x5, 7x7, 12x12 variants)</div>
-<div class="line">├── scripts/                 # Benchmarks and helpers</div>
-<div class="line">├── tests/                   # Unit tests + old version archive</div>
-<div class="line">├── docs/                    # Guides, analysis, history, improvement options</div>
+<div class="line">├── apps/</div>
+<div class="line">│   └── slitherlink_cli/     # CLI application</div>
+<div class="line">│       └── main.cpp         # Main solver (monolithic, self-contained)</div>
+<div class="line">├── include/                 # Public headers (organized by module)</div>
+<div class="line">│   ├── core/                # Grid, State, Edge, Solution</div>
+<div class="line">│   ├── solver/              # Solver, heuristics, propagators, validators</div>
+<div class="line">│   ├── interfaces/          # Abstract interfaces (IHeuristic, IPropagator, IValidator)</div>
+<div class="line">│   ├── io/                  # GridReader, SolutionCollector, SolutionPrinter</div>
+<div class="line">│   ├── factory/             # SolverFactory, SlitherlinkSolver facade</div>
+<div class="line">│   └── utils/               # Config utilities</div>
+<div class="line">├── src/                     # Implementation files (mirrors include/ structure)</div>
+<div class="line">│   ├── core/                # Grid.cpp, State.cpp</div>
+<div class="line">│   ├── solver/              # Solver.cpp, heuristics, propagators, validators</div>
+<div class="line">│   ├── io/                  # I/O implementations</div>
+<div class="line">│   ├── factory/             # Factory implementations</div>
+<div class="line">│   └── utils/               # Utility implementations</div>
+<div class="line">├── puzzles/samples/         # Sample puzzles organized by size</div>
+<div class="line">│   ├── 4x4/, 6x6/, 8x8/, 10x10/, 15x15/, 20x20/</div>
+<div class="line">│   └── *.txt                # Additional samples (5x5, 7x7, 12x12)</div>
+<div class="line">├── tests/</div>
+<div class="line">│   ├── unit/                # Unit tests</div>
+<div class="line">│   ├── integration/         # Integration tests (placeholder)</div>
+<div class="line">│   └── benchmarks/          # Performance benchmarks</div>
+<div class="line">├── docs/                    # Documentation (organized by audience)</div>
+<div class="line">│   ├── README.md            # Documentation hub</div>
+<div class="line">│   ├── user/                # User guides (USER_GUIDE.md, QUICK_START.md)</div>
+<div class="line">│   ├── developer/           # Developer documentation (ARCHITECTURE.md, SOLID docs)</div>
+<div class="line">│   ├── technical/           # Technical details &amp; optimizations</div>
+<div class="line">│   ├── guides/              # Navigation &amp; testing guides</div>
+<div class="line">│   ├── analysis/            # Performance analysis &amp; optimization journey</div>
+<div class="line">│   └── history/             # Project history &amp; migration logs</div>
+<div class="line">├── BackUp_oldCode/          # Archived historical versions (V1-V10)</div>
+<div class="line">│   └── old_versions/        # Complete version history with evolution notes</div>
+<div class="line">├── scripts/                 # Build and benchmark scripts</div>
+<div class="line">├── benchmarks/              # Benchmark utilities</div>
+<div class="line">├── results/                 # Benchmark results</div>
 <div class="line">├── CMakeLists.txt           # Build configuration</div>
-<div class="line">└── Doxyfile                 # Doxygen config (optional)</div>
+<div class="line">└── Doxyfile                 # API documentation generator config</div>
 </div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
 Build &amp; Run</h1>
-<div class="fragment"><div class="line"># Configure (Debug)</div>
-<div class="line">cmake -S . -B cmake-build-debug -DUSE_TBB=ON</div>
+<div class="fragment"><div class="line"># Configure &amp; Build (Release recommended for best performance)</div>
+<div class="line">cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DUSE_TBB=ON</div>
+<div class="line">cmake --build build -j8</div>
 <div class="line"> </div>
-<div class="line"># Build</div>
-<div class="line">cmake --build cmake-build-debug</div>
-<div class="line"> </div>
-<div class="line"># Run a sample puzzle</div>
-<div class="line">./cmake-build-debug/slitherlink puzzles/samples/example5x5.txt</div>
-<div class="line">./cmake-build-debug/slitherlink puzzles/samples/example7x7.txt</div>
-</div><!-- fragment --><p>Release build (faster for larger puzzles): </p><div class="fragment"><div class="line">cmake -S . -B cmake-build-release -DCMAKE_BUILD_TYPE=Release -DUSE_TBB=ON</div>
-<div class="line">cmake --build cmake-build-release</div>
+<div class="line"># Run sample puzzles</div>
+<div class="line">./build/slitherlink puzzles/samples/4x4/example4x4.txt</div>
+<div class="line">./build/slitherlink puzzles/samples/10x10/example10x10.txt</div>
+</div><!-- fragment --><p>Debug build (for development):</p>
+<div class="fragment"><div class="line">cmake -S . -B build-debug -DCMAKE_BUILD_TYPE=Debug -DUSE_TBB=ON</div>
+<div class="line">cmake --build build-debug</div>
 </div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
-Puzzles Included (current repo)</h1>
+Puzzles Included</h1>
+<p>Puzzles are organized in <span class="tt">puzzles/samples/</span> by grid size:</p>
 <ul>
-<li>5×5: <span class="tt">example5x5_{easy,medium,hard,extreme}.txt</span></li>
-<li>7×7: <span class="tt">example7x7_{easy,medium,hard,extreme}.txt</span></li>
-<li>12×12: <span class="tt">example12x12_{easy,medium,hard,extreme,simple}.txt</span></li>
+<li><b>4×4</b>: 5 puzzles in <span class="tt">puzzles/samples/4x4/</span></li>
+<li><b>6×6</b>: 5 puzzles in <span class="tt">puzzles/samples/6x6/</span></li>
+<li><b>8×8</b>: 7 puzzles in <span class="tt">puzzles/samples/8x8/</span></li>
+<li><b>10×10</b>: 6 puzzles in <span class="tt">puzzles/samples/10x10/</span></li>
+<li><b>15×15</b>: 5 puzzles in <span class="tt">puzzles/samples/15x15/</span></li>
+<li><b>20×20</b>: 6 puzzles in <span class="tt">puzzles/samples/20x20/</span></li>
+<li><b>Additional</b>: 5×5, 7×7, 12×12 variants in <span class="tt">puzzles/samples/*.txt</span></li>
 </ul>
-<p>Older docs referencing 4×4/8×8/10×10 files do not match the current tree.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+<p>Example runs:</p>
+<div class="fragment"><div class="line">./build/slitherlink puzzles/samples/4x4/example4x4.txt</div>
+<div class="line">./build/slitherlink puzzles/samples/10x10/example10x10.txt</div>
+<div class="line">./build/slitherlink puzzles/samples/example7x7.txt</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
 Testing &amp; Benchmarking</h1>
 <ul>
 <li>Quick manual checks: run the sample puzzles above.</li>
@@ -184,7 +216,7 @@ Notes on Versions and History</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on <span class="timestamp"></span> for Slitherlink Solver by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
   </ul>
 </div>
 </body>

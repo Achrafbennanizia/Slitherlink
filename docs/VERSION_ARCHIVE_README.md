@@ -66,10 +66,10 @@ g++ -std=c++17 -O3 -DUSE_TBB \
 
 **Best Practices:**
 
-- Run each executable against the same puzzle set to avoid mixing async/TBB results
+- Run each executable against the same puzzle set to avoid mixing async/TBB results (use `puzzles/samples/*`)
 - Record thread counts and puzzle characteristics (size, clue density) with timings
 - Test multiple puzzles of each size to capture performance variance
-- Use scripts/test_solver.sh for consistent automated testing
+- Use `scripts/compile_all_versions.sh` + `scripts/benchmark_versions.sh` for consistent automated testing
 - If documentation claims gradual TBB adoption before V10, treat it as historical commentary
 
 ## Learning Path

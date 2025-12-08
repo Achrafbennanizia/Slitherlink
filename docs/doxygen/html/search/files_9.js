@@ -1,4 +1,22 @@
 var searchData=
 [
-  ['user_5fguide_2emd_0',['USER_GUIDE.md',['../_u_s_e_r___g_u_i_d_e_8md.html',1,'']]]
+  ['slitherlinksolver_2ecpp_0',['SlitherlinkSolver.cpp',['../_slitherlink_solver_8cpp.html',1,'']]],
+  ['slitherlinksolver_2eh_1',['SlitherlinkSolver.h',['../_slitherlink_solver_8h.html',1,'']]],
+  ['smartheuristic_2ecpp_2',['SmartHeuristic.cpp',['../_smart_heuristic_8cpp.html',1,'']]],
+  ['smartheuristic_2eh_3',['SmartHeuristic.h',['../_smart_heuristic_8h.html',1,'']]],
+  ['solid_5farchitecture_2emd_4',['SOLID_ARCHITECTURE.md',['../_s_o_l_i_d___a_r_c_h_i_t_e_c_t_u_r_e_8md.html',1,'']]],
+  ['solid_5fprinciples_2emd_5',['SOLID_PRINCIPLES.md',['../_s_o_l_i_d___p_r_i_n_c_i_p_l_e_s_8md.html',1,'']]],
+  ['solution_2eh_6',['Solution.h',['../_solution_8h.html',1,'']]],
+  ['solutioncollector_2ecpp_7',['SolutionCollector.cpp',['../_solution_collector_8cpp.html',1,'']]],
+  ['solutioncollector_2eh_8',['SolutionCollector.h',['../_solution_collector_8h.html',1,'']]],
+  ['solutionprinter_2ecpp_9',['SolutionPrinter.cpp',['../_solution_printer_8cpp.html',1,'']]],
+  ['solutionprinter_2eh_10',['SolutionPrinter.h',['../_solution_printer_8h.html',1,'']]],
+  ['solver_2ecpp_11',['Solver.cpp',['../_solver_8cpp.html',1,'']]],
+  ['solver_2eh_12',['Solver.h',['../_solver_8h.html',1,'']]],
+  ['solverfactory_2ecpp_13',['SolverFactory.cpp',['../_solver_factory_8cpp.html',1,'']]],
+  ['solverfactory_2eh_14',['SolverFactory.h',['../_solver_factory_8h.html',1,'']]],
+  ['standardvalidator_2ecpp_15',['StandardValidator.cpp',['../_standard_validator_8cpp.html',1,'']]],
+  ['standardvalidator_2eh_16',['StandardValidator.h',['../_standard_validator_8h.html',1,'']]],
+  ['state_2ecpp_17',['State.cpp',['../_state_8cpp.html',1,'']]],
+  ['state_2eh_18',['State.h',['../_state_8h.html',1,'']]]
 ];

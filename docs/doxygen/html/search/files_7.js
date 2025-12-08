@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['readme_2emd_0',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['readme_5fsolid_2emd_1',['README_SOLID.md',['../_r_e_a_d_m_e___s_o_l_i_d_8md.html',1,'']]]
+  ['quick_5fstart_2emd_0',['QUICK_START.md',['../_q_u_i_c_k___s_t_a_r_t_8md.html',1,'']]]
 ];

@@ -43,6 +43,7 @@ INPUT                  = apps/slitherlink_cli/main.cpp \
                          src \
                          README.md \
                          docs/user/USER_GUIDE.md \
+                         docs/user/QUICK_START.md \
                          docs/developer
 
 FILE_PATTERNS          = *.cpp \
@@ -57,7 +58,8 @@ EXCLUDE                = cmake-build-debug \
                          .git \
                          BackUp_oldCode \
                          docs/history \
-                         docs/technical
+                         docs/technical \
+                         tests/old_versions
 
 EXCLUDE_PATTERNS       = */cmake-build-*/* \
                          */build/* \
@@ -87,7 +89,6 @@ HTML_FILE_EXTENSION    = .html
 HTML_COLORSTYLE_HUE    = 220
 HTML_COLORSTYLE_SAT    = 100
 HTML_COLORSTYLE_GAMMA  = 80
-HTML_TIMESTAMP         = YES
 HTML_DYNAMIC_SECTIONS  = YES
 HTML_INDEX_NUM_ENTRIES = 100
 GENERATE_TREEVIEW      = YES
@@ -118,7 +119,6 @@ EXTERNAL_GROUPS        = YES
 #---------------------------------------------------------------------------
 # Configuration options related to the dot tool
 #---------------------------------------------------------------------------
-CLASS_DIAGRAMS         = YES
 HAVE_DOT               = YES
 DOT_NUM_THREADS        = 0
 CLASS_GRAPH            = YES

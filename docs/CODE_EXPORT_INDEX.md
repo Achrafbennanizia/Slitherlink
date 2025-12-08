@@ -13,13 +13,13 @@ Use the paths below to browse or copy each solver snapshot.
 ### Historical Snapshots (from version.txt)
 
 - `v01_from_history.cpp` - Week 1: Initial implementation
-- `v02_from_history.cpp` - Week 1: TBB integration
+- `v02_from_history.cpp` - Week 1: Async/thread control
 - `v03_from_history.cpp` - Week 2: CPU limiting
 - `v04_from_history.cpp` - Week 2: Adaptive depth ⭐
 - `v05_from_history.cpp` - Week 2: Smart heuristics
 - `v07_from_history.cpp` - Week 3: OR-Tools attempt (failed)
-- `v09_from_history.cpp` - Week 4: TBB validation
-- `v10_from_history.cpp` - Week 4: Lambda optimization
+- `v09_from_history.cpp` - Week 4: Async polish
+- `v10_from_history.cpp` - Week 4: Lambda optimization (basis for TBB rewrite)
 
 ### Version Archive
 
@@ -45,7 +45,7 @@ Use the paths below to browse or copy each solver snapshot.
 - **DEVELOPMENT_ARCHIVE.md** - Usage guide and learning resources
 - **CONVERSATION_HISTORY.md** - Complete chat logs (1000+ lines)
 - **README.md** - Archive navigation guide
-- **NAVIGATION_GUIDE.md** - Complete documentation map
+- **docs/guides/NAVIGATION_GUIDE.md** - Current documentation map
 
 ## 🛠️ Build & Test Tools
 
@@ -68,7 +68,7 @@ Use the paths below to browse or copy each solver snapshot.
 
 ### Want to Compile & Test?
 
-→ Run `./compile_all_versions.sh` then `./benchmark_versions.sh ../example8x8.txt`
+→ Run `./compile_all_versions.sh` then `./benchmark_versions.sh ../puzzles/samples/example7x7.txt`
 
 ## 📊 File Statistics
 
@@ -80,7 +80,7 @@ Use the paths below to browse or copy each solver snapshot.
 | DEVELOPMENT_ARCHIVE.md  | ~300  | Usage guide              |
 | v01_baseline.cpp        | 481   | Initial code             |
 | v10_final.cpp           | 987   | Final code               |
-| ../main.cpp             | 1023  | Production code          |
+| ../apps/slitherlink_cli/main.cpp | ~1500 | Current CLI code       |
 
 ## 💡 Tip
 

@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['easy_20by_20solid_0',['Future Extensions (Made Easy by SOLID)',['../md_docs_2developer_2_s_o_l_i_d___p_r_i_n_c_i_p_l_e_s.html#autotoc_md233',1,'']]],
-  ['edge_20h_1',['Edge.h',['../md_docs_2developer_2_c_o_d_e___s_t_r_u_c_t_u_r_e.html#autotoc_md86',1,'']]],
-  ['effort_2',['Estimated Effort',['../md_docs_2developer_2_s_o_l_i_d___a_r_c_h_i_t_e_c_t_u_r_e.html#autotoc_md191',1,'']]],
-  ['ependency_20inversion_20principle_20dip_3',['5. **D**ependency Inversion Principle (DIP)',['../md_docs_2developer_2_s_o_l_i_d___p_r_i_n_c_i_p_l_e_s.html#autotoc_md212',1,'']]],
+  ['easy_20by_20solid_0',['Future Extensions (Made Easy by SOLID)',['../md_docs_2developer_2_s_o_l_i_d___p_r_i_n_c_i_p_l_e_s.html#autotoc_md239',1,'']]],
+  ['edge_20h_1',['Edge.h',['../md_docs_2developer_2_c_o_d_e___s_t_r_u_c_t_u_r_e.html#autotoc_md92',1,'']]],
+  ['effort_2',['Estimated Effort',['../md_docs_2developer_2_s_o_l_i_d___a_r_c_h_i_t_e_c_t_u_r_e.html#autotoc_md197',1,'']]],
+  ['ependency_20inversion_20principle_20dip_3',['5. **D**ependency Inversion Principle (DIP)',['../md_docs_2developer_2_s_o_l_i_d___p_r_i_n_c_i_p_l_e_s.html#autotoc_md218',1,'']]],
   ['errors_4',['Problem: Compilation errors',['../md_docs_2user_2_u_s_e_r___g_u_i_d_e.html#autotoc_md63',1,'']]],
-  ['estimated_20effort_5',['Estimated Effort',['../md_docs_2developer_2_s_o_l_i_d___a_r_c_h_i_t_e_c_t_u_r_e.html#autotoc_md191',1,'']]],
-  ['example_6',['💡 Usage Example',['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md111',1,'']]],
+  ['estimated_20effort_5',['Estimated Effort',['../md_docs_2developer_2_s_o_l_i_d___a_r_c_h_i_t_e_c_t_u_r_e.html#autotoc_md197',1,'']]],
+  ['example_6',['💡 Usage Example',['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md117',1,'']]],
   ['example_201_3a_20tiny_202×2_20puzzle_7',['Example 1: Tiny 2×2 Puzzle',['../md_docs_2user_2_u_s_e_r___g_u_i_d_e.html#autotoc_md29',1,'']]],
   ['example_201_3a_20trivial_202×2_20puzzle_8',['Example 1: Trivial 2×2 Puzzle',['../md_docs_2user_2_u_s_e_r___g_u_i_d_e.html#autotoc_md42',1,'']]],
   ['example_202_3a_205×5_20puzzle_20matches_20provided_20samples_9',['Example 2: 5×5 Puzzle (matches provided samples)',['../md_docs_2user_2_u_s_e_r___g_u_i_d_e.html#autotoc_md30',1,'']]],
@@ -15,12 +15,12 @@ var searchData=
   ['example_203_3a_20moderate_206×6_20puzzle_12',['Example 3: Moderate 6×6 Puzzle',['../md_docs_2user_2_u_s_e_r___g_u_i_d_e.html#autotoc_md46',1,'']]],
   ['example_204_3a_20large_2010×10_20puzzle_13',['Example 4: Large 10×10 Puzzle',['../md_docs_2user_2_u_s_e_r___g_u_i_d_e.html#autotoc_md48',1,'']]],
   ['example_20output_3a_14',['Example Output:',['../md_docs_2user_2_u_s_e_r___g_u_i_d_e.html#autotoc_md38',1,'']]],
-  ['example_20puzzle_15',['Run with Example Puzzle',['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md118',1,'']]],
-  ['example_20usage_20after_20refactoring_16',['Example Usage (After Refactoring)',['../md_docs_2developer_2_s_o_l_i_d___a_r_c_h_i_t_e_c_t_u_r_e.html#autotoc_md169',1,'']]],
+  ['example_20puzzle_15',['Run with Example Puzzle',['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md124',1,'']]],
+  ['example_20usage_20after_20refactoring_16',['Example Usage (After Refactoring)',['../md_docs_2developer_2_s_o_l_i_d___a_r_c_h_i_t_e_c_t_u_r_e.html#autotoc_md175',1,'']]],
   ['example_3a_17',['Simple Example:',['../md_docs_2user_2_u_s_e_r___g_u_i_d_e.html#autotoc_md13',1,'']]],
-  ['examples_18',['Examples',['../md_docs_2developer_2_s_o_l_i_d___p_r_i_n_c_i_p_l_e_s.html#autotoc_md225',1,'Code Examples'],['../md_docs_2user_2_u_s_e_r___g_u_i_d_e.html#autotoc_md41',1,'Examples']]],
-  ['expected_20results_19',['Expected Results',['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md120',1,'']]],
-  ['extending_20the_20architecture_20',['🎨 Extending the Architecture',['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md122',1,'']]],
-  ['extensibility_21',['Extensibility',['../md_docs_2developer_2_s_o_l_i_d___p_r_i_n_c_i_p_l_e_s.html#autotoc_md219',1,'✅ Extensibility'],['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md129',1,'Extensibility'],['../md_docs_2developer_2_s_o_l_i_d___a_r_c_h_i_t_e_c_t_u_r_e.html#autotoc_md174',1,'Extensibility']]],
-  ['extensions_20made_20easy_20by_20solid_22',['Future Extensions (Made Easy by SOLID)',['../md_docs_2developer_2_s_o_l_i_d___p_r_i_n_c_i_p_l_e_s.html#autotoc_md233',1,'']]]
+  ['examples_18',['Examples',['../md_docs_2developer_2_s_o_l_i_d___p_r_i_n_c_i_p_l_e_s.html#autotoc_md231',1,'Code Examples'],['../md_docs_2user_2_u_s_e_r___g_u_i_d_e.html#autotoc_md41',1,'Examples']]],
+  ['expected_20results_19',['Expected Results',['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md126',1,'']]],
+  ['extending_20the_20architecture_20',['🎨 Extending the Architecture',['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md128',1,'']]],
+  ['extensibility_21',['Extensibility',['../md_docs_2developer_2_s_o_l_i_d___p_r_i_n_c_i_p_l_e_s.html#autotoc_md225',1,'✅ Extensibility'],['../md_docs_2developer_2_r_e_a_d_m_e___s_o_l_i_d.html#autotoc_md135',1,'Extensibility'],['../md_docs_2developer_2_s_o_l_i_d___a_r_c_h_i_t_e_c_t_u_r_e.html#autotoc_md180',1,'Extensibility']]],
+  ['extensions_20made_20easy_20by_20solid_22',['Future Extensions (Made Easy by SOLID)',['../md_docs_2developer_2_s_o_l_i_d___p_r_i_n_c_i_p_l_e_s.html#autotoc_md239',1,'']]]
 ];
